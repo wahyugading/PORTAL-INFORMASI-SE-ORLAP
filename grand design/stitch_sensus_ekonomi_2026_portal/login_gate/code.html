@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PR-SE2026 | Login Gate</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#eec200",
+                    "on-secondary": "#3c2f00",
+                    "on-background": "#dce1fb",
+                    "on-primary-container": "#542000",
+                    "on-secondary-fixed-variant": "#564500",
+                    "on-surface-variant": "#dfc0b2",
+                    "error": "#ffb4ab",
+                    "highlight-yellow": "#FACD15",
+                    "primary-container": "#f27221",
+                    "primary": "#ffb691",
+                    "on-tertiary": "#00344e",
+                    "primary-fixed-dim": "#ffb691",
+                    "surface-container-high": "#23293c",
+                    "tertiary-fixed-dim": "#8ccdff",
+                    "on-primary-fixed-variant": "#793100",
+                    "tertiary-fixed": "#cae6ff",
+                    "on-primary-fixed": "#341100",
+                    "inverse-on-surface": "#2a3043",
+                    "secondary-fixed": "#ffe081",
+                    "on-surface": "#dce1fb",
+                    "surface-bright": "#33394c",
+                    "slate-800": "#1e293b",
+                    "error-container": "#93000a",
+                    "tertiary-container": "#00a0e7",
+                    "on-error-container": "#ffdad6",
+                    "slate-950": "#020617",
+                    "slate-900": "#0f172a",
+                    "slate-400": "#94a3b8",
+                    "secondary": "#ffe391",
+                    "surface": "#0c1324",
+                    "background": "#0c1324",
+                    "surface-variant": "#2e3447",
+                    "slate-100": "#f1f7feb",
+                    "outline": "#a78b7e",
+                    "surface-container-highest": "#2e3447",
+                    "inverse-surface": "#dce1fb",
+                    "on-tertiary-fixed": "#001e30",
+                    "inverse-primary": "#9e4300",
+                    "surface-container": "#191f31",
+                    "surface-tint": "#ffb691",
+                    "on-primary": "#552000",
+                    "outline-variant": "#584237",
+                    "on-tertiary-fixed-variant": "#004b70",
+                    "surface-container-low": "#151b2d",
+                    "surface-dim": "#0c1324",
+                    "surface-container-lowest": "#070d1f",
+                    "on-secondary-fixed": "#231b00",
+                    "tertiary": "#8ccdff",
+                    "secondary-container": "#f1c500",
+                    "on-tertiary-container": "#00334d",
+                    "primary-fixed": "#ffdbcb",
+                    "on-error": "#690005",
+                    "on-secondary-container": "#665200"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "1rem",
+                    "container-max-width": "448px",
+                    "edge-margin": "1.25rem",
+                    "stack-md": "1rem",
+                    "touch-target-min": "48px",
+                    "stack-lg": "1.5rem",
+                    "stack-sm": "0.5rem"
+            },
+            "fontFamily": {
+                    "body-sm": ["Inter"],
+                    "label-md": ["Inter"],
+                    "body-base": ["Inter"],
+                    "button-text": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "title-lg": ["Inter"],
+                    "display-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-base": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "button-text": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #020617; /* slate-950 */
+            color: #dce1fb; /* on-surface */
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom tactile interaction */
+        .btn-interact:active {
+            transform: scale(0.95);
+        }
+        .login-card {
+            backdrop-filter: blur(8px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="flex items-center justify-center min-h-screen p-edge-margin">
+<!-- Atmospheric Background Element -->
+<div class="fixed inset-0 z-0 pointer-events-none opacity-20">
+<div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary-container rounded-full blur-[120px]"></div>
+<div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-slate-800 rounded-full blur-[120px]"></div>
+</div>
+<!-- Main Login Shell -->
+<main class="relative z-10 w-full max-w-container-max-width flex flex-col items-center">
+<!-- Brand Identity / Header Section -->
+<div class="mb-stack-lg text-center">
+<h1 class="font-display-lg text-display-lg text-primary-container tracking-tight mb-stack-sm">
+                PR-SE2026
+            </h1>
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-slate-900 border border-slate-800 rounded-full">
+<span class="material-symbols-outlined text-[14px] text-highlight-yellow" style="font-variation-settings: 'FILL' 1;">security</span>
+<span class="font-label-md text-label-md text-slate-400">INSTITUTIONAL PORTAL</span>
+</div>
+</div>
+<!-- Login Card -->
+<div class="login-card w-full bg-slate-900/80 border border-slate-800 rounded-xl p-stack-lg shadow-2xl flex flex-col items-center">
+<!-- Graphic Element -->
+<div class="w-16 h-16 bg-slate-950 rounded-full flex items-center justify-center mb-stack-lg border border-slate-800">
+<span class="material-symbols-outlined text-[32px] text-primary-container">lock_open</span>
+</div>
+<!-- Typography Content -->
+<div class="text-center mb-stack-lg">
+<h2 class="font-title-lg text-title-lg text-slate-100 mb-2">
+                    Akses Terbatas Internal
+                </h2>
+<p class="font-body-base text-body-base text-slate-400">
+                    Masuk dengan email institusi @stis.ac.id Anda.
+                </p>
+</div>
+<!-- Login Action -->
+<button class="btn-interact w-full bg-white text-slate-950 h-14 rounded-lg flex items-center justify-center gap-3 transition-transform duration-150 ease-out font-button-text text-button-text shadow-lg">
+<svg fill="none" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.6001 10.2273C19.6001 9.51818 19.5365 8.84091 19.4183 8.19091H10.0001V12.0455H15.3819C15.1501 13.2955 14.4456 14.3545 13.3865 15.0636V17.5636H16.6183C18.5092 15.8227 19.6001 13.2636 19.6001 10.2273Z" fill="#4285F4"></path>
+<path d="M10.0001 20.0001C12.7001 20.0001 14.9637 19.1046 16.6183 17.5637L13.3865 15.0637C12.491 15.6637 11.3456 16.0182 10.0001 16.0182C7.39102 16.0182 5.18193 14.2592 4.39102 11.8909H1.06372V14.4728C2.71827 17.7592 6.10008 20.0001 10.0001 20.0001Z" fill="#34A853"></path>
+<path d="M4.39091 11.8909C4.19091 11.2909 4.07727 10.6545 4.07727 10C4.07727 9.34545 4.19091 8.70909 4.39091 8.10909V5.52727H1.06364C0.386364 6.87273 0 8.39091 0 10C0 11.6091 0.386364 13.1273 1.06364 14.4727L4.39091 11.8909Z" fill="#FBBC05"></path>
+<path d="M10.0001 3.98182C11.4728 3.98182 12.791 4.49091 13.8319 5.48182L16.691 2.62273C14.9592 1.00909 12.7001 0 10.0001 0C6.10008 0 2.71827 2.24091 1.06372 5.52727L4.39102 8.10909C5.18193 5.74091 7.39102 3.98182 10.0001 3.98182Z" fill="#EA4335"></path>
+</svg>
+<span>Sign in with Google</span>
+</button>
+<!-- Metadata / Policy footer -->
+<div class="mt-stack-lg w-full flex flex-col gap-stack-sm text-center">
+<div class="h-[1px] w-full bg-slate-800"></div>
+<p class="font-body-sm text-body-sm text-slate-500 px-4">
+                    Sistem ini terenkripsi dan dipantau secara berkala oleh Divisi Keamanan Data STIS.
+                </p>
+<div class="flex justify-center gap-4 text-slate-400 font-label-md text-label-md mt-2">
+<a class="hover:text-primary-container transition-colors" href="#">Privacy Policy</a>
+<span class="text-slate-800">•</span>
+<a class="hover:text-primary-container transition-colors" href="#">Terms of Use</a>
+</div>
+</div>
+</div>
+<!-- Verification Badge (Minimalist Glass) -->
+<div class="mt-stack-lg flex items-center gap-2 text-slate-500 opacity-60">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<p class="font-label-md text-label-md uppercase tracking-widest">Secure Field Access 2026</p>
+</div>
+</main>
+<!-- Micro-interaction Script -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loginBtn = document.querySelector('.btn-interact');
+            
+            loginBtn.addEventListener('click', (e) => {
+                // Simulate a subtle loading state
+                const originalContent = loginBtn.innerHTML;
+                loginBtn.style.opacity = '0.7';
+                loginBtn.innerHTML = `
+                    <div class="animate-spin rounded-full h-5 w-5 border-2 border-slate-950 border-t-transparent"></div>
+                    <span>Verifying...</span>
+                `;
+                
+                setTimeout(() => {
+                    loginBtn.innerHTML = originalContent;
+                    loginBtn.style.opacity = '1';
+                }, 1500);
+            });
+        });
+    </script>
+</body></html>

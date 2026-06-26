@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description"
+    content="Portal Repository & Pusat Bantuan Lapangan Sensus Ekonomi 2026 - Polstat STIS Jakarta" />
+  <meta name="theme-color" content="#F27221" />
+  <title>PR-SE2026 | Portal Repository Sensus Ekonomi 2026</title>
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="assets/Logo SE2026 - utama_Vertikal.svg" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    /* =============================================
+       DESIGN SYSTEM - SE2026 HIGH CONTRAST LIGHT
+       ============================================= */
+    :root {
+      --clr-orange: #F27221;
+      --clr-orange-dk: #D4611A;
+      --clr-black: #0F172A;
+      --clr-white: #FFFFFF;
+      --clr-blue: #003366;
+      --clr-surface: #F8FAFC;
+      --clr-border: #E2E8F0;
+      --clr-text-2: #475569;
+      --radius-card: 12px;
+      --shadow-card: 0 2px 8px rgba(15, 23, 42, .08);
+      --shadow-float: 0 8px 24px rgba(15, 23, 42, .12);
+      --transition: 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--clr-white);
+      color: var(--clr-black);
+      -webkit-font-smoothing: antialiased;
+      min-height: 100dvh;
+      overflow-x: hidden;
+    }
+
+    /* ---- TOP APP BAR ---- */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--clr-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      height: 56px;
+    }
+
+    .topbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .topbar-logo {
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
+    }
+
+    .topbar-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--clr-black);
+      letter-spacing: -0.02em;
+    }
+
+    .topbar-title span {
+      color: var(--clr-orange);
+    }
+
+    .topbar-badge {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--clr-blue);
+      background: rgba(0, 51, 102, 0.08);
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 51, 102, 0.15);
+    }
+
+    /* ---- MAIN LAYOUT ---- */
+    main {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 16px 120px;
+    }
+
+    /* ---- HERO SECTION ---- */
+    .hero {
+      margin: 16px 0;
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      border: 1px solid var(--clr-border);
+      position: relative;
+      background: var(--clr-surface);
+      box-shadow: var(--shadow-card);
+    }
+
+    .hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* ---- SECTION TITLE ---- */
+    .section-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--clr-text-2);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      padding-left: 2px;
+    }
+
+    .section-header {
+      margin: 24px 0 12px;
+    }
+
+    .section-header h2 {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--clr-black);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    /* ---- DIVIDER ---- */
+    .divider {
+      height: 1px;
+      background: var(--clr-border);
+      margin: 20px 0;
+    }
+
+    /* ---- DUKUNGAN GUBERNUR CARD ---- */
+    .gov-card {
+      background: linear-gradient(135deg, var(--clr-blue) 0%, #00509E 100%);
+      border-radius: var(--radius-card);
+      padding: 20px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      text-decoration: none;
+      transition: var(--transition);
+      box-shadow: var(--shadow-float);
+      margin-bottom: 12px;
+      cursor: pointer;
+    }
+
+    .gov-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(0, 51, 102, .25);
+    }
+
+    .gov-card:active {
+      transform: scale(0.98);
+    }
+
+    .gov-card-icon {
+      width: 52px;
+      height: 52px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .gov-card-icon .material-symbols-outlined {
+      font-size: 28px;
+      color: white;
+    }
+
+    .gov-card-text {
+      flex: 1;
+    }
+
+    .gov-card-tag {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      opacity: 0.7;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .gov-card-title {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .gov-card-sub {
+      font-size: 11px;
+      opacity: 0.75;
+      margin-top: 2px;
+    }
+
+    .gov-card-arrow .material-symbols-outlined {
+      font-size: 20px;
+      opacity: 0.7;
+    }
+
+    /* ---- QUICK ACTION GRID ---- */
+    .action-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .action-card {
+      background: var(--clr-orange);
+      border-radius: var(--radius-card);
+      padding: 16px;
+      color: white;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 130px;
+      transition: var(--transition);
+      box-shadow: 0 4px 12px rgba(242, 114, 33, .30);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .action-card::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      width: 80px;
+      height: 80px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+    }
+
+    .action-card:hover {
+      transform: translateY(-3px) scale(1.01);
+      box-shadow: 0 8px 20px rgba(242, 114, 33, .40);
+    }
+
+    .action-card:active {
+      transform: scale(0.97);
+    }
+
+    .action-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .action-card-top .material-symbols-outlined {
+      font-size: 32px;
+    }
+
+    .action-card-link .material-symbols-outlined {
+      font-size: 16px;
+      opacity: 0.75;
+    }
+
+    .action-card-tag {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      opacity: 0.8;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .action-card-title {
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.25;
+    }
+
+    /* Variasi warna kartu */
+    .action-card.blue {
+      background: linear-gradient(135deg, var(--clr-blue) 0%, #00509E 100%);
+      box-shadow: 0 4px 12px rgba(0, 51, 102, .25);
+    }
+
+    .action-card.blue:hover {
+      box-shadow: 0 8px 20px rgba(0, 51, 102, .35);
+    }
+
+    .action-card.dark {
+      background: var(--clr-black);
+      box-shadow: 0 4px 12px rgba(15, 23, 42, .25);
+    }
+
+    .action-card.dark:hover {
+      box-shadow: 0 8px 20px rgba(15, 23, 42, .35);
+    }
+
+    .action-card.teal {
+      background: linear-gradient(135deg, #0D7377 0%, #14BDBD 100%);
+      box-shadow: 0 4px 12px rgba(13, 115, 119, .25);
+    }
+
+    .action-card.teal:hover {
+      box-shadow: 0 8px 20px rgba(13, 115, 119, .35);
+    }
+
+    /* ---- SURAT PENGANTAR CARD ---- */
+    .doc-card {
+      background: var(--clr-white);
+      border: 2px solid var(--clr-black);
+      border-radius: var(--radius-card);
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: var(--clr-black);
+      transition: var(--transition);
+      box-shadow: 4px 4px 0px 0px var(--clr-black);
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    .doc-card:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0px 0px var(--clr-orange);
+    }
+
+    .doc-card:active {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0px 0px var(--clr-black);
+    }
+
+    .doc-card-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--clr-orange);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .doc-card-icon .material-symbols-outlined {
+      font-size: 22px;
+      color: white;
+    }
+
+    .doc-card-body {
+      flex: 1;
+    }
+
+    .doc-card-tag {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--clr-text-2);
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+
+    .doc-card-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--clr-black);
+      line-height: 1.3;
+    }
+
+    .doc-card-arrow .material-symbols-outlined {
+      font-size: 18px;
+      color: var(--clr-text-2);
+    }
+
+    /* ---- SLOGAN BANNER ---- */
+    .slogan-section {
+      margin: 24px 0 0;
+    }
+
+    .slogan-img-wrap {
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      border: 1px solid var(--clr-border);
+      box-shadow: var(--shadow-card);
+      margin-bottom: 16px;
+    }
+
+    .slogan-img-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .slogan-quote {
+      background: var(--clr-surface);
+      border: 2px solid var(--clr-black);
+      border-radius: var(--radius-card);
+      padding: 20px;
+      text-align: center;
+      box-shadow: 4px 4px 0px 0px var(--clr-black);
+    }
+
+    .slogan-quote p {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--clr-black);
+      line-height: 1.5;
+      font-style: italic;
+    }
+
+    .slogan-quote span {
+      color: var(--clr-orange);
+    }
+
+    /* ---- FOOTER ---- */
+    .footer {
+      text-align: center;
+      padding: 28px 20px 16px;
+      border-top: 1px solid var(--clr-border);
+      margin-top: 32px;
+    }
+
+    .footer-logo {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      margin: 0 auto 8px;
+      display: block;
+    }
+
+    .footer-text {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: var(--clr-text-2);
+      text-transform: uppercase;
+    }
+
+    /* ---- BOTTOM NAV (Mobile) ---- */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid var(--clr-border);
+      box-shadow: 0 -4px 16px rgba(15, 23, 42, .08);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 64px;
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      text-decoration: none;
+      color: var(--clr-text-2);
+      padding: 8px 16px;
+      border-radius: 10px;
+      transition: 0.15s;
+      min-width: 56px;
+    }
+
+    .nav-item.active {
+      color: var(--clr-orange);
+      background: rgba(242, 114, 33, 0.08);
+    }
+
+    .nav-item:hover:not(.active) {
+      background: var(--clr-surface);
+    }
+
+    .nav-item:active {
+      transform: scale(0.92);
+    }
+
+    .nav-item .material-symbols-outlined {
+      font-size: 22px;
+    }
+
+    .nav-item span.label {
+      font-size: 10px;
+      font-weight: 600;
+    }
+
+    /* ---- ANIMATIONS ---- */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-up {
+      animation: fadeUp 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    }
+
+    .fade-up:nth-child(1) {
+      animation-delay: 0.05s;
+    }
+
+    .fade-up:nth-child(2) {
+      animation-delay: 0.10s;
+    }
+
+    .fade-up:nth-child(3) {
+      animation-delay: 0.15s;
+    }
+
+    .fade-up:nth-child(4) {
+      animation-delay: 0.20s;
+    }
+
+    /* ---- PULSE BADGE ---- */
+    @keyframes pulse-ring {
+      0% {
+        box-shadow: 0 0 0 0 rgba(242, 114, 33, .4);
+      }
+
+      70% {
+        box-shadow: 0 0 0 8px rgba(242, 114, 33, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(242, 114, 33, 0);
+      }
+    }
+
+    .pulse {
+      animation: pulse-ring 2s ease-out infinite;
+    }
+
+    /* ---- RESPONSIVE ---- */
+    @media (min-width: 640px) {
+      main {
+        padding: 0 24px 120px;
+      }
+
+      .action-grid {
+        gap: 12px;
+      }
+
+      .action-card {
+        min-height: 150px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ========== TOP APP BAR ========== -->
+  <header class="topbar">
+    <a href="index.html" class="topbar-brand">
+      <img src="assets/Logo SE2026 - utama_Vertikal.svg" alt="Logo Sensus Ekonomi 2026" class="topbar-logo" />
+      <span class="topbar-title">PR-<span>SE2026</span></span>
+    </a>
+    <span class="topbar-badge">BERANDA</span>
+  </header>
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main>
+
+    <!-- HERO POSTER -->
+    <section class="hero fade-up" id="hero-poster">
+      <img src="assets/Baliho (2x1) - Opsi 1(rev).jpg" alt="Poster Menyukseskan Sensus Ekonomi 2026 - BPS DKI Jakarta"
+        loading="eager" />
+    </section>
+
+    <!-- PAGE INTRO -->
+    <section class="fade-up" style="margin: 16px 0 20px;">
+      <p class="section-label">Portal Repository Lapangan</p>
+      <h1 style="font-size:22px;font-weight:900;letter-spacing:-0.03em;line-height:1.15;color:var(--clr-black);">
+        SENSUS EKONOMI<br /><span style="color:var(--clr-orange);">2026</span>
+      </h1>
+      <p style="font-size:13px;color:var(--clr-text-2);margin-top:6px;line-height:1.5;">
+        Portal Bukti Legalitas &amp; Dukungan Resmi untuk Petugas Lapangan Polstat STIS
+      </p>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- DUKUNGAN GUBERNUR DKI -->
+    <section class="fade-up">
+      <div class="section-header">
+        <p class="section-label">Dukungan Regional</p>
+        <h2>Surat &amp; Video Gubernur DKI Jakarta</h2>
+      </div>
+
+      <!-- Gubernur -->
+      <a href="https://drive.google.com/drive/folders/1vXZyDwkToxeLGu3icsQWV7QHDJvaLHZy?usp=drive_link" target="_blank"
+        rel="noopener noreferrer" class="gov-card" id="link-gubernur">
+        <div class="gov-card-icon">
+          <span class="material-symbols-outlined">account_balance</span>
+        </div>
+        <div class="gov-card-text">
+          <p class="gov-card-tag">Regional Approval</p>
+          <p class="gov-card-title">Surat Himbauan &amp; Video Dukungan<br />Gubernur &amp; Wakil Gubernur DKI Jakarta
+          </p>
+          <p class="gov-card-sub">Klik untuk membuka folder Drive →</p>
+        </div>
+        <div class="gov-card-arrow">
+          <span class="material-symbols-outlined">open_in_new</span>
+        </div>
+      </a>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- QUICK ACTION GRID: DOKUMEN KEMENTERIAN -->
+    <section class="fade-up">
+      <div class="section-header">
+        <p class="section-label">Bukti Dukungan &amp; Legalitas</p>
+        <h2>Akses Dokumen Resmi</h2>
+      </div>
+
+      <div class="action-grid">
+
+        <!-- Kementerian -->
+        <a href="https://drive.google.com/drive/folders/1fJI-wvh1UpjBMbWWaESH340SqJMDwlOu?usp=drive_link"
+          target="_blank" rel="noopener noreferrer" class="action-card" id="link-kementerian">
+          <div class="action-card-top">
+            <span class="material-symbols-outlined">assured_workload</span>
+            <span class="action-card-link">
+              <span class="material-symbols-outlined">open_in_new</span>
+            </span>
+          </div>
+          <div>
+            <p class="action-card-tag">Ministerial Decree</p>
+            <p class="action-card-title">Dukungan Kementerian</p>
+          </div>
+        </a>
+
+        <!-- Surat Tugas BPS -->
+        <a href="https://drive.google.com/file/d/1v4gP46cDqBCYM204jF1eFh5cBeJxhPVE/view?usp=drive_link" target="_blank"
+          rel="noopener noreferrer" class="action-card blue pulse" id="link-surat-tugas">
+          <div class="action-card-top">
+            <span class="material-symbols-outlined">badge</span>
+            <span class="action-card-link">
+              <span class="material-symbols-outlined">open_in_new</span>
+            </span>
+          </div>
+          <div>
+            <p class="action-card-tag">Verified Document</p>
+            <p class="action-card-title">Surat Pengantar BPS DKI Jakarta</p>
+          </div>
+        </a>
+
+        <!-- Testimoni Tokoh -->
+        <a href="https://drive.google.com/drive/folders/11cJz0-8xrNximsr7UvKOyAdKDGCwkFJu?usp=drive_link"
+          target="_blank" rel="noopener noreferrer" class="action-card teal" id="link-testimoni">
+          <div class="action-card-top">
+            <span class="material-symbols-outlined">record_voice_over</span>
+            <span class="action-card-link">
+              <span class="material-symbols-outlined">open_in_new</span>
+            </span>
+          </div>
+          <div>
+            <p class="action-card-tag">Public Endorsement</p>
+            <p class="action-card-title">Testimoni Tokoh Publik</p>
+          </div>
+        </a>
+
+        <!-- Hubungi Bantuan -->
+        <a href="bantuan.html" class="action-card dark" id="link-bantuan">
+          <div class="action-card-top">
+            <span class="material-symbols-outlined">support_agent</span>
+            <span class="action-card-link">
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </span>
+          </div>
+          <div>
+            <p class="action-card-tag">Pusat Bantuan</p>
+            <p class="action-card-title">Solusi Kasus &amp; Call Center</p>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- SLOGAN BANNER -->
+    <section class="slogan-section fade-up">
+      <div class="slogan-img-wrap">
+        <img src="assets/Spanduk (3x1) - BPJS Opsi 2.png" alt="Slogan Resmi Sensus Ekonomi 2026" loading="lazy" />
+      </div>
+      <div class="slogan-quote">
+        <p>
+          "Data Mencerdaskan Bangsa, <span>Sensus</span> Membangun Masa Depan Indonesia yang Lebih Berkelanjutan."
+        </p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer fade-up">
+      <div style="font-size: 14px; font-weight: 800; color: var(--clr-black); margin-bottom: 4px; font-style: italic;">
+        "Data Akurat, Ekonomi Tangguh, Indonesia Maju"
+      </div>
+      <div style="font-size: 12px; font-weight: 700; color: var(--clr-orange); margin-bottom: 12px;">
+        #MencatatEkonomiIndonesia
+      </div>
+      <img src="assets/Logo SE2026 - utama_Vertikal.svg" alt="Logo SE2026" class="footer-logo" />
+      <p class="footer-text">© 2026 · Organisasi Lapangan Mahasiswa Politeknik Statistika STIS · PR-SE2026</p>
+      <div style="font-size: 11px; font-weight: 600; color: var(--clr-text-2); margin-top: 12px;">
+        Kendala Web? Hubungi <a href="https://wa.me/6285867428956" target="_blank"
+          style="color: var(--clr-blue); text-decoration: none;">Wahyu (085867428956)</a>
+      </div>
+    </footer>
+
+  </main><!-- end main -->
+
+  <!-- ========== BOTTOM NAV ========== -->
+  <nav class="bottom-nav" id="bottom-nav" role="navigation" aria-label="Navigasi Utama">
+    <a href="index.html" class="nav-item active" id="nav-home">
+      <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">home</span>
+      <span class="label">Beranda</span>
+    </a>
+    <a href="struktur.html" class="nav-item" id="nav-struktur">
+      <span class="material-symbols-outlined">groups</span>
+      <span class="label">Struktur</span>
+    </a>
+    <a href="informasi.html" class="nav-item" id="nav-info">
+      <span class="material-symbols-outlined">campaign</span>
+      <span class="label">Informasi</span>
+    </a>
+    <a href="bantuan.html" class="nav-item" id="nav-bantuan">
+      <span class="material-symbols-outlined">support_agent</span>
+      <span class="label">Bantuan</span>
+    </a>
+  </nav>
+
+  <script>
+    // Micro-interaction: ripple on card tap
+    document.querySelectorAll('.action-card, .gov-card, .doc-card').forEach(card => {
+      card.addEventListener('click', function (e) {
+        const ripple = document.createElement('span');
+        ripple.style.cssText = `
+          position:absolute;
+          width:80px;height:80px;
+          background:rgba(255,255,255,0.3);
+          border-radius:50%;
+          transform:scale(0);
+          left:${e.offsetX - 40}px;
+          top:${e.offsetY - 40}px;
+          animation:rippleAnim 0.5s ease-out forwards;
+          pointer-events:none;
+        `;
+        this.style.position = 'relative';
+        this.style.overflow = 'hidden';
+        this.appendChild(ripple);
+        setTimeout(() => ripple.remove(), 600);
+      });
+    });
+
+    // Active nav highlight based on current page
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-item').forEach(item => {
+      const href = item.getAttribute('href');
+      if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+        item.classList.add('active');
+      } else {
+        item.classList.remove('active');
+      }
+    });
+  </script>
+
+  <style>
+    @keyframes rippleAnim {
+      to {
+        transform: scale(3);
+        opacity: 0;
+      }
+    }
+  </style>
+
+</body>
+
+</html>

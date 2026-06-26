@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PR-SE2026 - Dashboard Document Viewer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .modal-blur {
+            backdrop-filter: blur(12px);
+        }
+        .document-shadow {
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5);
+        }
+        @keyframes modal-pop {
+            0% { opacity: 0; transform: scale(0.95) translateY(10px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+        .animate-modal {
+            animation: modal-pop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#33394c",
+                        "surface": "#0c1324",
+                        "secondary": "#ffe391",
+                        "primary-container": "#f27221",
+                        "primary": "#ffb691",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed": "#231b00",
+                        "on-tertiary-fixed-variant": "#004b70",
+                        "slate-800": "#1e293b",
+                        "outline": "#a78b7e",
+                        "tertiary-fixed-dim": "#8ccdff",
+                        "primary-fixed": "#ffdbcb",
+                        "background": "#0c1324",
+                        "on-surface-variant": "#dfc0b2",
+                        "surface-container": "#191f31",
+                        "on-primary-container": "#542000",
+                        "slate-100": "#f1f7feb",
+                        "error-container": "#93000a",
+                        "primary-fixed-dim": "#ffb691",
+                        "tertiary-container": "#00a0e7",
+                        "secondary-fixed-dim": "#eec200",
+                        "outline-variant": "#584237",
+                        "tertiary": "#8ccdff",
+                        "on-background": "#dce1fb",
+                        "on-secondary-container": "#665200",
+                        "on-primary-fixed": "#341100",
+                        "error": "#ffb4ab",
+                        "on-tertiary-container": "#00334d",
+                        "slate-400": "#94a3b8",
+                        "surface-container-low": "#151b2d",
+                        "on-tertiary": "#00344e",
+                        "surface-container-lowest": "#070d1f",
+                        "surface-container-high": "#23293c",
+                        "on-surface": "#dce1fb",
+                        "on-secondary-fixed-variant": "#564500",
+                        "surface-container-highest": "#2e3447",
+                        "inverse-surface": "#dce1fb",
+                        "surface-variant": "#2e3447",
+                        "inverse-primary": "#9e4300",
+                        "on-error": "#690005",
+                        "slate-900": "#0f172a",
+                        "surface-tint": "#ffb691",
+                        "secondary-fixed": "#ffe081",
+                        "highlight-yellow": "#FACD15",
+                        "inverse-on-surface": "#2a3043",
+                        "on-primary-fixed-variant": "#793100",
+                        "on-tertiary-fixed": "#001e30",
+                        "surface-dim": "#0c1324",
+                        "on-secondary": "#3c2f00",
+                        "secondary-container": "#f1c500",
+                        "slate-950": "#020617",
+                        "tertiary-fixed": "#cae6ff",
+                        "on-primary": "#552000"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "touch-target-min": "48px",
+                        "gutter": "1rem",
+                        "stack-lg": "1.5rem",
+                        "stack-sm": "0.5rem",
+                        "stack-md": "1rem",
+                        "edge-margin": "1.25rem",
+                        "container-max-width": "448px"
+                    },
+                    "fontFamily": {
+                        "button-text": ["Inter"],
+                        "body-base": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "title-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "button-text": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+                        "body-base": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-slate-950 text-on-surface font-body-base overflow-hidden">
+<!-- Top App Bar -->
+<header class="fixed top-0 w-full z-50 bg-slate-950 border-b border-slate-800">
+<div class="flex justify-between items-center px-edge-margin h-14 w-full max-w-container-max-width mx-auto">
+<div class="flex items-center gap-4">
+<button class="text-primary-container active:scale-95 duration-150 p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-display-lg text-title-lg text-primary-container tracking-tight">PR-SE2026</h1>
+</div>
+<button class="text-primary-container hover:bg-slate-900 transition-colors rounded-full p-2">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</header>
+<!-- Main Content (Dashboard Background) -->
+<main class="pt-20 pb-24 px-edge-margin w-full max-w-md mx-auto min-h-screen opacity-50 blur-sm pointer-events-none">
+<section class="mb-stack-lg">
+<div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 mb-stack-md">
+<h2 class="text-slate-400 font-label-md text-label-md mb-2">FIELD STATUS</h2>
+<div class="flex items-center justify-between">
+<div class="font-headline-md text-headline-md text-white">Active Survey</div>
+<span class="bg-primary-container text-on-primary-container text-[10px] font-bold px-2 py-1 rounded">LIVE</span>
+</div>
+</div>
+<!-- Bento-style Grid for Dashboard Items -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 flex flex-col justify-between h-32">
+<span class="material-symbols-outlined text-primary">analytics</span>
+<div>
+<div class="text-2xl font-bold">12/40</div>
+<div class="text-slate-400 text-sm">Progress</div>
+</div>
+</div>
+<div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 flex flex-col justify-between h-32">
+<span class="material-symbols-outlined text-primary">map</span>
+<div>
+<div class="text-2xl font-bold">Zone B</div>
+<div class="text-slate-400 text-sm">Location</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Modal Backdrop -->
+<div class="fixed inset-0 z-[60] bg-slate-950/90 modal-blur flex items-center justify-center p-4" id="modal-backdrop">
+<!-- Modal Container -->
+<div class="animate-modal w-full max-w-md bg-slate-900/90 border border-slate-800 rounded-xl shadow-2xl flex flex-col max-h-[90vh]">
+<!-- Modal Header -->
+<div class="flex items-center justify-between p-4 border-b border-slate-800">
+<div class="flex items-center gap-3">
+<div class="w-2 h-6 bg-primary-container rounded-full"></div>
+<h2 class="font-title-lg text-title-lg text-white">Surat Tugas Resmi</h2>
+</div>
+<button class="text-slate-400 hover:text-white p-2 transition-colors active:scale-95" onclick="document.getElementById('modal-backdrop').style.display='none'">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Modal Content (Document Viewer) -->
+<div class="flex-1 overflow-y-auto p-4 bg-slate-950/40 custom-scrollbar">
+<div class="relative group">
+<!-- The Document Image -->
+<div class="document-shadow rounded-sm overflow-hidden bg-white">
+<img alt="Official government assignment letter" class="w-full h-auto block select-none" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbAcq52ZwxOs_yXZaes5W--_SHFT0Vg6TVohrOAuSCSjqgJVIhfuMddWtqGAJdILCrrbp4_ESSVGoz3ZV8261Mo3o9lbbA61czc2Lekc2m9-IUMLAGfqOUmRvaHl4Nm4Ue4j8lbRGiZr9bdNqxaCiulEX_6lNBv_qEuQD51jn47yHdVXt49mT8PRIegFCb8Ftq4kCjdpKxIOD3xB9fKh1BQfpmnnp3GDvswu8w0FWbFfpAKRtYkd7osL6aXvpxKgyPNdv5LUKhTv0"/>
+</div>
+<!-- Overlay for Authenticity Feel -->
+<div class="absolute inset-0 pointer-events-none border-[12px] border-slate-900/50 mix-blend-overlay"></div>
+</div>
+<!-- Document Info Card -->
+<div class="mt-4 bg-slate-800/50 rounded-lg p-3 border border-slate-700">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary-container mt-0.5">verified_user</span>
+<div>
+<p class="text-sm font-semibold text-white">Dokumen Terverifikasi</p>
+<p class="text-xs text-slate-400 leading-relaxed">Berlaku untuk kegiatan Sensus Ekonomi 2026 di Wilayah Kerja Provinsi DKI Jakarta.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="p-edge-margin border-t border-slate-800 flex flex-col gap-3">
+<button class="w-full bg-primary-container text-on-primary-container h-14 rounded-lg font-button-text text-button-text flex items-center justify-center gap-2 active:scale-98 transition-transform duration-150 shadow-lg shadow-primary-container/10">
+<span class="material-symbols-outlined">download</span>
+                    Download PDF
+                </button>
+<button class="w-full bg-slate-800 text-slate-100 h-14 rounded-lg font-button-text text-button-text active:scale-98 transition-transform duration-150" onclick="document.getElementById('modal-backdrop').style.display='none'">
+                    Close
+                </button>
+</div>
+</div>
+</div>
+<!-- Bottom Nav Bar (Suppressed on Modal focus, but added for layout consistency as requested for Dashboard) -->
+<nav class="fixed bottom-0 w-full z-50 bg-slate-950 border-t border-slate-800">
+<div class="flex justify-around items-center h-20 w-full max-w-container-max-width mx-auto px-gutter pb-safe">
+<div class="flex flex-col items-center justify-center text-primary-container font-bold">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400">
+<span class="material-symbols-outlined">emergency_home</span>
+<span class="font-label-md text-label-md">Triage</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400">
+<span class="material-symbols-outlined">help_center</span>
+<span class="font-label-md text-label-md">Help</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-md text-label-md">Profile</span>
+</div>
+</div>
+</nav>
+<script>
+        // Simple micro-interaction for document zoom/view
+        const modalContent = document.querySelector('.overflow-y-auto');
+        let isDown = false;
+        let startY;
+        let scrollTop;
+
+        modalContent.addEventListener('mousedown', (e) => {
+            isDown = true;
+            startY = e.pageY - modalContent.offsetTop;
+            scrollTop = modalContent.scrollTop;
+        });
+        modalContent.addEventListener('mouseleave', () => isDown = false);
+        modalContent.addEventListener('mouseup', () => isDown =</script></body></html>

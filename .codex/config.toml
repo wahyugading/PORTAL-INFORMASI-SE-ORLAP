@@ -1,0 +1,3 @@
+[mcp_servers.gpdoc]
+command = "node"
+args = ["c:\\Users\\WAHYU NUGRAHA\\.antigravity\\extensions\\repetere.gpdoc-3.6.0-universal\\out\\mcp-server.js"]

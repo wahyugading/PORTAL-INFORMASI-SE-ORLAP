@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>PR-SE2026 | Orlap &amp; Triage</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid #1e293b;
+        }
+        .thumb-zone {
+            padding-bottom: 100px;
+        }
+        body {
+            background-color: #020617;
+            color: #dce1fb;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#eec200",
+                        "on-secondary": "#3c2f00",
+                        "on-background": "#dce1fb",
+                        "on-primary-container": "#542000",
+                        "on-secondary-fixed-variant": "#564500",
+                        "on-surface-variant": "#dfc0b2",
+                        "error": "#ffb4ab",
+                        "highlight-yellow": "#FACD15",
+                        "primary-container": "#f27221",
+                        "primary": "#ffb691",
+                        "on-tertiary": "#00344e",
+                        "primary-fixed-dim": "#ffb691",
+                        "surface-container-high": "#23293c",
+                        "tertiary-fixed-dim": "#8ccdff",
+                        "on-primary-fixed-variant": "#793100",
+                        "tertiary-fixed": "#cae6ff",
+                        "on-primary-fixed": "#341100",
+                        "inverse-on-surface": "#2a3043",
+                        "secondary-fixed": "#ffe081",
+                        "on-surface": "#dce1fb",
+                        "surface-bright": "#33394c",
+                        "slate-800": "#1e293b",
+                        "error-container": "#93000a",
+                        "tertiary-container": "#00a0e7",
+                        "on-error-container": "#ffdad6",
+                        "slate-950": "#020617",
+                        "slate-900": "#0f172a",
+                        "slate-400": "#94a3b8",
+                        "secondary": "#ffe391",
+                        "surface": "#0c1324",
+                        "background": "#0c1324",
+                        "surface-variant": "#2e3447",
+                        "slate-100": "#f1f7feb",
+                        "outline": "#a78b7e",
+                        "surface-container-highest": "#2e3447",
+                        "inverse-surface": "#dce1fb",
+                        "on-tertiary-fixed": "#001e30",
+                        "inverse-primary": "#9e4300",
+                        "surface-container": "#191f31",
+                        "surface-tint": "#ffb691",
+                        "on-primary": "#552000",
+                        "outline-variant": "#584237",
+                        "on-tertiary-fixed-variant": "#004b70",
+                        "surface-container-low": "#151b2d",
+                        "surface-dim": "#0c1324",
+                        "surface-container-lowest": "#070d1f",
+                        "on-secondary-fixed": "#231b00",
+                        "tertiary": "#8ccdff",
+                        "secondary-container": "#f1c500",
+                        "on-tertiary-container": "#00334d",
+                        "primary-fixed": "#ffdbcb",
+                        "on-error": "#690005",
+                        "on-secondary-container": "#665200"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "1rem",
+                        "container-max-width": "448px",
+                        "edge-margin": "1.25rem",
+                        "stack-md": "1rem",
+                        "touch-target-min": "48px",
+                        "stack-lg": "1.5rem",
+                        "stack-sm": "0.5rem"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-base": ["Inter"],
+                        "button-text": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "display-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-base": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "button-text": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="max-w-md mx-auto min-h-screen flex flex-col relative overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="bg-slate-950 text-primary-container font-title-lg text-title-lg fixed top-0 w-full z-50 border-b border-slate-800 flex justify-between items-center px-edge-margin h-14 w-full max-w-container-max-width mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined cursor-pointer">menu</span>
+<span class="font-display-lg text-display-lg text-primary-container tracking-tight">PR-SE2026</span>
+</div>
+<span class="material-symbols-outlined cursor-pointer">account_circle</span>
+</header>
+<main class="mt-14 p-edge-margin thumb-zone flex-1 overflow-y-auto">
+<!-- Committee Metrics Summary -->
+<section class="mb-stack-lg">
+<h2 class="text-slate-400 font-label-md text-label-md mb-stack-sm uppercase tracking-wider">Committee Metrics</h2>
+<div class="grid grid-cols-2 gap-stack-sm">
+<div class="glass-card p-4 rounded-xl flex flex-col items-center justify-center border-l-4 border-l-primary-container">
+<span class="text-slate-100 font-display-lg text-display-lg">1</span>
+<span class="text-slate-400 font-label-md text-label-md">Utama</span>
+</div>
+<div class="glass-card p-4 rounded-xl flex flex-col items-center justify-center border-l-4 border-l-secondary-fixed-dim">
+<span class="text-slate-100 font-display-lg text-display-lg">2</span>
+<span class="text-slate-400 font-label-md text-label-md">Wakil</span>
+</div>
+<div class="glass-card p-3 rounded-xl flex justify-between items-center bg-slate-900/40">
+<span class="text-slate-400 font-body-sm text-body-sm">Seklap</span>
+<span class="text-primary font-bold">2</span>
+</div>
+<div class="glass-card p-3 rounded-xl flex justify-between items-center bg-slate-900/40">
+<span class="text-slate-400 font-body-sm text-body-sm">Korwil</span>
+<span class="text-primary font-bold">10</span>
+</div>
+<div class="col-span-2 glass-card p-3 rounded-xl flex justify-between items-center bg-slate-900/40">
+<span class="text-slate-400 font-body-sm text-body-sm">Sekwil</span>
+<span class="text-primary font-bold">17</span>
+</div>
+</div>
+</section>
+<!-- Triage Grouping -->
+<div class="space-y-stack-lg">
+<!-- High-Security / Hard Rejections -->
+<section>
+<div class="flex items-center gap-2 mb-stack-sm text-error">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">report</span>
+<h2 class="font-title-lg text-title-lg font-bold">High-Security</h2>
+</div>
+<div class="bg-slate-950 border-2 border-error rounded-xl p-4 shadow-[0_0_20px_rgba(239,68,68,0.2)] active:scale-98 transition-transform duration-150">
+<div class="flex justify-between items-start mb-4">
+<div>
+<p class="text-error font-bold font-body-base text-body-base">Jalur Khusus Bu Risni &amp; BPH</p>
+<p class="text-slate-400 font-body-sm text-body-sm">Status: URGENT / Hard Rejection</p>
+</div>
+<span class="bg-error text-on-error px-2 py-1 rounded text-xs font-bold uppercase">SOS</span>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container font-button-text text-button-text h-14 rounded-lg flex items-center justify-center gap-2 active:scale-95 transition-all duration-150">
+<span class="material-symbols-outlined">chat</span>
+                        Hubungi WA
+                    </button>
+</div>
+</section>
+<!-- Administrative/Reporting -->
+<section>
+<h2 class="text-slate-100 font-headline-md text-headline-md mb-stack-md flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">description</span>
+                    Administrative
+                </h2>
+<div class="space-y-stack-sm">
+<!-- Sekretaris Lapangan 1 -->
+<div class="glass-card p-4 rounded-xl flex items-center justify-between group active:scale-98 transition-transform duration-150">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div>
+<h3 class="text-slate-100 font-bold font-body-base text-body-base">Budi Santoso</h3>
+<p class="text-slate-400 font-body-sm text-body-sm">Sekretaris Lapangan A</p>
+</div>
+</div>
+<button class="bg-primary-container/10 hover:bg-primary-container text-primary-container hover:text-on-primary-container p-3 rounded-full transition-colors active:scale-95 duration-150">
+<span class="material-symbols-outlined">chat</span>
+</button>
+</div>
+<!-- Sekretaris Lapangan 2 -->
+<div class="glass-card p-4 rounded-xl flex items-center justify-between group active:scale-98 transition-transform duration-150">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div>
+<h3 class="text-slate-100 font-bold font-body-base text-body-base">Siti Aminah</h3>
+<p class="text-slate-400 font-body-sm text-body-sm">Sekretaris Lapangan B</p>
+</div>
+</div>
+<button class="bg-primary-container/10 hover:bg-primary-container text-primary-container hover:text-on-primary-container p-3 rounded-full transition-colors active:scale-95 duration-150">
+<span class="material-symbols-outlined">chat</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Psychological/Stress -->
+<section>
+<h2 class="text-slate-100 font-headline-md text-headline-md mb-stack-md flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-container">psychology</span>
+                    Psychological
+                </h2>
+<div class="grid grid-cols-1 gap-stack-sm">
+<div class="glass-card p-4 rounded-xl active:scale-98 transition-transform duration-150">
+<div class="flex justify-between items-start mb-3">
+<div>
+<h3 class="text-slate-100 font-bold font-body-base text-body-base">UPK Pusat</h3>
+<p class="text-slate-400 font-body-sm text-body-sm">Unit Penanganan Krisis</p>
+</div>
+<span class="bg-tertiary-container/20 text-tertiary-container px-2 py-1 rounded text-xs font-bold">AVAIL</span>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container font-button-text text-button-text h-12 rounded-lg flex items-center justify-center gap-2 active:scale-95 transition-all duration-150">
+<span class="material-symbols-outlined">chat</span>
+                            Hubungi WA
+                        </button>
+</div>
+<div class="glass-card p-4 rounded-xl active:scale-98 transition-transform duration-150">
+<div class="flex justify-between items-start mb-3">
+<div>
+<h3 class="text-slate-100 font-bold font-body-base text-body-base">Konselor Sebaya</h3>
+<p class="text-slate-400 font-body-sm text-body-sm">Peer Support Network</p>
+</div>
+<span class="bg-slate-800 text-slate-400 px-2 py-1 rounded text-xs font-bold">STANDBY</span>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container font-button-text text-button-text h-12 rounded-lg flex items-center justify-center gap-2 active:scale-95 transition-all duration-150">
+<span class="material-symbols-outlined">chat</span>
+                            Hubungi WA
+                        </button>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-slate-950 text-label-md font-label-md fixed bottom-0 w-full z-50 border-t border-slate-800 flex justify-around items-center h-20 w-full max-w-container-max-width mx-auto px-gutter pb-safe shadow-lg">
+<a class="flex flex-col items-center justify-center text-slate-400 hover:text-primary-fixed-dim transition-colors active:scale-98 duration-150" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary-container font-bold transition-colors active:scale-98 duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">emergency_home</span>
+<span>Triage</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 hover:text-primary-fixed-dim transition-colors active:scale-98 duration-150" href="#">
+<span class="material-symbols-outlined">help_center</span>
+<span>Help</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 hover:text-primary-fixed-dim transition-colors active:scale-98 duration-150" href="#">
+<span class="material-symbols-outlined">person</span>
+<span>Profile</span>
+</a>
+</nav>
+<script>
+        // Simple touch feedback animation for interactive elements
+        document.querySelectorAll('button, .glass-card, a').forEach(el => {
+            el.addEventListener('touchstart', function() {
+                this.classList.add('scale-98');
+            });
+            el.addEventListener('touchend', function() {
+                this.classList.remove('scale-98');
+            });
+        });
+    </script>
+</body></html>

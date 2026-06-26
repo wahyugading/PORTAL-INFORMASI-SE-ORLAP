@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description"
+    content="Informasi & Media Sensus Ekonomi 2026 - Portal Informasi Orlap SE2026 Polstat STIS" />
+  <meta name="theme-color" content="#F27221" />
+  <title>Informasi & Media | PR-SE2026</title>
+
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="assets/Logo SE2026 - utama_Vertikal.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    :root {
+      --clr-orange: #F27221;
+      --clr-orange-dk: #D4611A;
+      --clr-black: #0F172A;
+      --clr-white: #FFFFFF;
+      --clr-blue: #003366;
+      --clr-surface: #F8FAFC;
+      --clr-border: #E2E8F0;
+      --clr-text-2: #475569;
+      --radius-card: 14px;
+      --shadow-card: 0 2px 12px rgba(15, 23, 42, .08);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--clr-white);
+      color: var(--clr-black);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      min-height: 100dvh;
+    }
+
+    /* ---- TOP APP BAR ---- */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--clr-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      height: 56px;
+    }
+
+    .topbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .topbar-logo {
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
+    }
+
+    .topbar-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--clr-black);
+      letter-spacing: -0.02em;
+    }
+
+    .topbar-title span {
+      color: var(--clr-orange);
+    }
+
+    .topbar-badge {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--clr-blue);
+      background: rgba(0, 51, 102, 0.08);
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 51, 102, 0.15);
+    }
+
+    /* ---- MAIN ---- */
+    main {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px 0 120px;
+    }
+
+    .px {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .page-title {
+      font-size: 24px;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      margin-bottom: 6px;
+    }
+
+    .page-desc {
+      font-size: 13px;
+      color: var(--clr-text-2);
+      line-height: 1.5;
+      margin-bottom: 28px;
+    }
+
+    /* ---- SECTION LABEL ---- */
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 28px 16px 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--clr-black);
+    }
+
+    .section-label h2 {
+      font-size: 17px;
+      font-weight: 800;
+    }
+
+    .section-label .icon {
+      color: var(--clr-orange);
+      font-size: 22px;
+    }
+
+    /* ============================================================
+       CAROUSEL – Apa Itu Sensus Ekonomi
+       ============================================================ */
+    .carousel-wrapper {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .carousel-track {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding: 4px 16px 12px;
+      cursor: grab;
+    }
+
+    .carousel-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .carousel-track:active {
+      cursor: grabbing;
+    }
+
+    .carousel-slide {
+      flex: 0 0 calc(90%);
+      scroll-snap-align: start;
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      border: 1px solid var(--clr-border);
+      background: var(--clr-surface);
+      position: relative;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    .carousel-slide-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: var(--clr-orange);
+      color: white;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 4px 8px;
+      border-radius: 999px;
+    }
+
+    /* Dots indicator */
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      padding: 6px 0 4px;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--clr-border);
+      transition: width 0.3s, background 0.3s;
+    }
+
+    .dot.active {
+      width: 20px;
+      background: var(--clr-orange);
+    }
+
+    /* ============================================================
+       FLYER TIR – Info Card
+       ============================================================ */
+    .tir-card {
+      margin: 0 16px;
+      border-radius: var(--radius-card);
+      border: 2px solid var(--clr-black);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      background: var(--clr-white);
+    }
+
+    /* PDF preview embed */
+    .tir-pdf-preview {
+      position: relative;
+      width: 100%;
+      background: #f1f5f9;
+      border-bottom: 1px solid var(--clr-border);
+      overflow: hidden;
+      max-height: 260px;
+    }
+
+    .tir-pdf-preview iframe {
+      width: 100%;
+      height: 340px;
+      border: none;
+      margin-top: -40px;
+      /* crop pdf toolbar chrome */
+      pointer-events: none;
+      display: block;
+    }
+
+    .tir-pdf-preview .overlay-view {
+      position: absolute;
+      inset: 0;
+      cursor: pointer;
+      z-index: 2;
+      background: transparent;
+    }
+
+    .tir-body {
+      padding: 16px;
+    }
+
+    .tir-title {
+      font-size: 16px;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .tir-sub {
+      font-size: 12px;
+      color: var(--clr-text-2);
+      margin-bottom: 16px;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      border: 1px solid var(--clr-border);
+      background: var(--clr-surface);
+      text-decoration: none;
+      color: var(--clr-black);
+      transition: 0.2s;
+    }
+
+    .contact-row:hover {
+      border-color: var(--clr-orange);
+      background: rgba(242, 114, 33, 0.04);
+    }
+
+    .contact-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 22px;
+    }
+
+    .contact-icon.green {
+      background: #e7f7ee;
+      color: #25D366;
+    }
+
+    .contact-icon.blue {
+      background: rgba(0, 51, 102, 0.1);
+      color: var(--clr-blue);
+    }
+
+    .contact-icon.orange {
+      background: rgba(242, 114, 33, 0.12);
+      color: var(--clr-orange);
+    }
+
+    .contact-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--clr-text-2);
+      margin-bottom: 2px;
+    }
+
+    .contact-value {
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .contact-row .arrow {
+      margin-left: auto;
+      color: var(--clr-text-2);
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .btn-open-pdf {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 12px;
+      margin-top: 14px;
+      background: var(--clr-black);
+      color: var(--clr-white);
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    .btn-open-pdf:hover {
+      background: #1e293b;
+    }
+
+    .btn-open-pdf:active {
+      transform: scale(0.97);
+    }
+
+    /* ============================================================
+       LEAFLET PDF CARD
+       ============================================================ */
+    .leaflet-card {
+      margin: 0 16px;
+      border-radius: var(--radius-card);
+      border: 2px solid var(--clr-border);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      background: var(--clr-white);
+    }
+
+    .leaflet-preview {
+      position: relative;
+      width: 100%;
+      background: #f1f5f9;
+      border-bottom: 1px solid var(--clr-border);
+      overflow: hidden;
+      max-height: 260px;
+    }
+
+    .leaflet-preview iframe {
+      width: 100%;
+      height: 360px;
+      border: none;
+      margin-top: -40px;
+      pointer-events: none;
+      display: block;
+    }
+
+    .leaflet-preview .overlay-view {
+      position: absolute;
+      inset: 0;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .leaflet-body {
+      padding: 16px;
+    }
+
+    .leaflet-title {
+      font-size: 16px;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .leaflet-sub {
+      font-size: 12px;
+      color: var(--clr-text-2);
+      margin-bottom: 14px;
+    }
+
+    .btn-leaflet {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 12px;
+      background: var(--clr-orange);
+      color: var(--clr-white);
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    .btn-leaflet:hover {
+      background: var(--clr-orange-dk);
+    }
+
+    .btn-leaflet:active {
+      transform: scale(0.97);
+    }
+
+    /* ---- FOOTER ---- */
+    .footer {
+      text-align: center;
+      padding: 28px 20px 16px;
+      border-top: 1px solid var(--clr-border);
+      margin-top: 32px;
+    }
+
+    .footer-logo {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      margin: 0 auto 8px;
+      display: block;
+    }
+
+    .footer-text {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: var(--clr-text-2);
+      text-transform: uppercase;
+    }
+
+    /* ---- BOTTOM NAV ---- */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid var(--clr-border);
+      box-shadow: 0 -4px 16px rgba(15, 23, 42, .08);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 64px;
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      text-decoration: none;
+      color: var(--clr-text-2);
+      padding: 8px 16px;
+      border-radius: 10px;
+      transition: 0.15s;
+      min-width: 56px;
+    }
+
+    .nav-item.active {
+      color: var(--clr-orange);
+      background: rgba(242, 114, 33, 0.08);
+    }
+
+    .nav-item:hover:not(.active) {
+      background: var(--clr-surface);
+    }
+
+    .nav-item:active {
+      transform: scale(0.92);
+    }
+
+    .nav-item .material-symbols-outlined {
+      font-size: 22px;
+    }
+
+    .nav-item span.label {
+      font-size: 10px;
+      font-weight: 600;
+    }
+
+    /* ---- ANIMATIONS ---- */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-up {
+      animation: fadeUp 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    }
+
+    .fade-up-2 {
+      animation: fadeUp 0.5s 0.1s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    }
+
+    .fade-up-3 {
+      animation: fadeUp 0.5s 0.2s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP APP BAR -->
+  <header class="topbar">
+    <a href="index.html" class="topbar-brand">
+      <img src="assets/Logo SE2026 - utama_Vertikal.svg" alt="Logo Sensus Ekonomi 2026" class="topbar-logo" />
+      <span class="topbar-title">PR-<span>SE2026</span></span>
+    </a>
+    <span class="topbar-badge">INFO</span>
+  </header>
+
+  <main>
+
+    <div class="px fade-up">
+      <h1 class="page-title">Informasi &amp; Media</h1>
+      <p class="page-desc">Materi edukasi, flyer resmi, dan leaflet pendukung kegiatan Sensus Ekonomi 2026.</p>
+    </div>
+
+    <!-- ====================================================
+         SECTION 1: CAROUSEL – Apa Itu Sensus Ekonomi
+         ==================================================== -->
+    <div class="section-label fade-up">
+      <span class="material-symbols-outlined icon">auto_stories</span>
+      <h2>Apa Itu Sensus Ekonomi 2026?</h2>
+    </div>
+
+    <div class="carousel-wrapper fade-up-2">
+      <div class="carousel-track" id="carouselTrack">
+        <div class="carousel-slide">
+          <span class="carousel-slide-badge">1 / 5</span>
+          <img src="assets/Apa Itu Sensus Ekonomi - 1.jpg" alt="Apa Itu Sensus Ekonomi - Bagian 1" loading="eager" />
+        </div>
+        <div class="carousel-slide">
+          <span class="carousel-slide-badge">2 / 5</span>
+          <img src="assets/Apa Itu Sensus Ekonomi - 2.jpg" alt="Apa Itu Sensus Ekonomi - Bagian 2" loading="lazy" />
+        </div>
+        <div class="carousel-slide">
+          <span class="carousel-slide-badge">3 / 5</span>
+          <img src="assets/Apa Itu Sensus Ekonomi - 3.jpg" alt="Apa Itu Sensus Ekonomi - Bagian 3" loading="lazy" />
+        </div>
+        <div class="carousel-slide">
+          <span class="carousel-slide-badge">4 / 5</span>
+          <img src="assets/Apa Itu Sensus Ekonomi - 4.jpg" alt="Apa Itu Sensus Ekonomi - Bagian 4" loading="lazy" />
+        </div>
+        <div class="carousel-slide">
+          <span class="carousel-slide-badge">5 / 5</span>
+          <img src="assets/Apa Itu Sensus Ekonomi - 5.jpg" alt="Apa Itu Sensus Ekonomi - Bagian 5" loading="lazy" />
+        </div>
+      </div>
+      <div class="carousel-dots" id="carouselDots">
+        <div class="dot active" data-index="0"></div>
+        <div class="dot" data-index="1"></div>
+        <div class="dot" data-index="2"></div>
+        <div class="dot" data-index="3"></div>
+        <div class="dot" data-index="4"></div>
+      </div>
+    </div>
+
+    <!-- ====================================================
+         SECTION 2: FLYER TIR – Informasi Resmi BPS
+         ==================================================== -->
+    <div class="section-label fade-up">
+      <span class="material-symbols-outlined icon">newspaper</span>
+      <h2>Flyer Resmi BPS SE2026</h2>
+    </div>
+
+    <div class="tir-card fade-up-2">
+      <!-- PDF embed preview (click to open full) -->
+      <div class="tir-pdf-preview" id="tirPreview">
+        <iframe id="tirIframe" src="assets/Flyer TIR SE2026.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH"
+          title="Preview Flyer TIR SE2026">
+        </iframe>
+        <div class="overlay-view" onclick="openPDF('assets/Flyer TIR SE2026.pdf')" title="Tap untuk buka PDF penuh">
+        </div>
+      </div>
+
+      <div class="tir-body">
+        <div class="tir-title">Flyer Tata Informasi Resmi (TIR) SE2026</div>
+        <div class="tir-sub">Informasi kontak resmi & kanal digital Sensus Ekonomi 2026 dari BPS RI</div>
+
+        <!-- Call Center BPS -->
+        <a class="contact-row" href="tel:081511262026">
+          <div class="contact-icon green">
+            <span class="material-symbols-outlined">call</span>
+          </div>
+          <div>
+            <div class="contact-label">Call Center Resmi SE2026</div>
+            <div class="contact-value">0815-1126-2026</div>
+          </div>
+          <span class="material-symbols-outlined arrow">chevron_right</span>
+        </a>
+
+        <!-- Email Resmi SE2026 -->
+        <a class="contact-row" href="mailto:halose2026@bps.go.id">
+          <div class="contact-icon orange">
+            <span class="material-symbols-outlined">mail</span>
+          </div>
+          <div>
+            <div class="contact-label">Email Resmi Sekretariat</div>
+            <div class="contact-value">halose2026@bps.go.id</div>
+          </div>
+          <span class="material-symbols-outlined arrow">chevron_right</span>
+        </a>
+
+        <!-- Web Resmi SE2026 -->
+        <a class="contact-row" href="https://sensus.bps.go.id/se2026" target="_blank" rel="noopener">
+          <div class="contact-icon blue">
+            <span class="material-symbols-outlined">language</span>
+          </div>
+          <div>
+            <div class="contact-label">Website Resmi SE2026</div>
+            <div class="contact-value">sensus.bps.go.id/se2026</div>
+          </div>
+          <span class="material-symbols-outlined arrow">open_in_new</span>
+        </a>
+
+        <!-- Chatbot Bung Itung -->
+        <a class="contact-row" href="https://sensus.bps.go.id/se2026/" target="_blank" rel="noopener">
+          <div class="contact-icon orange">
+            <span class="material-symbols-outlined">smart_toy</span>
+          </div>
+          <div>
+            <div class="contact-label">Bingung Tentang Sensus Ekonomi ? Tanya Langsung ke Chatbot 🤖</div>
+            <div class="contact-value">Bung Itung 🤖</div>
+          </div>
+          <span class="material-symbols-outlined arrow">open_in_new</span>
+        </a>
+
+        <a class="btn-open-pdf" href="assets/Flyer TIR SE2026.pdf" target="_blank" rel="noopener">
+          <span class="material-symbols-outlined">picture_as_pdf</span>
+          Buka Flyer TIR Lengkap
+        </a>
+      </div>
+    </div>
+
+    <!-- ====================================================
+         SECTION 3: LEAFLET TRIFOLD SE2026
+         ==================================================== -->
+    <div class="section-label fade-up">
+      <span class="material-symbols-outlined icon">menu_book</span>
+      <h2>Leaflet Trifold SE2026</h2>
+    </div>
+
+    <div class="leaflet-card fade-up-2">
+      <!-- PDF embed preview -->
+      <div class="leaflet-preview">
+        <iframe id="leafletIframe"
+          src="assets/SE2026 - Leaflet Trifold - REV 20260608.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH"
+          title="Preview Leaflet Trifold SE2026">
+        </iframe>
+        <div class="overlay-view" onclick="openPDF('assets/SE2026 - Leaflet Trifold - REV 20260608.pdf')"></div>
+      </div>
+
+      <div class="leaflet-body">
+        <div class="leaflet-title">Leaflet Trifold Sensus Ekonomi 2026</div>
+        <div class="leaflet-sub">Revisi 8 Juni 2026 · Materi edukasi responden & petugas lapangan</div>
+
+        <a class="btn-leaflet" href="assets/SE2026 - Leaflet Trifold - REV 20260608.pdf" target="_blank" rel="noopener">
+          <span class="material-symbols-outlined">picture_as_pdf</span>
+          Buka Leaflet Lengkap
+        </a>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer fade-up">
+      <div style="font-size: 14px; font-weight: 800; color: var(--clr-black); margin-bottom: 4px; font-style: italic;">
+        "Data Akurat, Ekonomi Tangguh, Indonesia Maju"
+      </div>
+      <div style="font-size: 12px; font-weight: 700; color: var(--clr-orange); margin-bottom: 12px;">
+        #MencatatEkonomiIndonesia
+      </div>
+      <img src="assets/Logo SE2026 - utama_Vertikal.svg" alt="Logo SE2026" class="footer-logo" />
+      <p class="footer-text">© 2026 · Organisasi Lapangan Mahasiswa Politeknik Statistika STIS · PR-SE2026</p>
+      <div style="font-size: 11px; font-weight: 600; color: var(--clr-text-2); margin-top: 12px;">
+        Kendala Web? Hubungi <a href="https://wa.me/6285867428956" target="_blank"
+          style="color: var(--clr-blue); text-decoration: none;">Wahyu (085867428956)</a>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ========== BOTTOM NAV ========== -->
+  <nav class="bottom-nav" role="navigation" aria-label="Navigasi Utama">
+    <a href="index.html" class="nav-item" id="nav-home">
+      <span class="material-symbols-outlined">home</span>
+      <span class="label">Beranda</span>
+    </a>
+    <a href="struktur.html" class="nav-item" id="nav-struktur">
+      <span class="material-symbols-outlined">groups</span>
+      <span class="label">Struktur</span>
+    </a>
+    <a href="informasi.html" class="nav-item active" id="nav-info">
+      <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">campaign</span>
+      <span class="label">Informasi</span>
+    </a>
+    <a href="bantuan.html" class="nav-item" id="nav-bantuan">
+      <span class="material-symbols-outlined">support_agent</span>
+      <span class="label">Bantuan</span>
+    </a>
+  </nav>
+
+  <script>
+    /* =============================================
+       CAROUSEL LOGIC – scroll-snap with dot sync
+       ============================================= */
+    const track = document.getElementById('carouselTrack');
+    const dots = document.querySelectorAll('#carouselDots .dot');
+    const slides = track.querySelectorAll('.carousel-slide');
+
+    function updateDots() {
+      const scrollLeft = track.scrollLeft;
+      const slideWidth = slides[0].getBoundingClientRect().width + 12; // gap = 12px
+      const activeIdx = Math.round(scrollLeft / slideWidth);
+      dots.forEach((d, i) => d.classList.toggle('active', i === activeIdx));
+    }
+
+    track.addEventListener('scroll', () => {
+      clearTimeout(track._scrollTimer);
+      track._scrollTimer = setTimeout(updateDots, 50);
+    }, { passive: true });
+
+    // Tap on dot → scroll to slide
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        const slideWidth = slides[0].getBoundingClientRect().width + 12;
+        track.scrollTo({ left: slideWidth * i, behavior: 'smooth' });
+      });
+    });
+
+    /* Touch drag for non-snap fallback */
+    let startX = 0, isDragging = false;
+    track.addEventListener('pointerdown', e => { startX = e.clientX; isDragging = false; });
+    track.addEventListener('pointermove', e => { if (Math.abs(e.clientX - startX) > 5) isDragging = true; });
+
+    /* =============================================
+       Open PDF helper
+       ============================================= */
+    function openPDF(url) {
+      window.open(url, '_blank', 'noopener');
+    }
+
+    /* =============================================
+       PDF iframe fallback for non-PDF browsers
+       ============================================= */
+    function handleIframeError(id) {
+      const iframe = document.getElementById(id);
+      if (!iframe) return;
+      iframe.onerror = () => { iframe.style.display = 'none'; };
+    }
+    handleIframeError('tirIframe');
+    handleIframeError('leafletIframe');
+  </script>
+</body>
+
+</html>

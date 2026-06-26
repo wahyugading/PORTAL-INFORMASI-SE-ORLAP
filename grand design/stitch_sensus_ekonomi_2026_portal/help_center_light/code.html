@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-error": "#ffffff",
+                "outline-variant": "#dfc0b2",
+                "on-secondary-fixed": "#131b2e",
+                "surface-container": "#eceef0",
+                "secondary-container": "#dae2fd",
+                "tertiary-fixed-dim": "#8ccdff",
+                "error-container": "#ffdad6",
+                "error": "#ba1a1a",
+                "secondary": "#565e74",
+                "text-solid": "#0F172A",
+                "surface-bright": "#f7f9fb",
+                "secondary-fixed": "#dae2fd",
+                "inverse-on-surface": "#eff1f3",
+                "primary": "#9e4300",
+                "institutional-blue": "#003366",
+                "tertiary": "#006493",
+                "secondary-fixed-dim": "#bec6e0",
+                "surface-container-lowest": "#ffffff",
+                "inverse-primary": "#ffb691",
+                "tertiary-fixed": "#cae6ff",
+                "on-error-container": "#93000a",
+                "surface": "#f7f9fb",
+                "on-tertiary": "#ffffff",
+                "on-primary-container": "#542000",
+                "on-surface": "#191c1e",
+                "outline": "#8c7265",
+                "surface-container-high": "#e6e8ea",
+                "background": "#f7f9fb",
+                "on-primary": "#ffffff",
+                "inverse-surface": "#2d3133",
+                "on-surface-variant": "#584237",
+                "surface-pure": "#FFFFFF",
+                "primary-container": "#f27221",
+                "surface-tint": "#9e4300"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "stack-sm": "8px",
+                "gutter": "16px",
+                "stack-md": "16px",
+                "margin-desktop": "40px",
+                "touch-target": "48px",
+                "margin-mobile": "20px",
+                "stack-lg": "32px"
+            },
+            "fontFamily": {
+                "body-lg": ["Inter"],
+                "headline-lg-mobile": ["Inter"],
+                "display-lg": ["Inter"],
+                "headline-lg": ["Inter"],
+                "label-md": ["Inter"],
+                "label-lg": ["Inter"],
+                "headline-md": ["Inter"],
+                "title-lg": ["Inter"],
+                "body-md": ["Inter"]
+            },
+            "fontSize": {
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-lg-mobile": ["28px", {"lineHeight": "34px", "fontWeight": "700"}],
+                "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "700"}],
+                "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out, opacity 0.2s ease-in;
+        opacity: 0;
+      }
+      .faq-item.active .faq-answer {
+        max-height: 500px;
+        opacity: 1;
+        transition: max-height 0.5s ease-in, opacity 0.4s ease-in;
+      }
+      .faq-item.active .faq-chevron {
+        transform: rotate(180deg);
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-bright text-on-surface min-h-screen flex flex-col font-body-md text-body-md">
+<!-- TopAppBar -->
+<header class="w-full sticky top-0 z-50 bg-surface-pure border-b border-on-surface/10 flex items-center justify-between px-margin-mobile h-touch-target">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 transition-transform duration-150 text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-headline-md text-headline-md font-bold text-text-solid">PR-SE2026</h1>
+</div>
+<button class="active:scale-95 transition-transform duration-150 text-primary">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</header>
+<main class="flex-1 pb-24">
+<!-- Sticky Search Area -->
+<div class="sticky top-[48px] z-40 bg-surface-pure/95 backdrop-blur-md px-margin-mobile py-stack-md border-b border-on-surface/5">
+<div class="flex gap-2">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary">search</span>
+<input class="w-full h-touch-target pl-10 pr-4 bg-surface-pure border-b-2 border-text-solid focus:border-primary-container outline-none font-body-md transition-all" placeholder="Cari solusi kasus..." type="text"/>
+</div>
+<button class="bg-primary-container text-on-primary font-label-lg px-4 rounded-lg active:scale-90 transition-all">
+                    Reset
+                </button>
+</div>
+<!-- Quick Filter Chips -->
+<div class="flex gap-2 mt-4 overflow-x-auto no-scrollbar py-1">
+<span class="flex-shrink-0 bg-primary-container text-on-primary px-4 py-1.5 rounded-full font-label-md">#Menolak</span>
+<span class="flex-shrink-0 bg-primary-container text-on-primary px-4 py-1.5 rounded-full font-label-md">#Pindah</span>
+<span class="flex-shrink-0 bg-primary-container text-on-primary px-4 py-1.5 rounded-full font-label-md">#Meninggal</span>
+<span class="flex-shrink-0 bg-primary-container text-on-primary px-4 py-1.5 rounded-full font-label-md">#Sinyal</span>
+</div>
+</div>
+<!-- FAQ Content -->
+<div class="px-margin-mobile mt-stack-lg space-y-stack-md">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-text-solid">Pusat Bantuan</h2>
+<!-- FAQ Accordion -->
+<div class="space-y-4">
+<!-- FAQ Item 1 -->
+<div class="faq-item group bg-surface-pure border border-on-surface/10 rounded-xl overflow-hidden transition-all duration-200">
+<button class="w-full flex flex-col items-start p-stack-md text-left active:bg-surface-container transition-colors" onclick="toggleFaq(this)">
+<div class="flex justify-between items-center w-full mb-2">
+<span class="bg-primary-container text-on-primary text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">METODOLOGI</span>
+<span class="material-symbols-outlined faq-chevron transition-transform duration-300 text-secondary">expand_more</span>
+</div>
+<h3 class="font-title-lg text-title-lg font-bold text-text-solid leading-tight">Bagaimana jika responden menolak pendataan?</h3>
+</button>
+<div class="faq-answer px-stack-md">
+<p class="pb-stack-md text-on-surface-variant font-body-md">
+                            Gunakan pendekatan persuasif dengan menjelaskan tujuan program PR-SE2026. Jika tetap menolak, tandai koordinat lokasi dan beri tag <span class="font-bold text-primary">#Menolak</span> pada form digital untuk tindak lanjut tim supervisi.
+                        </p>
+</div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="faq-item group bg-surface-pure border border-on-surface/10 rounded-xl overflow-hidden transition-all duration-200">
+<button class="w-full flex flex-col items-start p-stack-md text-left active:bg-surface-container transition-colors" onclick="toggleFaq(this)">
+<div class="flex justify-between items-center w-full mb-2">
+<span class="bg-primary-container text-on-primary text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">LOGISTIK</span>
+<span class="material-symbols-outlined faq-chevron transition-transform duration-300 text-secondary">expand_more</span>
+</div>
+<h3 class="font-title-lg text-title-lg font-bold text-text-solid leading-tight">Kendala sinyal di area Blank Spot?</h3>
+</button>
+<div class="faq-answer px-stack-md">
+<p class="pb-stack-md text-on-surface-variant font-body-md">
+                            Aplikasi mendukung mode offline. Pastikan Anda telah mengunduh peta area sebelum bertugas. Sinkronisasi data dilakukan saat Anda mendapatkan akses internet stabil.
+                        </p>
+</div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="faq-item group bg-surface-pure border border-on-surface/10 rounded-xl overflow-hidden transition-all duration-200">
+<button class="w-full flex flex-col items-start p-stack-md text-left active:bg-surface-container transition-colors" onclick="toggleFaq(this)">
+<div class="flex justify-between items-center w-full mb-2">
+<span class="bg-primary-container text-on-primary text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">ADMINISTRASI</span>
+<span class="material-symbols-outlined faq-chevron transition-transform duration-300 text-secondary">expand_more</span>
+</div>
+<h3 class="font-title-lg text-title-lg font-bold text-text-solid leading-tight">Perubahan data anggota keluarga?</h3>
+</button>
+<div class="faq-answer px-stack-md">
+<p class="pb-stack-md text-on-surface-variant font-body-md">
+                            Perubahan data yang telah disubmit hanya dapat dilakukan melalui menu "Koreksi" selama periode pencacahan masih berlangsung. Lampirkan bukti foto KTP terbaru.
+                        </p>
+</div>
+</div>
+</div>
+<!-- Fallback Card -->
+<div class="mt-stack-lg border-2 border-dashed border-text-solid/30 rounded-xl p-stack-lg bg-surface-container-low text-center flex flex-col items-center">
+<div class="w-16 h-16 bg-surface-pure rounded-full flex items-center justify-center mb-4 shadow-sm border border-on-surface/5">
+<span class="material-symbols-outlined text-primary text-3xl">search_off</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-text-solid mb-2">Kasus belum terdata?</h4>
+<p class="text-on-surface-variant mb-6 px-4">Jika Anda menemukan kasus unik di lapangan yang tidak tercantum dalam panduan ini, segera laporkan.</p>
+<button class="w-full max-w-xs h-touch-target bg-primary-container text-on-primary font-bold rounded-lg shadow-md active:scale-95 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">description</span>
+                    Laporkan Kasus Baru via G-Form
+                </button>
+</div>
+<!-- Visual Decorative Card -->
+<div class="relative overflow-hidden rounded-xl h-48 mt-8 border border-on-surface/10">
+<div class="absolute inset-0 bg-gradient-to-br from-primary-container to-primary opacity-90 z-10"></div>
+<div class="absolute inset-0 z-0" data-alt="A cinematic, high-contrast aerial view of a modern urban landscape with intricate street grids, bathed in morning sunlight. The lighting is sharp, creating deep shadows and bright highlights that emphasize structure and order. The color palette is dominated by neutral architectural tones with vibrant orange accents, matching a professional high-stakes field operation aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA2Ak0xFnaOQw9VIuFBp4CNywNrU2VcZx6Tceu8sH0EbTut0gXS75zemeT0fDTLk3ciDoNq8w8CdLRnzqcuVU-AD3hut0Aro_hrpbD17YQt7NArVmqWBWExTtOmjBPiDwuqMG70O5c240DTh7StuZMlACYAwmy6UOzQxlrVK98KvhJQQNfv0Musswh0mjGDVZgMZ3MSNT_z4_ZydyBi_V5mZ-TbNm6DfANo0LiWVKm5uZ2v7nLQwJb6engN1gQsWZFNGI37I6RRREA')"></div>
+<div class="relative z-20 h-full p-stack-md flex flex-col justify-end text-on-primary">
+<h5 class="font-headline-sm text-headline-sm font-bold">Panduan Lapangan v1.0.4</h5>
+<p class="font-label-md opacity-80 uppercase tracking-widest">Pembaruan terakhir: 24 Okt 2023</p>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 bg-surface-pure border-t border-on-surface/10 shadow-[0_-4px_12px_rgba(15,23,42,0.08)] flex justify-around items-center h-[72px] pb-safe px-4 rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-secondary" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary" href="#">
+<span class="material-symbols-outlined">emergency_home</span>
+<span class="font-label-md text-label-md">Triage</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary bg-primary-container/10 rounded-xl px-4 py-1" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">help_center</span>
+<span class="font-label-md text-label-md">Help</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-md text-label-md">Profile</span>
+</a>
+</nav>
+<script>
+        function toggleFaq(button) {
+            const item = button.closest('.faq-item');
+            const isActive = item.classList.contains('active');
+            
+            // Close all others
+            document.querySelectorAll('.faq-item').forEach(i => {
+                i.classList.remove('active');
+                i.style.borderColor = 'rgba(25, 28, 30, 0.1)';
+            });
+
+            // Toggle current
+            if (!isActive) {
+                item.classList.add('active');
+                item.style.borderColor = '#9e4300'; // Primary color
+            }
+        }
+
+        // Initialize micro-interactions
+        document.querySelectorAll('button, a').forEach(el => {
+            el.addEventListener('touchstart', function() {
+                this.classList.add('scale-95');
+            });
+            el.addEventListener('touchend', function() {
+                this.classList.remove('scale-95');
+            });
+        });
+    </script>
+</body></html>

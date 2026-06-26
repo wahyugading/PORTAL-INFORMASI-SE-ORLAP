@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="Pusat Solusi & Bantuan Kendala Lapangan Sensus Ekonomi 2026" />
+  <meta name="theme-color" content="#F27221" />
+  <title>Bantuan & Solusi | PR-SE2026</title>
+
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="assets/Logo SE2026 - utama_Vertikal.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    /* =============================================
+       DESIGN SYSTEM - SE2026 HIGH CONTRAST LIGHT
+       ============================================= */
+    :root {
+      --clr-orange: #F27221;
+      --clr-orange-dk: #D4611A;
+      --clr-black: #0F172A;
+      --clr-white: #FFFFFF;
+      --clr-blue: #003366;
+      --clr-surface: #F8FAFC;
+      --clr-border: #E2E8F0;
+      --clr-text-2: #475569;
+      --radius-card: 14px;
+      --shadow-card: 0 2px 12px rgba(15, 23, 42, .08);
+      --transition: 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--clr-white);
+      color: var(--clr-black);
+      -webkit-font-smoothing: antialiased;
+      overflow-y: scroll;
+      /* prevent layout shift */
+      overflow-x: hidden;
+      min-height: 100dvh;
+    }
+
+    /* ---- TOP APP BAR ---- */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--clr-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      height: 56px;
+    }
+
+    .topbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .topbar-logo {
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
+    }
+
+    .topbar-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--clr-black);
+      letter-spacing: -0.02em;
+    }
+
+    .topbar-title span {
+      color: var(--clr-orange);
+    }
+
+    .topbar-badge {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--clr-blue);
+      background: rgba(0, 51, 102, 0.08);
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 51, 102, 0.15);
+    }
+
+    /* ---- MAIN ---- */
+    main {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px 16px 120px;
+    }
+
+    .page-title {
+      font-size: 24px;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      margin-bottom: 6px;
+    }
+
+    .page-desc {
+      font-size: 13px;
+      color: var(--clr-text-2);
+      line-height: 1.5;
+      margin-bottom: 24px;
+    }
+
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 32px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--clr-black);
+    }
+
+    .section-label h2 {
+      font-size: 17px;
+      font-weight: 800;
+    }
+
+    .section-label .icon {
+      color: var(--clr-orange);
+      font-size: 22px;
+    }
+
+    /* ============================================================
+       TRIAGE CALL CENTER
+       ============================================================ */
+    .triage-container {
+      background: var(--clr-white);
+      border: 2px solid var(--clr-black);
+      border-radius: var(--radius-card);
+      padding: 20px;
+      box-shadow: var(--shadow-card);
+      margin-bottom: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .triage-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(to right, #003366, #F27221);
+    }
+
+    .triage-header {
+      margin-bottom: 16px;
+    }
+
+    .triage-header h3 {
+      font-size: 14px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--clr-black);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .triage-header p {
+      font-size: 12px;
+      color: var(--clr-text-2);
+      line-height: 1.4;
+    }
+
+    .triage-btn {
+      width: 100%;
+      text-align: left;
+      padding: 14px 16px;
+      background: var(--clr-surface);
+      border: 1px solid var(--clr-border);
+      border-radius: 12px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .triage-btn:hover {
+      border-color: var(--clr-orange);
+      background: rgba(242, 114, 33, 0.03);
+      transform: translateY(-1px);
+    }
+
+    .triage-btn:active {
+      transform: translateY(0);
+    }
+
+    .triage-btn .icon {
+      font-size: 24px;
+      color: var(--clr-black);
+    }
+
+    .triage-btn .text-wrapper {
+      flex: 1;
+    }
+
+    .triage-btn h4 {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--clr-black);
+      margin-bottom: 2px;
+    }
+
+    .triage-btn p {
+      font-size: 11px;
+      color: var(--clr-text-2);
+      line-height: 1.4;
+    }
+
+    /* Result Stage */
+    .triage-result {
+      display: none;
+      animation: fadeUp 0.3s ease-out forwards;
+    }
+
+    .alert-box {
+      background: rgba(242, 114, 33, 0.1);
+      border-left: 4px solid var(--clr-orange);
+      padding: 12px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+      font-size: 12px;
+      color: var(--clr-orange-dk);
+      line-height: 1.5;
+    }
+
+    .secure-contact {
+      background: var(--clr-surface);
+      border: 1px solid var(--clr-border);
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .secure-contact-info h4 {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--clr-black);
+      margin-bottom: 2px;
+    }
+
+    .secure-contact-info p {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--clr-text-2);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .btn-call {
+      background: #25D366;
+      /* WA Green */
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: 0.2s;
+    }
+
+    .btn-call:hover {
+      background: #1ebc5a;
+    }
+
+    .btn-call:active {
+      transform: scale(0.95);
+    }
+
+    .btn-back-triage {
+      width: 100%;
+      background: transparent;
+      border: none;
+      color: var(--clr-text-2);
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: underline;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    /* ============================================================
+       FUZZY SEARCH & QNA
+       ============================================================ */
+    .search-wrapper {
+      position: sticky;
+      top: 56px;
+      z-index: 40;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      padding: 16px 0;
+      margin: 0 -16px;
+      border-bottom: 1px solid var(--clr-border);
+      margin-bottom: 20px;
+    }
+
+    .search-box {
+      position: relative;
+      margin: 0 16px;
+    }
+
+    .search-box input {
+      width: 100%;
+      background: var(--clr-white);
+      border: 2px solid var(--clr-black);
+      border-radius: 12px;
+      padding: 14px 44px 14px 16px;
+      font-size: 14px;
+      font-family: 'Inter', sans-serif;
+      color: var(--clr-black);
+      transition: var(--transition);
+    }
+
+    .search-box input:focus {
+      outline: none;
+      border-color: var(--clr-orange);
+      box-shadow: 0 0 0 4px rgba(242, 114, 33, 0.1);
+    }
+
+    .search-box .icon-search {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--clr-text-2);
+      font-size: 20px;
+      pointer-events: none;
+    }
+
+    .btn-clear {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--clr-border);
+      border: none;
+      border-radius: 999px;
+      width: 24px;
+      height: 24px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--clr-text-2);
+    }
+
+    .btn-clear.show {
+      display: flex;
+    }
+
+    .chips {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 12px 16px 4px;
+      scrollbar-width: none;
+    }
+
+    .chips::-webkit-scrollbar {
+      display: none;
+    }
+
+    .chip {
+      padding: 6px 14px;
+      background: var(--clr-surface);
+      border: 1px solid var(--clr-border);
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--clr-text-2);
+      white-space: nowrap;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .chip:hover {
+      background: #e2e8f0;
+    }
+
+    .chip.active {
+      background: var(--clr-orange);
+      color: white;
+      border-color: var(--clr-orange);
+    }
+
+    /* QnA Cards */
+    .qna-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .qna-card {
+      border: 2px solid var(--clr-black);
+      border-radius: var(--radius-card);
+      background: var(--clr-white);
+      overflow: hidden;
+    }
+
+    .qna-header {
+      width: 100%;
+      text-align: left;
+      padding: 16px;
+      background: var(--clr-surface);
+      border: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .qna-header:hover {
+      background: #f1f5f9;
+    }
+
+    .qna-cat {
+      display: inline-block;
+      font-size: 9px;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 3px 6px;
+      border-radius: 4px;
+      background: var(--clr-black);
+      color: var(--clr-white);
+      margin-bottom: 6px;
+    }
+
+    .qna-q {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--clr-black);
+      line-height: 1.4;
+    }
+
+    .qna-header .icon {
+      transition: transform 0.3s;
+      font-size: 20px;
+      color: var(--clr-black);
+      margin-top: 2px;
+    }
+
+    .qna-card.open .icon {
+      transform: rotate(180deg);
+    }
+
+    .qna-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+
+    .qna-a {
+      padding: 16px;
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--clr-text-2);
+      border-top: 2px solid var(--clr-black);
+    }
+
+    /* Fallback UI */
+    .fallback-ui {
+      display: none;
+      text-align: center;
+      padding: 40px 20px;
+      border: 2px dashed var(--clr-border);
+      border-radius: var(--radius-card);
+      background: var(--clr-surface);
+      margin-top: 20px;
+    }
+
+    .fallback-ui.show {
+      display: block;
+    }
+
+    .fallback-ui p {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .btn-gform {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--clr-orange);
+      color: white;
+      font-weight: 800;
+      font-size: 13px;
+      padding: 12px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    .btn-gform:hover {
+      background: var(--clr-orange-dk);
+    }
+
+    .btn-gform:active {
+      transform: scale(0.95);
+    }
+
+    /* ---- FOOTER ---- */
+    .footer {
+      text-align: center;
+      padding: 28px 20px 16px;
+      border-top: 1px solid var(--clr-border);
+      margin-top: 32px;
+    }
+
+    .footer-logo {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      margin: 0 auto 8px;
+      display: block;
+    }
+
+    .footer-text {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: var(--clr-text-2);
+      text-transform: uppercase;
+    }
+
+    /* ---- BOTTOM NAV ---- */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid var(--clr-border);
+      box-shadow: 0 -4px 16px rgba(15, 23, 42, .08);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 64px;
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      text-decoration: none;
+      color: var(--clr-text-2);
+      padding: 8px 16px;
+      border-radius: 10px;
+      transition: 0.15s;
+      min-width: 56px;
+    }
+
+    .nav-item.active {
+      color: var(--clr-orange);
+      background: rgba(242, 114, 33, 0.08);
+    }
+
+    .nav-item:hover:not(.active) {
+      background: var(--clr-surface);
+    }
+
+    .nav-item:active {
+      transform: scale(0.92);
+    }
+
+    .nav-item .material-symbols-outlined {
+      font-size: 22px;
+    }
+
+    .nav-item span.label {
+      font-size: 10px;
+      font-weight: 600;
+    }
+
+    /* ---- ANIMATIONS ---- */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-up {
+      animation: fadeUp 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP APP BAR -->
+  <header class="topbar">
+    <a href="index.html" class="topbar-brand">
+      <img src="assets/Logo SE2026 - utama_Vertikal.svg" alt="Logo Sensus Ekonomi 2026" class="topbar-logo" />
+      <span class="topbar-title">PR-<span>SE2026</span></span>
+    </a>
+    <span class="topbar-badge">BANTUAN</span>
+  </header>
+
+  <main>
+    <div class="fade-up">
+      <h1 class="page-title">Pusat Solusi Lapangan</h1>
+      <p class="page-desc">Jalur bantuan darurat dan pencarian solusi instan untuk kendala pendataan.</p>
+    </div>
+
+    <!-- ====================================================
+         TRIAGE CALL CENTER
+         ==================================================== -->
+    <div class="triage-container fade-up" style="animation-delay: 0.1s;">
+
+      <!-- Stage 1: Categories -->
+      <div id="triage-category" style="display: block;">
+        <div class="triage-header">
+          <h3><span class="material-symbols-outlined" style="font-size:18px;">support_agent</span> Jalur Bantuan
+            Terbimbing</h3>
+          <p>Pilih jenis kendala utama Anda untuk mendapatkan PIC penanganan yang tepat dan cepat.</p>
+        </div>
+
+        <button class="triage-btn" onclick="handleTriage('admin')">
+          <span class="material-symbols-outlined icon">edit_document</span>
+          <div class="text-wrapper">
+            <h4>Masalah Laporan & Admin</h4>
+            <p>Surat tugas hilang, salah rekap form, masalah presensi.</p>
+          </div>
+        </button>
+
+        <button class="triage-btn" onclick="handleTriage('mental')">
+          <span class="material-symbols-outlined icon" style="color: #25D366;">psychology</span>
+          <div class="text-wrapper">
+            <h4>Kelelahan Mental & Stres</h4>
+            <p>Konseling resmi UPK dan layanan konselor sebaya BEM.</p>
+          </div>
+        </button>
+
+        <button class="triage-btn" onclick="handleTriage('security')">
+          <span class="material-symbols-outlined icon" style="color: #e11d48;">gpp_bad</span>
+          <div class="text-wrapper">
+            <h4>Konflik Fisik / Penolakan Keras</h4>
+            <p>Diusir aparat, ancaman fisik, intimidasi berat.</p>
+          </div>
+        </button>
+      </div>
+
+      <!-- Stage 2: Result (Contact PIC) -->
+      <div id="triage-result" class="triage-result">
+        <div class="triage-header">
+          <h3>Rekomendasi Penanganan</h3>
+          <p>Kontak di bawah ini adalah penanggung jawab yang berwenang menyelesaikan masalah Anda secara cepat.</p>
+        </div>
+
+        <div class="alert-box" id="triage-alert">
+          <!-- populated by JS -->
+        </div>
+
+        <div class="secure-contact">
+          <div class="secure-contact-info">
+            <h4 id="pic-name">PIC Name</h4>
+            <p id="pic-role">PIC Role</p>
+          </div>
+          <button class="btn-call" id="pic-btn" data-phone="" onclick="callSecureContact(this)">
+            <span class="material-symbols-outlined" style="font-size:18px;">chat</span>
+            WA
+          </button>
+        </div>
+
+        <button class="btn-back-triage" onclick="resetTriage()">Kembali ke menu kategori</button>
+      </div>
+
+    </div>
+
+    <!-- ====================================================
+         FUZZY LIVE SEARCH & CHIPS
+         ==================================================== -->
+    <div class="search-wrapper fade-up" style="animation-delay: 0.2s;">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Cari kasus: menolak, pindah..." autocomplete="off" />
+        <span class="material-symbols-outlined icon-search" id="searchIcon">search</span>
+        <button class="btn-clear" id="searchClear" onclick="clearSearch()">
+          <span class="material-symbols-outlined" style="font-size: 16px;">close</span>
+        </button>
+      </div>
+      <div class="chips">
+        <button class="chip" onclick="applyTag(this, 'Menolak')">#Menolak</button>
+        <button class="chip" onclick="applyTag(this, 'Pindah')">#Pindah</button>
+        <button class="chip" onclick="applyTag(this, 'Sinyal')">#Sinyal</button>
+        <button class="chip" onclick="applyTag(this, 'Tutup')">#Tutup</button>
+      </div>
+    </div>
+
+    <!-- LIST KASUS -->
+    <div class="qna-list fade-up" id="qnaList" style="animation-delay: 0.3s;">
+      <!-- Populated by JS -->
+    </div>
+
+    <!-- FALLBACK UI (Not Found) -->
+    <div class="fallback-ui" id="fallbackUi">
+      <p>Kasus tidak ditemukan di database.</p>
+      <a href="http://s.stis.ac.id/PertanyaanSE2026" target="_blank" rel="noopener noreferrer" class="btn-gform">
+        <span class="material-symbols-outlined">description</span>
+        Laporkan Kasus via G-Form
+      </a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer fade-up">
+      <div style="font-size: 14px; font-weight: 800; color: var(--clr-black); margin-bottom: 4px; font-style: italic;">
+        "Data Akurat, Ekonomi Tangguh, Indonesia Maju"
+      </div>
+      <div style="font-size: 12px; font-weight: 700; color: var(--clr-orange); margin-bottom: 12px;">
+        #MencatatEkonomiIndonesia
+      </div>
+      <img src="assets/Logo SE2026 - utama_Vertikal.svg" alt="Logo SE2026" class="footer-logo" />
+      <p class="footer-text">© 2026 · Organisasi Lapangan Mahasiswa Politeknik Statistika STIS · PR-SE2026</p>
+      <div style="font-size: 11px; font-weight: 600; color: var(--clr-text-2); margin-top: 12px;">
+        Kendala Web? Hubungi <a href="https://wa.me/6285867428956" target="_blank"
+          style="color: var(--clr-blue); text-decoration: none;">Wahyu (085867428956)</a>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ========== BOTTOM NAV ========== -->
+  <nav class="bottom-nav" role="navigation" aria-label="Navigasi Utama">
+    <a href="index.html" class="nav-item" id="nav-home">
+      <span class="material-symbols-outlined">home</span>
+      <span class="label">Beranda</span>
+    </a>
+    <a href="struktur.html" class="nav-item" id="nav-struktur">
+      <span class="material-symbols-outlined">groups</span>
+      <span class="label">Struktur</span>
+    </a>
+    <a href="informasi.html" class="nav-item" id="nav-info">
+      <span class="material-symbols-outlined">campaign</span>
+      <span class="label">Informasi</span>
+    </a>
+    <a href="bantuan.html" class="nav-item active" id="nav-bantuan">
+      <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">support_agent</span>
+      <span class="label">Bantuan</span>
+    </a>
+  </nav>
+
+  <script>
+    /* =============================================
+       TRIAGE CALL CENTER LOGIC
+       ============================================= */
+    const CATEGORIES = {
+      'admin': {
+        name: 'Sekretaris Lapangan',
+        role: 'PIC Admin & Laporan',
+        alert: 'Persiapkan Nomor Induk Mahasiswa (NIM) dan jelaskan secara singkat kendala dokumen Anda sebelum menghubungi.',
+        phoneB64: 'NjI4MTIzNDU2Nzg5' // Dummy: 628123456789
+      },
+      'security': {
+        name: 'Bu Risni & BPH Utama',
+        role: 'PIC Keamanan / Urgent',
+        alert: '🚨 Segera menyingkir dari lokasi rawan dan cari tempat aman sebelum menghubungi PIC.',
+        phoneB64: 'NjI4OTk5ODg4Nzc3' // Dummy: 628999888777
+      }
+    };
+
+    function handleTriage(type) {
+      if (type === 'mental') {
+        window.open('https://s.stis.ac.id/LayananKonselingSebayaSTIS', '_blank');
+        return;
+      }
+
+      const data = CATEGORIES[type];
+      if (data) {
+        document.getElementById('triage-category').style.display = 'none';
+
+        document.getElementById('pic-name').textContent = data.name;
+        document.getElementById('pic-role').textContent = data.role;
+        document.getElementById('triage-alert').innerHTML = data.alert;
+        document.getElementById('pic-btn').dataset.phone = data.phoneB64;
+        document.getElementById('pic-btn').dataset.name = data.name;
+
+        document.getElementById('triage-result').style.display = 'block';
+      }
+    }
+
+    function resetTriage() {
+      document.getElementById('triage-result').style.display = 'none';
+      document.getElementById('triage-category').style.display = 'block';
+    }
+
+    function callSecureContact(btn) {
+      const b64 = btn.dataset.phone;
+      const name = btn.dataset.name;
+      try {
+        const decodedPhone = atob(b64);
+        const message = encodeURIComponent(`Halo ${name}, saya petugas lapangan SE2026 Polstat STIS ingin meminta bantuan mendesak terkait kendala lapangan.`);
+        window.open(`https://wa.me/${decodedPhone}?text=${message}`, '_blank', 'noopener,noreferrer');
+      } catch (e) {
+        alert("Gagal memecahkan kode kontak. Silakan hubungi Korwil.");
+      }
+    }
+
+    /* =============================================
+       QNA FUZZY SEARCH LOGIC
+       ============================================= */
+    const DATA_QNA = [
+      {
+        id: 'q1', category: 'Metodologi', tags: ['menolak', 'tidak mau', 'sibuk', 'usir'],
+        question: 'Bagaimana jika pelaku UMKM menolak keras didata dengan alasan sibuk?',
+        answer: 'Tunjukkan Surat Tugas BPS dan Surat Himbauan Menteri UMKM. Jelaskan bahwa jaminan kerahasiaan data diatur UU No 16/1997 dan wawancara hanya memakan waktu 5 menit. Jika tetap menolak keras, catat form kendala dan infokan ke Korwil.'
+      },
+      {
+        id: 'q2', category: 'Sistem', tags: ['pindah', 'alamat salah', 'tutup', 'bangkrut'],
+        question: 'Lokasi UMKM di target sampel ternyata sudah pindah alamat atau gulung tikar?',
+        answer: 'Jangan langsung dihapus dari sistem. Laporkan melalui menu identifikasi masalah dan pilih opsi "Perubahan Status Alamat" agar sistem merekapnya secara otomatis.'
+      },
+      {
+        id: 'q3', category: 'Teknis', tags: ['sinyal', 'blank spot', 'offline'],
+        question: 'Berada di area blank spot dan tidak bisa mengakses dokumen online?',
+        answer: 'Aplikasi PR-SE2026 ini mendukung mode offline. Pastikan Anda sudah membuka halaman web ini minimal sekali sebelum berangkat. Dokumen legalitas tetap bisa dibuka dari Beranda.'
+      },
+      {
+        id: 'q4', category: 'Metodologi', tags: ['batas wilayah', 'nyasar', 'peta'],
+        question: 'Blok sensus (peta wilayah) tidak jelas atau tumpang tindih dengan RT sebelah?',
+        answer: 'Gunakan patokan fisik alam (sungai, jalan raya). Jika masih ragu, segera hubungi Ketua RT/RW setempat untuk konfirmasi batas wilayah aktual.'
+      }
+    ];
+
+    const searchInput = document.getElementById('searchInput');
+    const searchClear = document.getElementById('searchClear');
+    const searchIcon = document.getElementById('searchIcon');
+    const qnaList = document.getElementById('qnaList');
+    const fallbackUi = document.getElementById('fallbackUi');
+    const chips = document.querySelectorAll('.chip');
+
+    function renderQnA(data) {
+      qnaList.innerHTML = '';
+      if (data.length === 0) {
+        qnaList.style.display = 'none';
+        fallbackUi.classList.add('show');
+        return;
+      }
+
+      qnaList.style.display = 'flex';
+      fallbackUi.classList.remove('show');
+
+      data.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'qna-card';
+        div.innerHTML = `
+          <button class="qna-header" onclick="toggleQna(this)">
+            <div>
+              <span class="qna-cat">${item.category}</span>
+              <div class="qna-q">${item.question}</div>
+            </div>
+            <span class="material-symbols-outlined icon">expand_more</span>
+          </button>
+          <div class="qna-body">
+            <div class="qna-a">${item.answer}</div>
+          </div>
+        `;
+        qnaList.appendChild(div);
+      });
+    }
+
+    function toggleQna(btn) {
+      const card = btn.parentElement;
+      const body = card.querySelector('.qna-body');
+      const isOpen = card.classList.contains('open');
+
+      // Close all
+      document.querySelectorAll('.qna-card').forEach(c => {
+        c.classList.remove('open');
+        c.querySelector('.qna-body').style.maxHeight = null;
+      });
+
+      if (!isOpen) {
+        card.classList.add('open');
+        body.style.maxHeight = body.scrollHeight + "px";
+      }
+    }
+
+    function doSearch(query) {
+      const q = query.toLowerCase().trim();
+
+      // Update UI for clear button
+      if (q) {
+        searchClear.classList.add('show');
+        searchIcon.style.display = 'none';
+      } else {
+        searchClear.classList.remove('show');
+        searchIcon.style.display = 'block';
+      }
+
+      // Filter logic
+      const filtered = DATA_QNA.filter(item => {
+        return item.question.toLowerCase().includes(q) ||
+          item.answer.toLowerCase().includes(q) ||
+          item.tags.some(t => t.toLowerCase().includes(q));
+      });
+
+      renderQnA(filtered);
+    }
+
+    function clearSearch() {
+      searchInput.value = '';
+      doSearch('');
+      chips.forEach(c => c.classList.remove('active'));
+      searchInput.focus();
+    }
+
+    function applyTag(btn, tag) {
+      const isActive = btn.classList.contains('active');
+      chips.forEach(c => c.classList.remove('active'));
+
+      if (isActive) {
+        searchInput.value = '';
+        doSearch('');
+      } else {
+        btn.classList.add('active');
+        searchInput.value = tag;
+        doSearch(tag);
+      }
+    }
+
+    // Bind event
+    searchInput.addEventListener('input', (e) => doSearch(e.target.value));
+
+    // Initial render
+    renderQnA(DATA_QNA);
+  </script>
+</body>
+
+</html>

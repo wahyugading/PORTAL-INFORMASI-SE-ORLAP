@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PR-SE2026 - Surat Tugas Resmi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .document-container {
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1), 0 20px 25px -5px rgb(0 0 0 / 0.1);
+        }
+        .high-contrast-border {
+            border: 1px solid #0f172a;
+        }
+        body {
+            background-color: #f7f9fb;
+            color: #0f172a;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#f27221",
+                        "primary-container": "#f27221",
+                        "on-primary": "#ffffff",
+                        "surface": "#ffffff",
+                        "background": "#f7f9fb",
+                        "slate-900": "#0f172a",
+                        "slate-100": "#f1f5f9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "body-base": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "headline-md": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-body-base min-h-screen bg-slate-100 flex items-center justify-center p-4 md:p-8">
+<!-- Modal/Viewer Container -->
+<div class="w-full max-w-6xl bg-white rounded-xl shadow-2xl overflow-hidden flex flex-col md:flex-row high-contrast-border min-h-[85vh]">
+<!-- Left Section: Document Preview (Larger Area) -->
+<div class="flex-1 bg-slate-100 p-6 md:p-12 flex flex-col items-center justify-start overflow-y-auto border-b md:border-b-0 md:border-r border-slate-900/10">
+<div class="w-full max-w-2xl bg-white document-container p-1 rounded-sm border border-slate-200">
+<img alt="Official government assignment letter" class="w-full h-auto block select-none" src="https://lh3.googleusercontent.com/aida/AP1WRLtb8-1rUj4JFzzr7xVD94QeP-iT9yR6SbN4tXHNqXUh3Pt2idyTwCONloEjlUmBf_5pcaga-hOenwxXYJJSKrV125qaoutWZTnZt_38GCuu_5LxgISgITNkehWG3mc4VDm6v5qETL-xuN1g1wJx4TbnwLN1vOlHuAqjz9TlftIeJqSz745-Okc0qIBwNZyH98HqlpJ0nJEzqzzA6pnZpXmboEqoAANhnCSqxDzfplxQZunPaLifYFE3UQ"/>
+</div>
+<p class="mt-6 text-slate-500 text-sm font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">zoom_in</span>
+                Gunakan scroll untuk memperbesar detail dokumen
+            </p>
+</div>
+<!-- Right Section: Details and Actions -->
+<div class="w-full md:w-[400px] flex flex-col bg-white">
+<!-- Header -->
+<div class="p-6 border-b border-slate-100">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2">
+<div class="w-2 h-8 bg-primary rounded-full"></div>
+<h1 class="text-2xl font-extrabold text-slate-900 tracking-tight">Surat Tugas Resmi</h1>
+</div>
+<button class="text-slate-400 hover:text-slate-900 p-2 transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<p class="text-slate-600 text-sm leading-relaxed">
+                    Dokumen ini adalah bukti legalitas resmi petugas lapangan untuk kegiatan Sensus Ekonomi 2026.
+                </p>
+</div>
+<!-- Verification Panel -->
+<div class="p-6 flex-1">
+<div class="bg-slate-50 border-2 border-slate-900 rounded-lg p-5 mb-6">
+<div class="flex items-start gap-4">
+<div class="bg-primary/10 p-2 rounded-full">
+<span class="material-symbols-outlined text-primary font-bold">verified_user</span>
+</div>
+<div>
+<h3 class="text-slate-900 font-bold text-lg">Dokumen Terverifikasi</h3>
+<p class="text-slate-700 text-sm mt-1 leading-relaxed">
+                                Telah diperiksa secara digital oleh sistem keamanan BPS. Berlaku di seluruh wilayah Provinsi DKI Jakarta.
+                            </p>
+<div class="mt-3 flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-green-600 animate-pulse"></span>
+<span class="text-[10px] font-extrabold text-green-700 uppercase tracking-widest">Status: Valid</span>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-3 text-slate-600">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="text-sm font-medium">Berlaku s/d 31 Desember 2026</span>
+</div>
+<div class="flex items-center gap-3 text-slate-600">
+<span class="material-symbols-outlined">description</span>
+<span class="text-sm font-medium">Format: PDF Digital Signature</span>
+</div>
+</div>
+</div>
+<!-- Actions Footer -->
+<div class="p-6 bg-slate-50 border-t border-slate-100 flex flex-col gap-3">
+<button class="w-full bg-primary hover:bg-orange-600 text-white h-14 rounded-lg font-bold text-lg flex items-center justify-center gap-2 transition-all active:scale-[0.98] shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">download</span>
+                    Download PDF
+                </button>
+<button class="w-full bg-white border-2 border-slate-900 text-slate-900 h-14 rounded-lg font-bold text-lg hover:bg-slate-900 hover:text-white transition-all active:scale-[0.98]">
+                    Tutup Viewer
+                </button>
+<p class="text-center text-[11px] text-slate-400 font-medium uppercase tracking-tighter mt-2">
+                    Hak Cipta © 2024 Badan Pusat Statistik
+                </p>
+</div>
+</div>
+</div>
+<!-- Hidden Backdrop (Simulated for layout consistency) -->
+<div class="fixed inset-0 -z-10 bg-slate-950/20 backdrop-blur-sm"></div>
+</body></html>
