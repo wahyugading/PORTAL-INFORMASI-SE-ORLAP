@@ -340,6 +340,18 @@
       box-shadow: 0 8px 20px rgba(13, 115, 119, .35);
     }
 
+    .action-card.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .gov-card.orange {
+      background: linear-gradient(135deg, var(--clr-orange) 0%, var(--clr-orange-dk) 100%);
+    }
+
+    .gov-card.orange:hover {
+      box-shadow: 0 12px 32px rgba(242, 114, 33, .25);
+    }
+
     /* ---- SURAT PENGANTAR CARD ---- */
     .doc-card {
       background: var(--clr-white);
@@ -632,18 +644,35 @@
     <section class="fade-up">
       <div class="section-header">
         <p class="section-label">Dukungan Regional</p>
-        <h2>Surat &amp; Video Gubernur DKI Jakarta</h2>
+        <h2>Surat Dukungan Pemerintah Daerah</h2>
       </div>
 
-      <!-- Gubernur -->
+      <!-- Gubernur DKI -->
       <a href="https://drive.google.com/drive/folders/1vXZyDwkToxeLGu3icsQWV7QHDJvaLHZy?usp=drive_link" target="_blank"
         rel="noopener noreferrer" class="gov-card" id="link-gubernur">
         <div class="gov-card-icon">
           <span class="material-symbols-outlined">account_balance</span>
         </div>
         <div class="gov-card-text">
-          <p class="gov-card-tag">Regional Approval</p>
+          <p class="gov-card-tag">Regional Approval (DKI)</p>
           <p class="gov-card-title">Surat Himbauan &amp; Video Dukungan<br />Gubernur &amp; Wakil Gubernur DKI Jakarta
+          </p>
+          <p class="gov-card-sub">Klik untuk membuka folder Drive →</p>
+        </div>
+        <div class="gov-card-arrow">
+          <span class="material-symbols-outlined">open_in_new</span>
+        </div>
+      </a>
+
+      <!-- Pemda Non-DKI -->
+      <a href="https://drive.google.com/drive/folders/122c-nWIOP3AOTNctVBC_HO6BjZZB-Cx_?usp=sharing" target="_blank"
+        rel="noopener noreferrer" class="gov-card orange" id="link-pemda-lain">
+        <div class="gov-card-icon">
+          <span class="material-symbols-outlined">map</span>
+        </div>
+        <div class="gov-card-text">
+          <p class="gov-card-tag">Regional Approval (Non-DKI)</p>
+          <p class="gov-card-title">Surat Dukungan Pemerintah Daerah<br />Berdasarkan Wilayah Tugas
           </p>
           <p class="gov-card-sub">Klik untuk membuka folder Drive →</p>
         </div>
@@ -723,6 +752,21 @@
           </div>
         </a>
 
+        <!-- Polri -->
+        <a href="https://www.instagram.com/p/DaDfi0sifKU/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==" target="_blank"
+          rel="noopener noreferrer" class="action-card dark full-width" id="link-polri">
+          <div class="action-card-top">
+            <span class="material-symbols-outlined">local_police</span>
+            <span class="action-card-link">
+              <span class="material-symbols-outlined">open_in_new</span>
+            </span>
+          </div>
+          <div>
+            <p class="action-card-tag">Official Endorsement</p>
+            <p class="action-card-title">Dukungan Resmi Divisi Humas Polri (Kredibilitas Kegiatan)</p>
+          </div>
+        </a>
+
       </div>
     </section>
 
@@ -752,7 +796,7 @@
       <p class="footer-text">© 2026 · Organisasi Lapangan Mahasiswa Politeknik Statistika STIS · PR-SE2026</p>
       <div style="font-size: 11px; font-weight: 600; color: var(--clr-text-2); margin-top: 12px;">
         Kendala Web? Hubungi <a href="https://wa.me/6285867428956" target="_blank"
-          style="color: var(--clr-blue); text-decoration: none;">Wahyu (085867428956)</a>
+          style="color: var(--clr-blue); text-decoration: none;">Wahyu</a>
       </div>
     </footer>
 
@@ -771,6 +815,10 @@
     <a href="informasi.html" class="nav-item" id="nav-info">
       <span class="material-symbols-outlined">campaign</span>
       <span class="label">Informasi</span>
+    </a>
+    <a href="qna.html" class="nav-item" id="nav-qna">
+      <span class="material-symbols-outlined">help_center</span>
+      <span class="label">QnA &amp; FAQ</span>
     </a>
     <a href="bantuan.html" class="nav-item" id="nav-bantuan">
       <span class="material-symbols-outlined">support_agent</span>
