@@ -1,0 +1,16 @@
+{
+  "name": "Portal Informasi SE2026",
+  "short_name": "PR-SE2026",
+  "description": "Portal Informasi Resmi Organisasi Lapangan Mahasiswa Politeknik Statistika STIS untuk Sensus Ekonomi 2026.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#003366",
+  "icons": [
+    {
+      "src": "assets/Logomark SE2026_Utama Color.png",
+      "sizes": "192x192 512x512",
+      "type": "image/png"
+    }
+  ]
+}

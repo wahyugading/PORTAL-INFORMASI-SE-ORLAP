@@ -434,6 +434,34 @@
       <p class="page-desc">Jalur bantuan darurat dan pencarian solusi instan untuk kendala pendataan.</p>
     </div>
 
+    <!-- HIGHLIGHT LOGISTIK (REALTIME DATABASE) -->
+    <div class="fade-up"
+      style="background: linear-gradient(135deg, rgba(0, 51, 102, 0.08), rgba(0, 51, 102, 0.02)); border: 1px solid rgba(0, 51, 102, 0.15); padding: 16px; border-radius: 12px; margin-bottom: 32px; box-shadow: 0 4px 12px rgba(0,0,0,0.02); animation-delay: 0.05s;">
+      <div
+        style="font-size: 14px; font-weight: 800; color: var(--clr-black); margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+        <span class="material-symbols-outlined" style="color: var(--clr-orange); font-size: 20px;">local_shipping</span>
+        Pusat Informasi Logistik (Real-Time)
+      </div>
+      <p style="font-size: 12px; color: var(--clr-text-2); line-height: 1.6; margin-bottom: 16px;">
+        Dapatkan pembaruan langsung terkait <strong>rekomendasi penginapan dan sewa motor</strong> terpusat di seluruh
+        wilayah tugas. Informasi ini disusun dan diupdate secara real-time untuk mendukung kelancaran operasional
+        lapangan Anda.
+      </p>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <a href="https://docs.google.com/spreadsheets/d/1mNL1HkmhD0qy0r2MOLmEIQeyBqCqSRMdI5FHEMPSYlQ/edit?usp=sharing"
+          target="_blank"
+          style="display: flex; align-items: center; justify-content: center; gap: 8px; background: var(--clr-blue); color: white; padding: 12px 16px; border-radius: 8px; text-decoration: none; font-size: 13px; font-weight: 700; transition: 0.2s; box-shadow: 0 4px 10px rgba(0,51,102,0.2);">
+          <span class="material-symbols-outlined">table_view</span>
+          Buka Database Penginapan &amp; Sewa Motor
+        </a>
+        <a href="struktur.html#logistik-section"
+          style="display: flex; align-items: center; justify-content: center; gap: 8px; background: white; color: var(--clr-blue); border: 1px solid var(--clr-blue); padding: 12px 16px; border-radius: 8px; text-decoration: none; font-size: 13px; font-weight: 700; cursor: pointer; transition: 0.2s;">
+          <span class="material-symbols-outlined">support_agent</span>
+          Hubungi Anggota Logistik (Sesuai Wilayah)
+        </a>
+      </div>
+    </div>
+
     <!-- ====================================================
          TRIAGE CALL CENTER
          ==================================================== -->
@@ -447,11 +475,11 @@
           <p>Pilih jenis kendala utama Anda untuk mendapatkan PIC penanganan yang tepat dan cepat.</p>
         </div>
 
-        <button class="triage-btn" onclick="handleTriage('admin')">
+        <button class="triage-btn" onclick="handleTriage('lapangan')">
           <span class="material-symbols-outlined icon">edit_document</span>
           <div class="text-wrapper">
-            <h4>Masalah Laporan & Admin</h4>
-            <p>Surat tugas hilang, salah rekap form, masalah presensi.</p>
+            <h4>Masalah di Lapangan</h4>
+            <p>Pertanyaan teknis dan laporan kendala ke Korwil.</p>
           </div>
         </button>
 
@@ -463,11 +491,11 @@
           </div>
         </button>
 
-        <button class="triage-btn" onclick="handleTriage('security')">
-          <span class="material-symbols-outlined icon" style="color: #e11d48;">gpp_bad</span>
+        <button class="triage-btn" onclick="handleTriage('urgent')">
+          <span class="material-symbols-outlined icon" style="color: #e11d48;">emergency</span>
           <div class="text-wrapper">
-            <h4>Konflik Fisik / Penolakan Keras</h4>
-            <p>Diusir aparat, ancaman fisik, intimidasi berat.</p>
+            <h4>Emergency / Urgent</h4>
+            <p>Konflik fisik, diusir aparat, ancaman berat, dsb.</p>
           </div>
         </button>
       </div>
@@ -475,26 +503,34 @@
       <!-- Stage 2: Result (Contact PIC) -->
       <div id="triage-result" class="triage-result">
         <div class="triage-header">
-          <h3>Rekomendasi Penanganan</h3>
-          <p>Kontak di bawah ini adalah penanggung jawab yang berwenang menyelesaikan masalah Anda secara cepat.</p>
+          <h3 id="triage-result-title">Rekomendasi Penanganan</h3>
+          <p id="triage-result-desc">Pilih salah satu opsi penanganan di bawah ini yang paling sesuai.</p>
         </div>
 
-        <div class="alert-box" id="triage-alert">
+        <div class="alert-box" id="triage-alert" style="display: none;">
           <!-- populated by JS -->
         </div>
 
-        <div class="secure-contact">
-          <div class="secure-contact-info">
-            <h4 id="pic-name">PIC Name</h4>
-            <p id="pic-role">PIC Role</p>
-          </div>
-          <button class="btn-call" id="pic-btn" data-phone="" onclick="callSecureContact(this)">
-            <span class="material-symbols-outlined" style="font-size:18px;">chat</span>
-            WA
-          </button>
+        <div id="triage-actions" style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px;">
+          <!-- populated by JS -->
         </div>
 
         <button class="btn-back-triage" onclick="resetTriage()">Kembali ke menu kategori</button>
+      </div>
+
+      <!-- Stage 3: Search Korwil -->
+      <div id="triage-search" class="triage-result">
+        <div class="triage-header">
+          <h3>Pencarian Korwil</h3>
+          <p>Ketik nama daerah atau nama korwil Anda.</p>
+        </div>
+        <input type="text" id="korwil-search-input" onkeyup="searchKorwil()" placeholder="Cari Jaktim, Depok, dll..."
+          style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--clr-border); margin-bottom: 16px; font-family: inherit; font-size: 14px;">
+        <div id="korwil-list"
+          style="display: flex; flex-direction: column; gap: 10px; max-height: 250px; overflow-y: auto; margin-bottom: 16px; padding-right: 4px;">
+          <!-- Populated by JS -->
+        </div>
+        <button class="btn-back-triage" onclick="showTriageResult('lapangan')">Kembali ke opsi sebelumnya</button>
       </div>
 
     </div>
@@ -546,56 +582,160 @@
     /* =============================================
        TRIAGE CALL CENTER LOGIC
        ============================================= */
+    const KORWIL_DATA = [
+      { area: 'Jaktim 1 (Pulogadung, Cakung, Duren Sawit)', name: 'Ghifary Haykal Bramantyo', phone: '62895636889234' },
+      { area: 'Jaktim 2 (Pasar Rebo, Ciracas, dll)', name: 'Decapryo Rivian Belo', phone: '6281247571875' },
+      { area: 'Jakarta Selatan', name: 'Dimas Haafizh Rahman', phone: '62895412748343' },
+      { area: 'Jakarta Pusat', name: 'Ahmad Mujamil Nurfarisi', phone: '6287880673798' },
+      { area: 'Jakarta Barat', name: 'Dustin Raka Widiananta Aslam', phone: '6285752718145' },
+      { area: 'Jakarta Utara', name: 'Fikri Adi Nugraha', phone: '62895359782414' },
+      { area: 'Bogor', name: 'Rambati Lumbung Pardja', phone: '6281380836559' },
+      { area: 'Depok', name: 'Avita Mumtahana', phone: '6285800354450' },
+      { area: 'Bekasi', name: 'Rizky Alif Ichwanto', phone: '6281290040388' },
+      { area: 'Tangerang', name: 'Henry Kevin Gultom', phone: '6281260147813' },
+      { area: 'Tangerang Selatan', name: 'M. Fikri Khaikal', phone: '6285692902871' }
+    ];
+
     const CATEGORIES = {
-      'admin': {
-        name: 'Sekretaris Lapangan',
-        role: 'PIC Admin & Laporan',
-        alert: 'Persiapkan Nomor Induk Mahasiswa (NIM) dan jelaskan secara singkat kendala dokumen Anda sebelum menghubungi.',
-        phoneB64: 'NjI4MTIzNDU2Nzg5' // Dummy: 628123456789
+      'lapangan': {
+        title: 'Masalah di Lapangan',
+        desc: 'Pilih opsi yang paling sesuai dengan kendala Anda.',
+        alert: '',
+        buttons: [
+          { label: 'Isi Form Pertanyaan', icon: 'edit_note', url: 'https://s.stis.ac.id/PertanyaanSE2026', primary: true },
+          { label: 'Cari & Hubungi Korwil', icon: 'search', action: 'showSearch' }
+        ]
       },
-      'security': {
-        name: 'Bu Risni & BPH Utama',
-        role: 'PIC Keamanan / Urgent',
-        alert: '🚨 Segera menyingkir dari lokasi rawan dan cari tempat aman sebelum menghubungi PIC.',
-        phoneB64: 'NjI4OTk5ODg4Nzc3' // Dummy: 628999888777
+      'mental': {
+        title: 'Kelelahan Mental & Stres',
+        desc: 'Jangan ragu untuk mencari bantuan. Kami menyediakan dua layanan yang bisa Anda pilih.',
+        alert: 'Semua sesi konseling bersifat rahasia.',
+        buttons: [
+          { label: 'Konsultasi dengan UPK', icon: 'medical_services', url: 'https://s.stis.ac.id/PendaftaranKonseling', primary: true },
+          { label: 'Layanan Konselor Sebaya BEM', icon: 'group', url: 'https://s.stis.ac.id/LayananKonselingSebayaSTIS' }
+        ]
+      },
+      'urgent': {
+        title: 'Emergency / Urgent',
+        desc: 'Gunakan HANYA untuk kondisi darurat (konflik fisik, ancaman, dsb).',
+        alert: '🚨 Segera menyingkir dari lokasi rawan dan cari tempat aman sebelum menghubungi.',
+        buttons: [
+          { label: 'Hubungi Koordinator Utama (Aqsha)', icon: 'phone_in_talk', url: 'https://wa.me/6285218504302', primary: true, isWa: true },
+          { label: 'Hubungi Koord. Magang Dosen (Bu Risni)', icon: 'phone_in_talk', url: 'https://wa.me/6281284050686', primary: true, isWa: true }
+        ]
       }
     };
 
+    let currentCategory = '';
+
     function handleTriage(type) {
-      if (type === 'mental') {
-        window.open('https://s.stis.ac.id/LayananKonselingSebayaSTIS', '_blank');
-        return;
-      }
+      showTriageResult(type);
+    }
 
+    function showTriageResult(type) {
+      currentCategory = type;
       const data = CATEGORIES[type];
-      if (data) {
-        document.getElementById('triage-category').style.display = 'none';
+      if (!data) return;
 
-        document.getElementById('pic-name').textContent = data.name;
-        document.getElementById('pic-role').textContent = data.role;
-        document.getElementById('triage-alert').innerHTML = data.alert;
-        document.getElementById('pic-btn').dataset.phone = data.phoneB64;
-        document.getElementById('pic-btn').dataset.name = data.name;
+      document.getElementById('triage-category').style.display = 'none';
+      document.getElementById('triage-search').style.display = 'none';
 
-        document.getElementById('triage-result').style.display = 'block';
+      document.getElementById('triage-result-title').textContent = data.title;
+      document.getElementById('triage-result-desc').textContent = data.desc;
+
+      const alertBox = document.getElementById('triage-alert');
+      if (data.alert) {
+        alertBox.innerHTML = data.alert;
+        alertBox.style.display = 'block';
+      } else {
+        alertBox.style.display = 'none';
       }
+
+      const actionsDiv = document.getElementById('triage-actions');
+      actionsDiv.innerHTML = '';
+      data.buttons.forEach(btn => {
+        const button = document.createElement('button');
+        button.style.width = '100%';
+        button.style.padding = '12px 16px';
+        button.style.borderRadius = '8px';
+        button.style.border = 'none';
+        button.style.fontSize = '13px';
+        button.style.fontWeight = '700';
+        button.style.display = 'flex';
+        button.style.alignItems = 'center';
+        button.style.justifyContent = 'center';
+        button.style.gap = '8px';
+        button.style.cursor = 'pointer';
+        button.style.transition = '0.2s';
+
+        if (btn.primary) {
+          if (btn.isWa) {
+            button.style.background = '#25D366';
+            button.style.color = 'white';
+          } else {
+            button.style.background = 'var(--clr-blue)';
+            button.style.color = 'white';
+          }
+        } else {
+          button.style.background = 'var(--clr-surface)';
+          button.style.color = 'var(--clr-black)';
+          button.style.border = '1px solid var(--clr-border)';
+        }
+
+        button.innerHTML = `<span class="material-symbols-outlined" style="font-size: 18px;">${btn.icon}</span> ${btn.label}`;
+
+        button.onclick = () => {
+          if (btn.url) window.open(btn.url, '_blank', 'noopener,noreferrer');
+          else if (btn.action === 'showSearch') showSearch();
+        };
+
+        actionsDiv.appendChild(button);
+      });
+
+      document.getElementById('triage-result').style.display = 'block';
     }
 
     function resetTriage() {
       document.getElementById('triage-result').style.display = 'none';
+      document.getElementById('triage-search').style.display = 'none';
       document.getElementById('triage-category').style.display = 'block';
     }
 
-    function callSecureContact(btn) {
-      const b64 = btn.dataset.phone;
-      const name = btn.dataset.name;
-      try {
-        const decodedPhone = atob(b64);
-        const message = encodeURIComponent(`Halo ${name}, saya petugas lapangan SE2026 Polstat STIS ingin meminta bantuan mendesak terkait kendala lapangan.`);
-        window.open(`https://wa.me/${decodedPhone}?text=${message}`, '_blank', 'noopener,noreferrer');
-      } catch (e) {
-        alert("Gagal memecahkan kode kontak. Silakan hubungi Korwil.");
+    function showSearch() {
+      document.getElementById('triage-result').style.display = 'none';
+      document.getElementById('triage-search').style.display = 'block';
+      document.getElementById('korwil-search-input').value = '';
+      renderKorwilList(KORWIL_DATA);
+    }
+
+    function searchKorwil() {
+      const q = document.getElementById('korwil-search-input').value.toLowerCase();
+      const filtered = KORWIL_DATA.filter(k => k.area.toLowerCase().includes(q) || k.name.toLowerCase().includes(q));
+      renderKorwilList(filtered);
+    }
+
+    function renderKorwilList(list) {
+      const container = document.getElementById('korwil-list');
+      container.innerHTML = '';
+      if (list.length === 0) {
+        container.innerHTML = '<div style="font-size: 12px; color: var(--clr-text-2); text-align: center; padding: 10px;">Tidak ditemukan.</div>';
+        return;
       }
+      list.forEach(k => {
+        const item = document.createElement('div');
+        item.style.padding = '12px';
+        item.style.border = '1px solid var(--clr-border)';
+        item.style.borderRadius = '8px';
+        item.style.background = 'var(--clr-surface)';
+        item.innerHTML = `
+          <div style="font-size: 13px; font-weight: 800; color: var(--clr-black); margin-bottom: 2px;">${k.name}</div>
+          <div style="font-size: 11px; color: var(--clr-text-2); margin-bottom: 8px;">${k.area}</div>
+          <a href="https://wa.me/${k.phone}" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; gap: 4px; background: #25D366; color: white; padding: 6px 12px; border-radius: 6px; text-decoration: none; font-size: 11px; font-weight: 700; width: 100%;">
+            <span class="material-symbols-outlined" style="font-size: 14px;">chat</span> WhatsApp
+          </a>
+        `;
+        container.appendChild(item);
+      });
     }
 
 

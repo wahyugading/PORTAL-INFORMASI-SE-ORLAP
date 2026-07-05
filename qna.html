@@ -748,6 +748,19 @@
       <h2>QnA, FAQ &amp; Substansi Kuesioner</h2>
     </div>
 
+    <!-- AKSES MATERI PELATIHAN -->
+    <div class="info-box fade-up"
+      style="margin-bottom: 24px; animation-delay: 0.1s; background: #F0F9FF; border-left: 4px solid #0284C7; padding: 16px; border-radius: 8px;">
+      <p style="margin: 0 0 12px 0; font-size: 13px; color: #0369A1; line-height: 1.5;">Untuk mengakses dan mengunduh
+        seluruh <strong>Materi Pelatihan Sensus Ekonomi 2026</strong>, Anda dapat mengunjungi folder Google Drive resmi
+        berikut:</p>
+      <a href="https://drive.google.com/drive/folders/1LeTT5syakgNUVtOyuPYIeW6kGrSg_2BJ?usp=drive_link" target="_blank"
+        rel="noopener noreferrer" class="btn-gform"
+        style="width: 100%; font-size: 14px; padding: 10px; background: #0284C7; box-shadow: 0 4px 12px rgba(2, 132, 199, 0.2);">
+        <span class="material-symbols-outlined" style="font-size: 20px;">folder_open</span> Buka Folder Materi Pelatihan
+      </a>
+    </div>
+
     <!-- TAB NAVIGATION -->
     <div class="qna-tabs fade-up">
       <button class="qna-tab active" onclick="switchTab('tab-faq')">FAQ &amp; Kasus</button>
@@ -768,10 +781,12 @@
           </button>
         </div>
         <div class="chips">
-          <button class="chip" onclick="applyTag(this, 'Menolak')">#Menolak</button>
-          <button class="chip" onclick="applyTag(this, 'Pindah')">#Pindah</button>
-          <button class="chip" onclick="applyTag(this, 'Sinyal')">#Sinyal</button>
-          <button class="chip" onclick="applyTag(this, 'Tutup')">#Tutup</button>
+          <button class="chip" onclick="applyTag(this, 'Prosedur Prelisting')">#Prosedur Prelisting</button>
+          <button class="chip" onclick="applyTag(this, 'Aplikasi FASIH')">#Aplikasi FASIH</button>
+          <button class="chip" onclick="applyTag(this, 'KBLI & Klasifikasi')">#KBLI &amp; Klasifikasi</button>
+          <button class="chip" onclick="applyTag(this, 'Pencatatan Pendapatan')">#Pencatatan Pendapatan</button>
+          <button class="chip" onclick="applyTag(this, 'Identifikasi Tempat Usaha & Bisnis Keluarga')">#Identifikasi
+            Tempat Usaha</button>
         </div>
       </div>
 
@@ -1111,24 +1126,316 @@
        ============================================= */
     const DATA_QNA = [
       {
-        id: 'q1', category: 'Metodologi', tags: ['menolak', 'tidak mau', 'sibuk', 'usir'],
-        question: 'Bagaimana jika pelaku UMKM menolak keras didata dengan alasan sibuk?',
-        answer: 'Tunjukkan Surat Tugas BPS dan Surat Himbauan Menteri UMKM. Jelaskan bahwa jaminan kerahasiaan data diatur UU No 16/1997 dan wawancara hanya memakan waktu 5 menit. Jika tetap menolak keras, catat form kendala dan infokan ke Korwil.'
+        id: 'q1', category: 'Prosedur Prelisting', tags: ['#Prosedur Prelisting', '#Metodologi', 'lookup', 'sinyal', 'offline', 'remote', 'nik'],
+        question: `Bagaimana prosedur LOOKUP prelist SBR dan penambahan assignment di daerah remote tanpa sinyal internet, serta apakah cek NIK tetap wajib?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Bagaimana prosedur LOOKUP prelist SBR dan penambahan assignment di daerah remote tanpa sinyal internet, serta apakah cek NIK tetap wajib?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">LOOKUP dan penambahan assignment dapat berjalan secara offline. Cek NIK wajib jika ada sinyal, namun pendataan tetap bisa dilanjutkan hingga submit jika terkendala sinyal.</div>`
       },
       {
-        id: 'q2', category: 'Sistem', tags: ['pindah', 'alamat salah', 'tutup', 'bangkrut'],
-        question: 'Lokasi UMKM di target sampel ternyata sudah pindah alamat atau gulung tikar?',
-        answer: 'Jangan langsung dihapus dari sistem. Laporkan melalui menu identifikasi masalah dan pilih opsi "Perubahan Status Alamat" agar sistem merekapnya secara otomatis.'
+        id: 'q2', category: 'Prosedur Prelisting', tags: ['#Prosedur Prelisting', '#Metodologi', 'jasa pertanian', 'buruh tani', 'borongan', 'target', 'upah'],
+        question: `Apa batasan yang membedakan pekerja buruh tani biasa dengan mengusahakan Jasa Pertanian (misalnya dibayar borongan)?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Apa batasan yang membedakan pekerja buruh tani biasa dengan mengusahakan Jasa Pertanian (misalnya dibayar borongan)?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Dikatakan Jasa Pertanian jika pekerja dibayar berdasarkan target selesai (borongan) bukan harian, karena pekerja menanggung risiko atas pekerjaannya.</div>`
       },
       {
-        id: 'q3', category: 'Teknis', tags: ['sinyal', 'blank spot', 'offline'],
-        question: 'Berada di area blank spot dan tidak bisa mengakses dokumen online?',
-        answer: 'Aplikasi PR-SE2026 ini mendukung mode offline. Pastikan Anda sudah membuka halaman web ini minimal sekali sebelum berangkat. Dokumen legalitas tetap bisa dibuka dari Beranda.'
+        id: 'q3', category: 'Prosedur Prelisting', tags: ['#Prosedur Prelisting', '#Metodologi', 'panen', 'kehutanan', 'tegakan', 'peternakan', 'pembesaran', 'nilai produksi'],
+        question: `Bagaimana pencatatan usaha pertanian jika periode panen berada di luar setahun yang lalu, atau ada peternakan pembesaran yang belum pernah dijual?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Bagaimana pencatatan usaha pertanian jika periode panen berada di luar setahun yang lalu, atau ada peternakan pembesaran yang belum pernah dijual?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Jika tidak ada panen/usaha lagi, tidak ditangkap. Tanaman kehutanan harus ada tegakan. Untuk ternak pembesaran, nilai produksi dihitung dari selisih bobot akhir dan awal tahun.</div>`
       },
       {
-        id: 'q4', category: 'Metodologi', tags: ['batas wilayah', 'nyasar', 'peta'],
-        question: 'Blok sensus (peta wilayah) tidak jelas atau tumpang tindih dengan RT sebelah?',
-        answer: 'Gunakan patokan fisik alam (sungai, jalan raya). Jika masih ragu, segera hubungi Ketua RT/RW setempat untuk konfirmasi batas wilayah aktual.'
+        id: 'q4', category: 'Prosedur Prelisting', tags: ['#Prosedur Prelisting', '#Metodologi', 'door to door', 'usaha besar', 'geotagging', 'fasih', 'ppl ub'],
+        question: `Bagaimana PPL Door-to-Door mengetahui jika Usaha Besar (UB) sudah didata oleh PPL UB melalui FASIH?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Bagaimana PPL Door-to-Door mengetahui jika Usaha Besar (UB) sudah didata oleh PPL UB melalui FASIH?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">PPL Door-to-Door cukup melakukan geotagging dan menempelkan stiker jika menemukan UB di prelist/lookup. Pendataan lengkapnya akan dilakukan oleh PPL-UB.</div>`
+      },
+      {
+        id: 'q5', category: 'Prosedur Prelisting', tags: ['#Prosedur Prelisting', '#Metodologi', 'pertanian', 'kbli', 'pendapatan', 'pengeluaran', 'tanaman pangan'],
+        question: `Jika mengusahakan padi dan jagung berselang-seling, apakah pencatatan pendapatan dan pengeluaran pertaniannya digabung atau dipisah?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Jika mengusahakan padi dan jagung berselang-seling, apakah pencatatan pendapatan dan pengeluaran pertaniannya digabung atau dipisah?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Seluruh pendapatan dan pengeluaran dari padi maupun jagung dicatat dan digabung pada rincian nilai produksi (27a) dan biaya produksi (26b).</div>`
+      },
+      {
+        id: 'q6', category: 'Prosedur Prelisting', tags: ['#Prosedur Prelisting', '#Metodologi', 'fasih', 'dashboard', 'rekap petugas', 'sistem'],
+        question: `Apakah ada fitur di dashboard FASIH untuk melihat rekapitulasi data per petugas sebagai standar kegiatan?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Apakah ada fitur di dashboard FASIH untuk melihat rekapitulasi data per petugas sebagai standar kegiatan?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Ya, usulan telah dicatat dan rekapitulasi per petugas akan dijadikan standar pada pengembangan dashboard FASIH.</div>`
+      },
+      {
+        id: 'q7', category: 'Prosedur Prelisting', tags: ['#Prosedur Prelisting', '#Metodologi', 'peternakan', 'konsumsi sendiri', 'ternak', 'skala usaha'],
+        question: `Apakah memelihara hewan ternak (seperti ayam) dalam jumlah sedikit untuk konsumsi sendiri dikategorikan sebagai usaha peternakan?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Apakah memelihara hewan ternak (seperti ayam) dalam jumlah sedikit untuk konsumsi sendiri dikategorikan sebagai usaha peternakan?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Tidak. Ternak untuk konsumsi sendiri bukan usaha peternakan. Usaha peternakan mensyaratkan hewan dipelihara untuk dijual/usaha.</div>`
+      },
+      {
+        id: 'q8', category: 'Aplikasi FASIH & Pemetaan', tags: ['#Aplikasi FASIH', '#Sistem', 'skala usaha', 'ngibar', 'cawi', 'papi', 'capi', 'usaha menengah'],
+        question: `Bagaimana batasan skala Usaha Menengah (UM) saat NGIBAR, serta mekanisme penggunaan mode CAWI, PAPI, dan CAPI?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Bagaimana batasan skala Usaha Menengah (UM) saat NGIBAR, serta mekanisme penggunaan mode CAWI, PAPI, dan CAPI?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Skala usaha ditentukan dari prelist. NGIBAR menggunakan CAWI. Usaha yang belum submit CAWI akan dilanjutkan oleh PPL-UB (PAPI) atau PPL Door-to-Door (CAPI).</div>`
+      },
+      {
+        id: 'q9', category: 'Aplikasi FASIH & Pemetaan', tags: ['#Aplikasi FASIH', '#Sistem', 'sekolah', 'pendapatan online', 'internet', 'yayasan', 'ppdb'],
+        question: `Bagaimana cara pengisian persentase pendapatan online dan tujuan penggunaan internet untuk responden institusi (contoh: Sekolah/Yayasan)?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Bagaimana cara pengisian persentase pendapatan online dan tujuan penggunaan internet untuk responden institusi (contoh: Sekolah/Yayasan)?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">PPDB dan kelas online dinilai sebagai penggunaan internet. Namun pembayaran SPP via transfer bukan pendapatan online. Persentase online dihitung dari porsi pendaftar online terhadap total siswa.</div>`
+      },
+      {
+        id: 'q10', category: 'Aplikasi FASIH & Pemetaan', tags: ['#Aplikasi FASIH', '#Sistem', 'tanaman pangan', 'hortikultura', 'konsumsi sendiri', 'budidaya'],
+        question: `Apakah budidaya tanaman pangan skala kecil untuk konsumsi sendiri atau mengambil hasil daunnya saja termasuk usaha?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Apakah budidaya tanaman pangan skala kecil untuk konsumsi sendiri atau mengambil hasil daunnya saja termasuk usaha?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Tanaman pangan standar untuk konsumsi sendiri adalah usaha. Namun jika hanya dimanfaatkan daunnya (daun singkong/pisang), dikategorikan sebagai usaha hortikultura.</div>`
+      },
+      {
+        id: 'q11', category: 'Aplikasi FASIH & Pemetaan', tags: ['#Aplikasi FASIH', '#Sistem', 'sls', 'izin', 'tokoh masyarakat', 'ketua rt', 'prosedur'],
+        question: `Bagaimana prosedur pelaporan jika di suatu SLS (seperti RT/RW) belum memiliki Ketua atau pengurus yang definitif?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Bagaimana prosedur pelaporan jika di suatu SLS (seperti RT/RW) belum memiliki Ketua atau pengurus yang definitif?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Petugas wajib melapor ke tingkat SLS di atasnya (misal Ketua RW/Kampung) atau kepada tokoh masyarakat yang memiliki kewenangan/pengaruh di wilayah tersebut.</div>`
+      },
+      {
+        id: 'q12', category: 'KBLI & Klasifikasi', tags: ['#KBLI & Klasifikasi', '#Metodologi', 'yayasan', 'sekolah', 'jaringan usaha', 'cabang', 'tunggal'],
+        question: `Apakah sekolah filial (cabang) dan sekolah di bawah satu yayasan dicatat sebagai jaringan usaha tunggal atau cabang?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Apakah sekolah filial (cabang) dan sekolah di bawah satu yayasan dicatat sebagai jaringan usaha tunggal atau cabang?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Jika yayasan menaungi institusi mandiri tanpa induk lain, dicatat tunggal. Jika ada SD yang merupakan cabang langsung dari SD pusat lainnya, dicatat sebagai cabang.</div>`
+      },
+      {
+        id: 'q13', category: 'KBLI & Klasifikasi', tags: ['#KBLI & Klasifikasi', '#Metodologi', 'pegadaian', 'kantor pusat', 'kanwil', 'jaringan usaha', 'kbli'],
+        question: `Bagaimana penetapan KBLI dan jaringan usaha untuk Pegadaian (Pusat, Kanwil, Kantor Area, dan Outlet/Cabang)?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Bagaimana penetapan KBLI dan jaringan usaha untuk Pegadaian (Pusat, Kanwil, Kantor Area, dan Outlet/Cabang)?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Pusat, Perwakilan, Kanwil, dan Area yang fungsinya hanya koordinasi dicatat di N 70 (Kantor Pusat). Outlet/Cabang yang melayani nasabah gadai dicatat di Kategori L.</div>`
+      },
+      {
+        id: 'q14', category: 'KBLI & Klasifikasi', tags: ['#KBLI & Klasifikasi', '#Metodologi', 'anggota keluarga', 'anak', 'pisahkan kk', 'domisili'],
+        question: `Bagaimana pencatatan anggota keluarga bagi anak sekolah di bawah umur yang tinggal terpisah dari orang tua (bersama nenek)?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Bagaimana pencatatan anggota keluarga bagi anak sekolah di bawah umur yang tinggal terpisah dari orang tua (bersama nenek)?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Anak dicatat sebagai assignment keluarga tersendiri (kepala keluarga tunggal) di rumah neneknya. Info rinci ditanyakan kepada nenek sebagai responden.</div>`
+      },
+      {
+        id: 'q15', category: 'KBLI & Klasifikasi', tags: ['#KBLI & Klasifikasi', '#Metodologi', 'fasilitas bab', 'sanitasi', 'numpang', 'bersama'],
+        question: `Bagaimana pengisian Kepemilikan Fasilitas BAB untuk keluarga anak yang menumpang fasilitas di rumah orang tua yang beda bangunan?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Bagaimana pengisian Kepemilikan Fasilitas BAB untuk keluarga anak yang menumpang fasilitas di rumah orang tua yang beda bangunan?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Keduanya sama-sama diisikan dengan kode 2, yaitu 'Ada, digunakan bersama oleh anggota keluarga dari beberapa rumah'.</div>`
+      },
+      {
+        id: 'q16', category: 'KBLI & Klasifikasi', tags: ['#KBLI & Klasifikasi', '#Metodologi', 'industri', 'perdagangan', 'los pasar', 'produksi', 'jaringan usaha'],
+        question: `Apakah usaha produksi industri di rumah yang seluruhnya dijual langsung di los pasar dihitung sebagai 1 atau 2 usaha?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Apakah usaha produksi industri di rumah yang seluruhnya dijual langsung di los pasar dihitung sebagai 1 atau 2 usaha?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Dihitung sebagai 2 usaha terpisah. Usaha di rumah sebagai industri pengolahan (tunggal), dan usaha di los pasar sebagai perdagangan (tunggal).</div>`
+      },
+      {
+        id: 'q17', category: 'KBLI & Klasifikasi', tags: ['#KBLI & Klasifikasi', '#Metodologi', 'tanaman pangan', 'batas minimum', 'konsumsi sendiri', 'jumlah pohon'],
+        question: `Apakah ada jumlah minimum tanaman pangan untuk konsumsi sendiri agar dapat dicatat sebagai usaha pertanian?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Apakah ada jumlah minimum tanaman pangan untuk konsumsi sendiri agar dapat dicatat sebagai usaha pertanian?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Ketentuan batas minimum didasarkan pada standar jarak tanam normal tanaman pangan per komoditas yang berlaku.</div>`
+      },
+      {
+        id: 'q18', category: 'KBLI & Klasifikasi', tags: ['#KBLI & Klasifikasi', '#Metodologi', 'nature usaha', 'kbli', 'karaoke', 'bengkel', 'salon', 'minimarket'],
+        question: `Mengapa ada beberapa jenis usaha (seperti karaoke/bengkel/salon) yang KBLI utamanya ditentukan dari "nature" kegiatannya?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Mengapa ada beberapa jenis usaha (seperti karaoke/bengkel/salon) yang KBLI utamanya ditentukan dari "nature" kegiatannya?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Sesuai kesepakatan metodologi, terdapat 6 usaha berdasarkan nature: Bengkel (dengan sparepart), Salon (dengan kosmetik), Fotocopy (dengan ATK), Minimarket (dengan kopi), Karaoke, dan Klinik Kecantikan.</div>`
+      },
+      {
+        id: 'q19', category: 'KBLI & Klasifikasi', tags: ['#KBLI & Klasifikasi', '#Metodologi', 'kepulauan', 'domisili', 'aset', 'assignment baru'],
+        question: `Bagaimana pencatatan keluarga kepulauan yang tercatat di prelist pulau namun sedang berdomisili lama di darat?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Bagaimana pencatatan keluarga kepulauan yang tercatat di prelist pulau namun sedang berdomisili lama di darat?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Keluarga di pulau dikode 'Tidak ditemukan' dan dibuat assignment baru di alamat darat. Aset dan perumahan mengikuti kondisi rumah tempat tinggalnya saat ini.</div>`
+      },
+      {
+        id: 'q20', category: 'Pencatatan Pendapatan & Kasus Batas', tags: ['#Pencatatan Pendapatan', '#Teknis', 'nelayan', 'perikanan', 'perdagangan', 'pasar', 'produksi'],
+        question: `Jika nelayan menjual ikan hasil tangkapannya sendiri secara langsung di lapak pasar khusus, apakah dicatat sebagai 1 atau 2 usaha?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Jika nelayan menjual ikan hasil tangkapannya sendiri secara langsung di lapak pasar khusus, apakah dicatat sebagai 1 atau 2 usaha?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Dicatat sebagai 2 usaha. Satu usaha perikanan di rumah, dan satu usaha perdagangan ikan di los pasar (Bangunan Khusus Usaha).</div>`
+      },
+      {
+        id: 'q21', category: 'Pencatatan Pendapatan & Kasus Batas', tags: ['#Pencatatan Pendapatan', '#Teknis', 'kopra', 'industri', 'pertanian', 'pengolahan'],
+        question: `Jika petani mengolah hasil panennya menjadi produk akhir (misal kelapa menjadi kopra), apakah dicatat sebagai 1 atau 2 usaha?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Jika petani mengolah hasil panennya menjadi produk akhir (misal kelapa menjadi kopra), apakah dicatat sebagai 1 atau 2 usaha?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Dicatat sebagai 2 usaha terpisah: Usaha pertanian perkebunan (pendapatan = nilai kelapa) dan Usaha industri pengolahan (bahan baku = nilai kelapa).</div>`
+      },
+      {
+        id: 'q22', category: 'Pencatatan Pendapatan & Kasus Batas', tags: ['#Pencatatan Pendapatan', '#Teknis', 'jaringan usaha', 'bakery', 'kantor pusat', 'cabang', 'biaya operasional'],
+        question: `Bagaimana cara pengisian jaringan usaha dan biaya operasional untuk industri yang memiliki outlet pusat dan menitipkan jualan di cabang?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Bagaimana cara pengisian jaringan usaha dan biaya operasional untuk industri yang memiliki outlet pusat dan menitipkan jualan di cabang?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Kantor Pusat mencatat seluruh biaya produksi, upah pusat, dan pendapatannya. Kantor Cabang mencatat upah cabang, nilai pembelian barang terjual, operasional cabang, dan pendapatannya.</div>`
+      },
+      {
+        id: 'q23', category: 'Pencatatan Pendapatan & Kasus Batas', tags: ['#Pencatatan Pendapatan', '#Teknis', 'establishment', 'omzet terbesar', 'nature usaha', 'laporan keuangan'],
+        question: `Dalam penentuan jumlah usaha, apa yang lebih diprioritaskan: omzet terbesar atau nature (izin) usahanya?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Dalam penentuan jumlah usaha, apa yang lebih diprioritaskan: omzet terbesar atau nature (izin) usahanya?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Jika laporan keuangan tidak bisa dipisah, dicatat 1 usaha dengan omzet terbesar. Namun nature selalu diprioritaskan khusus untuk 6 jenis usaha tertentu.</div>`
+      },
+      {
+        id: 'q24', category: 'Pencatatan Pendapatan & Kasus Batas', tags: ['#Pencatatan Pendapatan', '#Teknis', 'usaha mikro', 'establishment', 'sembako', 'laporan keuangan'],
+        question: `Terkait usaha mikro yang merangkap berbagai jenis jualan, bagaimana menentukan agar dicatat 1 atau lebih dari 1 usaha?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Terkait usaha mikro yang merangkap berbagai jenis jualan, bagaimana menentukan agar dicatat 1 atau lebih dari 1 usaha?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Ditentukan dari lokasi dan laporan keuangan. Jika 1 lokasi dan laporan tergabung, maka dihitung sebagai 1 usaha dengan omzet terbesar. Tidak ada pengecualian bagi usaha mikro.</div>`
+      },
+      {
+        id: 'q25', category: 'Pencatatan Pendapatan & Kasus Batas', tags: ['#Pencatatan Pendapatan', '#Teknis', 'kuli bangunan', 'pekerja lepas', 'risiko', 'usaha jasa', 'harian'],
+        question: `Mengapa pekerja bangunan lepas (kuli harian) dianggap bukan usaha, sedangkan ART harian banyak majikan dianggap usaha?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Mengapa pekerja bangunan lepas (kuli harian) dianggap bukan usaha, sedangkan ART harian banyak majikan dianggap usaha?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Usaha dinilai dari konsep menanggung risiko, menanggung input, dan memasarkan jasa. Pekerja bangunan lepas umumnya tidak menanggung risiko dan bahan material (input).</div>`
+      },
+      {
+        id: 'q26', category: 'Pencatatan Pendapatan & Kasus Batas', tags: ['#Pencatatan Pendapatan', '#Teknis', 'bagi hasil', 'penggarap', 'pemilik lahan', 'risiko', 'pertanian'],
+        question: `Bagaimana pencatatan usaha pertanian dengan sistem bagi hasil antara pemilik lahan dan penggarap?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Bagaimana pencatatan usaha pertanian dengan sistem bagi hasil antara pemilik lahan dan penggarap?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Penggarap dicatat sebagai usaha pertanian. Jika seluruh modal/risiko ditanggung pemilik lahan, maka pemilik dicatat sebagai usaha dan penggarap dianggap sebagai buruh bayaran.</div>`
+      },
+      {
+        id: 'q27', category: 'Pencatatan Pendapatan & Kasus Batas', tags: ['#Pencatatan Pendapatan', '#Teknis', 'imputasi', 'harga pasar', 'air alam', 'hasil hutan liar'],
+        question: `Apakah penggunaan sumber air alam bebas pakai dan hasil alam liar harus diimputasi nilainya?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Apakah penggunaan sumber air alam bebas pakai dan hasil alam liar harus diimputasi nilainya?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Ya, wajib diimputasi sesuai harga pasar setempat. Jika harga pasar alam liar/air di wilayah tersebut gratis (0), maka nilai imputasinya adalah 0.</div>`
+      },
+      {
+        id: 'q28', category: 'Pencatatan Pendapatan & Kasus Batas', tags: ['#Pencatatan Pendapatan', '#Teknis', 'klinik', 'apotek', 'izin usaha', 'laporan keuangan'],
+        question: `Jika satu lokasi memiliki Klinik dan Apotek dengan 2 izin berbeda namun 1 pemilik, dicatat sebagai 1 atau 2 usaha?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Jika satu lokasi memiliki Klinik dan Apotek dengan 2 izin berbeda namun 1 pemilik, dicatat sebagai 1 atau 2 usaha?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Jika laporan keuangannya dapat dipisah sesuai perizinannya, dihitung 2 usaha. Jika laporan tergabung utuh, dianggap 1 usaha.</div>`
+      },
+      {
+        id: 'q29', category: 'Pencatatan Pendapatan & Kasus Batas', tags: ['#Pencatatan Pendapatan', '#Teknis', 'kaki lima', 'tenda', 'pasar mingguan', 'domisili'],
+        question: `Untuk perdagangan kaki lima yang berpindah-pindah antar pasar mingguan, di manakah pendataan lokasinya dilakukan?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Untuk perdagangan kaki lima yang berpindah-pindah antar pasar mingguan, di manakah pendataan lokasinya dilakukan?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Jika berjualan menggunakan tenda/kaki lima yang tidak permanen, didata di rumah tangganya. Jika menyewa kios bangunan tetap, didata di lokasi kios pasar.</div>`
+      },
+      {
+        id: 'q30', category: 'Pencatatan Pendapatan & Kasus Batas', tags: ['#Pencatatan Pendapatan', '#Teknis', 'pekerja musiman', 'jasa', 'panen', 'industri'],
+        question: `Bagaimana pencatatan status tenaga kerja musiman saat panen padi atau menjelang perayaan hari raya?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Bagaimana pencatatan status tenaga kerja musiman saat panen padi atau menjelang perayaan hari raya?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Pekerja musiman dicatat sebagai pekerja. Ia baru dicatat sebagai biaya jasa/operasional jika dibayarkan melalui perusahaan penyalur tenaga kerja.</div>`
+      },
+      {
+        id: 'q31', category: 'Pencatatan Pendapatan & Kasus Batas', tags: ['#Pencatatan Pendapatan', '#Teknis', 'keluarga ganda', 'fasih', 'assignment'],
+        question: `Bagaimana pengisian keterangan keluarga jika di dalam 1 bangunan tempat tinggal terdapat lebih dari 1 keluarga?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Bagaimana pengisian keterangan keluarga jika di dalam 1 bangunan tempat tinggal terdapat lebih dari 1 keluarga?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Keluarga kedua dan seterusnya harus ditambahkan sebagai assignment tersendiri dalam sistem.</div>`
+      },
+      {
+        id: 'q32', category: 'Identifikasi Tempat Usaha & Bisnis Keluarga', tags: ['#Identifikasi Tempat Usaha & Bisnis Keluarga', '#Identifikasi', 'fasih', 'validasi', 'pekerja'],
+        question: `Bagaimana perbaikan aturan validasi aplikasi FASIH untuk rincian 13 dan 24 pada percobaan roll out tahap 2?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Bagaimana perbaikan aturan validasi aplikasi FASIH untuk rincian 13 dan 24 pada percobaan roll out tahap 2?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Aturan validasi akan disesuaikan. Untuk rincian 24, total pekerja minimal 1; pekerja pemilik/pengelola dapat dicatat sebagai pekerja dibayar jika diupah.</div>`
+      },
+      {
+        id: 'q33', category: 'Identifikasi Tempat Usaha & Bisnis Keluarga', tags: ['#Identifikasi Tempat Usaha & Bisnis Keluarga', '#Identifikasi', 'lapak', 'pasar', 'kaki lima', 'keliling'],
+        question: `Bagaimana pencatatan lokasi untuk unit usaha di pasar yang hanya menyewa lapak (tanpa kios/los tetap)?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Bagaimana pencatatan lokasi untuk unit usaha di pasar yang hanya menyewa lapak (tanpa kios/los tetap)?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Usaha tersebut dikategorikan sebagai usaha tidak menempati bangunan (kaki lima / usaha keliling).</div>`
+      },
+      {
+        id: 'q34', category: 'Identifikasi Tempat Usaha & Bisnis Keluarga', tags: ['#Identifikasi Tempat Usaha & Bisnis Keluarga', '#Identifikasi', 'yayasan', 'sekolah', 'kompleks', 'unit penunjang'],
+        question: `Apakah sekolah dengan jenjang berbeda (TK, SD, SMP, SMA) di bawah satu yayasan dalam satu kompleks didata terpisah?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Apakah sekolah dengan jenjang berbeda (TK, SD, SMP, SMA) di bawah satu yayasan dalam satu kompleks didata terpisah?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Ya, setiap jenjang pendidikan dicacah sendiri-sendiri sebagai unit penunjang, sedangkan yayasannya dicatat sebagai kantor pusat.</div>`
+      },
+      {
+        id: 'q35', category: 'Identifikasi Tempat Usaha & Bisnis Keluarga', tags: ['#Identifikasi Tempat Usaha & Bisnis Keluarga', '#Identifikasi', 'anak', 'pekerja tidak dibayar', 'usaha sendiri'],
+        question: `Bagaimana pencatatan anak di bawah 17 tahun yang membantu usaha orang tua atau memiliki usaha sendiri?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Bagaimana pencatatan anak di bawah 17 tahun yang membantu usaha orang tua atau memiliki usaha sendiri?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Jika membantu tanpa dibayar, dicatat sebagai pekerja tidak dibayar. Jika memiliki usaha sendiri, dicatat sebagai pemilik usaha tersebut.</div>`
+      },
+      {
+        id: 'q36', category: 'Identifikasi Tempat Usaha & Bisnis Keluarga', tags: ['#Identifikasi Tempat Usaha & Bisnis Keluarga', '#Identifikasi', 'kos-kosan', 'kontrakan', 'kamar', 'akomodasi'],
+        question: `Apakah kos-kosan/kontrakan dengan jumlah kamar >=10 tetap dihitung sebagai usaha meskipun ada kamar yang kosong?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Apakah kos-kosan/kontrakan dengan jumlah kamar >=10 tetap dihitung sebagai usaha meskipun ada kamar yang kosong?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Ya, batasan usaha penyediaan akomodasi didasarkan pada jumlah kamar/pintu yang disewakan (>=10), terlepas dari apakah terisi semua atau tidak.</div>`
+      },
+      {
+        id: 'q37', category: 'Identifikasi Tempat Usaha & Bisnis Keluarga', tags: ['#Identifikasi Tempat Usaha & Bisnis Keluarga', '#Identifikasi', 'bku', 'sewa bangunan', 'pemilik'],
+        question: `Apakah pemilik Bangunan Khusus Usaha (BKU) yang menyewakan bangunannya didata di lokasi BKU tersebut?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Apakah pemilik Bangunan Khusus Usaha (BKU) yang menyewakan bangunannya didata di lokasi BKU tersebut?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Tidak, yang didata di BKU adalah usaha yang menyewanya. Pemilik bangunan didata di rumah tangganya, asalkan menyewakan >= 10 unit/pintu.</div>`
+      },
+      {
+        id: 'q38', category: 'Identifikasi Tempat Usaha & Bisnis Keluarga', tags: ['#Identifikasi Tempat Usaha & Bisnis Keluarga', '#Identifikasi', 'bku kosong', 'kompleks', 'terpencar'],
+        question: `Bagaimana jika pemilik memiliki >=10 BKU dalam satu kesatuan kompleks, namun beberapa di antaranya kosong?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Bagaimana jika pemilik memiliki >=10 BKU dalam satu kesatuan kompleks, namun beberapa di antaranya kosong?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Usaha sewa bangunan dicacah di lokasi bangunan jika dalam satu kompleks (>=10 pintu). Jika terpencar, dicacah di rumah tangga. Bangunan kosong tidak didata.</div>`
+      },
+      {
+        id: 'q39', category: 'Identifikasi Tempat Usaha & Bisnis Keluarga', tags: ['#Identifikasi Tempat Usaha & Bisnis Keluarga', '#Identifikasi', 'pengelola', 'omset', 'non respon'],
+        question: `Bagaimana jika pengelola usaha (yang diserahkan oleh pemilik) tidak bersedia memberikan informasi teknis dan omset?`,
+        answer: `<div style="font-weight: 600; color: var(--clr-blue); margin-bottom: 8px;">Pertanyaan:</div>
+<div style="margin-bottom: 16px; line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Bagaimana jika pengelola usaha (yang diserahkan oleh pemilik) tidak bersedia memberikan informasi teknis dan omset?</div>
+<div style="font-weight: 600; color: var(--clr-orange); margin-bottom: 8px;">Jawaban:</div>
+<div style="line-height: 1.5; font-size: 13.5px; color: var(--clr-text);">Responden utama adalah pengelola. Jika menolak, dapat didekati melalui pihak terkait. Jika tetap menolak, dicatat sebagai non-respon.</div>`
       }
     ];
 
