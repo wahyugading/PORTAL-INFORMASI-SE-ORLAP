@@ -1,0 +1,522 @@
+[
+  {
+    "q_full": "Untuk usaha yang mau ditambahkan perlu LOOKUP/ melihat Daftar Usaha yang ada di prelist SBR dalam 1 SLS (slide Tambah Usaha SE2026 Blok I). Untuk akses daftar usaha prelist SBR itu apakah perlu internet? Mengingat di daerah papua barat ini banyak daerah remote tanpa sinyal internet. Apabila perlu internet, apakah ada kiat atau cara supaya bisa sesuai dengan SOP yang ditentukan?\n2. Untuk LOOKUP tambah assignment apakah juga perlu internet? Untuk daerah remote bagaimana perlakukannya?\n3. Jika tambah assignment ini tidak disambungkan ke Lookup prelist Usaha saat di daerah tdk ada sinyal, tapi ketika ada sinyal mau disambungkan/lookup ke prelist yang tersedia apakah bisa? Apakah nanti akan mempengaruhi isian di dalamnya yang sudah terisi sebelum dilookup?\n4. Untuk CEK NIK apakah wajib? untuk daerah tdk ada sinyal bagaimana perlakuannya? Apakah diisi dahulu baru dicek NIK di tempat ada sinyal atau bisa\nlangsung dikirim tanpa cek NIK?",
+    "a_full": "1. Tidak perlu karena berjalan offline\n2. Tidak perlu, kecuali untuk mendapatkan status akhir dari usaha di lookup tsb apakah sudah digunakan atau tidak\n3. Bisa dilakukan mode offline\n4. Cek NIK wajib dilakukan untuk yang tidak ada kendala sinyal. Tetapi jika ada kendala baik signal maupun server maka tetap bisa dilanjutkan pendataan sampai submit.",
+    "tags": [
+      "#Prosedur Prelisting",
+      "#Metodologi"
+    ]
+  },
+  {
+    "q_full": "Batasan dikatakan mengusahakan Jasa Pertanian seperti apa?\n- Misal di Jasa Pemupukan, si A memang terbiasa bekerja sbg buruh tani. Dia pernah diminta untuk memupuk sawah orang seluar 1 hektar dengan dibayar 200rb untuk 1 hektar itu (ditarget selesai dalam 1 hari). Tapi bukan dibayar harian. Pupuknya dari pemilik sawah. Si A memupuk secara manual, tidak menggunakan alat. Apakah si A dikatakan punya usaha Jasa pertanian?\n- Misal di Jasa Pengolahan lahan, si B memang terbiasa bekerja sbg buruh tani. Di awal tahun 2026 pernah diminta untuk mengolahan lahan milik petani seluas 500 m2. Dia akan dibayar 700rb rupiah untuk mengolah sawah tsb (bukan dibayar berdasarkan hari kerja). Si B mengolah lahannya secara manual, hanya\nmenggunakan cangkul. Apakah si B mengusahakan jasa pertanian?",
+    "a_full": "- ya, jasa pertanian. Karena selesai sesuai target atau tidak maka bayarannya tetap. Dalam hal ini baik A maupun B menanggung resiko",
+    "tags": [
+      "#Prosedur Prelisting",
+      "#Metodologi"
+    ]
+  },
+  {
+    "q_full": "Saat pemutakhiran referensi waktunya setahun yang lalu. Sedangkan pada kuesioner L ditanyakan pendapatan dan pengeluaran selama 2025. Apabila terdapat panen tanaman padi pada April 2025. Apakah tidak masuk dalam pencacatan SE2026 karena saat pemutakhiran diluar periode setahun yang lalu?\n2. Untuk usaha tanaman kehutanan, berarti konsepnya tidak perlu ada tanaman tegakan seperti pada ST23 ya?\n3. Disebutkan untuk usaha pertanian harus ada yang diproduksi, bagaimana dengan peternakan dimana terdapat ternak Sapi yang fisiknya ada saat pendataan, tetapi belum pernah dijual sebelumnya dan akan berniat dijual karena sedang dalam pembesaran?",
+    "a_full": "1. Apabila April 2025 terakhir panen dan tidak mengusahakan komoditas pertanian lagi, maka tidak akan ditangkap sebagai usaha pertanian pada kuesioner pemutakhiran.\n2. Harus ada tegakan (Tegakan adalah tanaman yang sudah ditanam dan masih ada tanamannya), sama dengan konsep ST2023.\n3. Nilai produksi diperhitungkan selisih nilai bobot akhir tahun terhadap awal tahun",
+    "tags": [
+      "#Prosedur Prelisting",
+      "#Metodologi"
+    ]
+  },
+  {
+    "q_full": "PPL UB hanya mendata UB yang ada di prelist. Lalu PPL Door To Door mendata UB yang tidak ada di prelist (Sesuai alokasinya). Bagaimana cara Door To Door mengetahui jika UB tersebut sudah di data oleh PPL UB melalui FASIH ?\nSaat Pelatihan terdapat di PPT bahwa PPL Door To Door jika menemukan UB hanya geotagging dan submit, berarti tidak dilanjutkan pendataan ya ? Apakah ini\nmasih sama ?",
+    "a_full": "Jika PPL door to door menemukan usaha besar baik yang ada di daftar assigment maupun di menu lookup di wilayah SLS nya ada, maka PPL door to door cukup melakukan geotagging dan menempelkan sticker kemudian submit. Untuk pendataan lengkap usaha/perusahaan tersebut akan dilakukan oleh PPL-UB.",
+    "tags": [
+      "#Prosedur Prelisting",
+      "#Metodologi"
+    ]
+  },
+  {
+    "q_full": "Pak Barkah mengusahakan padi dan jagung selama 2025 secara berselang-seling, di P akan menjawab Ya pada tanaman pangan. Akan terbentuk rooster\nBarkah-Tanaman Pangan. Saat di rincian 13a penentuan KBLI dari nilai produksi terbesar antara padi dan jagung; misal yg terbesar adalah Padi. Pertanyaannya, pengeluaran dan pendapatan usaha pertanian pak barkah hanya berisi pengeluaran dan pendapatan untuk padi saja sesuai KBLI usaha atau termasuk\npengeluaran dan pendapatan padi dan jagung?",
+    "a_full": "Seluruh pendapatan dan pengeluaran padi dan jagung\nNilai Produksi dari seluruh hasil panen padi dan  jagung dicatat pada Rincaian 27 a Nilai produksi/penjualan/pendapatan barang dan jasa\nPengeluaran yang dicatat adalah seluruh pengeluaran pada kegiatan penanaman padi dan jagung pada rincian 26 b  Biaya produksi",
+    "tags": [
+      "#Prosedur Prelisting",
+      "#Metodologi"
+    ]
+  },
+  {
+    "q_full": "Rekomendasi untuk semua survei/sensus yang memanfaatkan FASIH dashboard. Bisa tidak ya dimulai dari SE ini, ada fitur di dashboard untuk melihat rekap per petugas? mengingat, kadang terjadi di survei lain, contohnya GC PBI, rekap petugas itu baru ada setelah ada banyak request dari daerah untuk dimunculkan di dashboard. Sebaiknya, itu jadi standar untuk kegiatan survei/sensus bahwa dashboard itu memfasilitasi untuk bisa melihat rekap per petugas.",
+    "a_full": "Noted. Rekap per petugas akan dijadikan standar.",
+    "tags": [
+      "#Prosedur Prelisting",
+      "#Metodologi"
+    ]
+  },
+  {
+    "q_full": "Untuk jumlah hewan ternak terutama ayam ini apa tidak ada batasannya?karena kalau di desa ini setiap rumah pasti melihara ayam tapi hanya dipelihara untuk jaga-jaga kalau butuh telur atau daging untuk dikonsumsi sendiri tidak sampai dijual\nIni serius kalau ayam misalnya cuma satu dan dia mau mengusahakan dimasukan\n?",
+    "a_full": "untuk yang memelihara hewan ternak dengan tujuan konsumsi sendiri maka\ntidak disebut sebagai usaha peternakan.\nIdentifikasi awal usaha peternakan yaitu ternak yang masih ada dipelihara pada saat pencacahan, kecuali pada unggas pedaging (ayam kampung pedaging, ayam ras pedaging, itik pedaging, puyuh pedaging) tetap tercakup walaupun pada saat pencacahan sedang tidak ada unggasnya (pengosongan kandang) asalkan masih berencana akan melanjutkan usaha unggas pedagingnya.",
+    "tags": [
+      "#Prosedur Prelisting",
+      "#Metodologi"
+    ]
+  },
+  {
+    "q_full": "Mohon izin bagaimana mengenali apakah usaha itu analog/mikro, menengah, dan UB/besar? Apakah batasannya, omset atau bagaimana?\nApakah boleh diberikan batasan omset berapa rupiah untuk penentuan di prelist tsb - sbg wawasan?\n2. Apakah pada praktiknya bisa dikatakan seperti ini. Ngibar bisa dilaksanakan sebelum Juni 2026 yang akan dikirimkan link CAWI oleh admin BPS RI (BPS Provinsi/Kab/Kota memberikan informasi email pengusaha yang ikut ngibar). Ketika belum submit, 1 minggu setelah ngibar untuk UB menjadi PAPI, untuk usaha menengah ke CAPI. Yang menentukan UB/UM berarti dari prelist ya pak? Usaha di luar prelist otomatis ke PAPI/CAPI? Terima kasih.\n3. Saat ngibar on the spot ada yg belum prelist, admin Fasih akan input sbg assignment baru dan change mode ke CAWI. Berarti akan admin fasih di Pusat, provinsi, dan kabkot? Apakah akan ada briefing khusus admin Fasih atau tidak? Apakah ada pedoman praktis (file pdf) untuk admin FASIH utamanya saat Ngibar? Terima kasih.",
+    "a_full": "1. Identifikasi skala usaha sudah ada di prelist yang dilakukan oleh Tim SBR\n2. Blasting link CAWI pada kegiatan ngibar dilakukan oleh admin FASIH di lokasi ngibar.\nBPS RI hanya mengirimkan link CAWI kepada UB/UM prelist yang memiliki no wa/email dan belum submit pada periode ngibar Mei, pada tanggal 1 dan 8 Juni 2026.\nTindak lanjut usaha yang belum submit (periode 1 minggu setelah pelaksanaan ngibar:\n- Pada periode Ngibar tahap 1 (Mei - Minggu II Juni 2026), dilakukan oleh PJK KKD sampai dengan 29 Juni 2026 untuk UB dan 13 Juni 2026 untuk UM.\n-Pada periode Ngibar tahap 2 (Minggu III juni - 31 Juli 2026), dilakukan oleh PPL-UB/door to door. Untuk UB prelist, akan didata oleh PPL-UB menggunakan PAPI. Sedangkan selain UB prelist, akan didata oleh PPL door to door menggunakan CAPI.\n3. Briefing Admin FASIH tanggal 19-22 Mei 2026. Pedoman untuk Admin Ngibar akan disiapkan oleh Tim SIS.",
+    "tags": [
+      "#Aplikasi FASIH",
+      "#Sistem"
+    ]
+  },
+  {
+    "q_full": "Untuk responden sekolah\n1. tujuan penggunaan internet nih gimana?\n- menerima pesanan jasa: PPDB online?\n- produksi jasa: kelas online?\n- distribusi jasa: tidak ada kan? atau kelas online yg masuk sini?\n- membeli bahan baku: apakah termasuk pengadaan peralatan belajar mengajar scr online?\n- promosi: punya sosial media atau website sekolah yg aktif?\n2. persentase pendapatan onlinenya gimana? di atas kan diisi ada transaksi onlen (ppdb) dan produksi (kelas onlen). tapi kan ga bisa dipisahin kalau siswa bayar SPP atau BOS ya buat semuanya",
+    "a_full": "1. - menerima pesanan jasa: PPDB online = Iya. Catatan: Dikatakan penggunaan internet untuk menerima pesanan barang/jasa ketika komitmen atau deal pesanan barang/jasa dilakukan secara online (tanpa memperhatikan metode pembayaran). (Jika terisi \"Iya\" maka persentase pendapatan online harus terisi).\n- produksi jasa: iya, kelas online sebagai produksi jasa\n- distribusi jasa:  iya, penyaluran jasa secara online.\n- membeli bahan baku: apakah termasuk pengadaan peralatan belajar mengajar secara online = iya\n- promosi: punya sosial media atau website sekolah yg aktif = iya\n2. untuk pembayaran SPP secara transfer bank melalui kasir atau atm belum dianggap sebagai pendapatan online karena pendapatan online diperoleh dengan menerima pesanan, memproduksi, atau mendistribusikan barang/jasa melalui internet.\nSuatu sekolah, ada yang mendaftar secara online dan ada yang datang ke sekolah secara offline.\nPersentase online adalah berapa persen pendapatan yang diperoleh dari siswa yang mendaftar online dari total pendapatan dari seluruh siswa.",
+    "tags": [
+      "#Aplikasi FASIH",
+      "#Sistem"
+    ]
+  },
+  {
+    "q_full": "Dalam slide dituliskan Untuk Sektor Tanaman Pangan termasuk yang seluruhnya dikonsumsi sendiri (padi, jagung, kedelai, kacang tanah, kacang hijau, ubi kayu, ubu jalar). Apakah selain komoditas yang disebutkan dalam kurung berarti harus sebagian dijual? Atau untuk seluruh komoditas tanaman pangan yang dikonsumsi sendiri misal talas, gayong, dll selain komoditas dalam kurung\n2. Apakah dalam SE2026 ini dianggap masuk usaha pertanian jika bentuk produksinya bukan standar? Budidaya pisang, jual daunnya, budidaya ubi kayu jual daunnya, dsb",
+    "a_full": "1. Seluruh komoditas tanaman pangan yang ada di ST2023-Kode (padi, jagung, kedelai, kacang tanah, kacang hijau, ubi kayu, ubu jalar dan palawija lainnya)\n2. Ya, sesuai dengan konsep ST2023. Untuk tanaman singkong yang diambil singkongnya masuk sebagai tanaman pangan. Tetapi untuk tanaman singkong yang diambil daunnya masuk sebagai hortikultura (ditangkap di Kuesioner P subsektor hortikultura). Untuk pisang, baik yang diambil buahnya maupun daunnya, masuk sebagai hortikultura.",
+    "tags": [
+      "#Aplikasi FASIH",
+      "#Sistem"
+    ]
+  },
+  {
+    "q_full": "saat ini di salah satu kabupaten/Kota yaitu di Kota Bitung masih belum ada pengesahan Ketua SLS, jadi belum ada ketua SLS yang disahkan untuk satu wilayah Kota Bitungsampe sekarang, pada tahap pengenalan dan Penelusuran Wilayahnya, serta identifikasi SLS seperti apa?, apakah tidak perlu melapor ke ketua SLS nya (kareta tidak ada ketua sls definite) atau dikonfirmasi ke ketua SLS periode sebelumnya atau ke aparat kelurahan saja?, informasinya saat ini belum ada pengurus Untuk semua Tingkatan SLS dibawah Kelurahan, baik itu Lingkungan (RW) maupun sls terkecil (RT)",
+    "a_full": "Melapor ke ketua SLS penting dilakukan untuk mengenalkan petugas, sekaligus meminta ijin untuk melakukan pendataan di wilayah (SLS) tersebut, hal ini untuk menghindari terjadinya persepsi negatif dari masyarakat. Jika suatu SLS belum ada Ketua SLSnya (belum ditetapkan), pendekatan yang dilakukan adalah melapor ke SLS di atasnya misal ke Ketua RW/Kampung, dan menanyakan pengurus/pengelola SLS/tokoh masyarakat lainnya yang diberi kewenangan (berpengaruh) untuk ditemui dan meminta ijin melakukan pendataan SE2026.",
+    "tags": [
+      "#Aplikasi FASIH",
+      "#Sistem"
+    ]
+  },
+  {
+    "q_full": "Sewaktu NGIBAR, bagaimana menentukan Usaha Menengah (UM)?\ntersebut hanya ada di Bangunan Khusus Usaha (BKU), contoh PTSP kebanyakan datanya adalah UMKM dan nama pada list data yang diberikan adalah nama pemiliknya meski sudah ada badan hukum. Tapi jika di probing atau pengecekan baru ketahuan jika dia ada yang tinggal di bangunan tersebut. Mohon konfirmasinya",
+    "a_full": "- skala usaha berdasarkan prelist.",
+    "tags": [
+      "#Aplikasi FASIH",
+      "#Sistem"
+    ]
+  },
+  {
+    "q_full": "Untuk sekolah yang dibawah yayasan, untuk jaringan usaha apakah diisikan cabang atau tunggal atau apa?\nKasus 1 : Yayasan A menaungi SD A1, SMP A1, Koperasi B. Bagaimana jaringan yayasan, sekolah dan koperasi?\nKasus 2 : Yayasan Al-Azhar Syifa Budi (Pusat di Jakarta), ada SD Al-Azhar Syifa Budi Samarinda (cabang). Bagaimana jaringannya?\nKasus 3 : sekolah negeri = tunggal. Namun bagaimana sekolah negeriinduk dan filial misal SDN 004 dan SDN Filial 004 Samarinda Utara?\n2. Pada L.UB untuk pertanyaan memproduksi barang/jasa ramah lingkungan (13a) dan penggunaan input tujuan perlindungan lingkungan (13b) apakah ada time reference nya? Bagaimana jika pernah namun ketika petugas datang sudah tidak memproduksi dan menggunakan input lagi?\n3. Di L.UB, untuk rincian memproduksi barang/jasa ramah lingkungan (13b) apakah barang yang diproduksi harus diusahakan? bagaimana jika usaha utamanya di bidang keuangan namun memproduksi pupuk cair yang tidak diperjualbelikan, apakah termasuk memproduksi barang/jasa sebagian?\n4. di L.UB, untuk rincian menggunakan produk karya seni, sastra, desain, teknologi, warisan budaya (R14), sejauh apa penggunaannya? apakah harus terlibat di kegiatan produksi? misal perusahaan hanya memajang saja lukisan di kantor apakah sudah termasuk menggunakan produk karya seni? atau menggunakan produk teknologi berupa hp untuk pekerjanya dalam hal komunikasi pekerjaan, apakah termasuk menggunakan teknologi?",
+    "a_full": "1. Kasus Yayasan bisa berlaku seperti kantor induk atau kantor pusat. Karena tidak ada pilihan induk pada jaringan usaha, maka yg berlaku sbg kantor induk dianggap sebagai usaha tunggal.\nKasus 1 : Yayasan A, SD A1, SMP A1, Koperasi B jaringan usahanya semua usaha tunggal\nKasus 2 : Yayasan Al Azhar Syifa Budi bisa sebagai pusat dari SD yang di Samarinda\nKasus 3 : sekolah-sekolah tersebut dianggap sebagai usaha tunggal\n2. Periode waktunya tahun 2025\n3. 13a yang memproduksi pupuk cair, meskipun tidak dijual, termasuk memproduksi barang/jasa sebagian.\n4. Pemanfaatan karya seni tidak harus terlibat dalam proses produksi, misal lukisan dipajang di ruang pelayanan nasabah. Kalau untuk penggunaan teknologi maju harus digunakan dalam proses produksi. contoh: aplikasi WA untuk keperluan usaha.\nizin tanya lebih lanjut:\n1. kenapa untuk kasus 1 tunggal dan kasus 2 cabang, padahal sama sama yayasan dan di lokasi yang berbeda?\n3. Mohon maaf, keliru menuliskan rincian, maksudnya R13a (memproduksi barang/jasa ramah lingkungan), apakah jika kegiatan utama di bidang keuangan, namun ada memproduksi pupuk cair namun tidak diperjualbelikan, apakah termasuk kode 2 (memproduksi sebagian)?\nJawaban lebih lanjut:\n1. kasus 1 tunggal karena SD A1, SMP A1, Koperasi B. merupakan establisment yang berdiri sendiri dan tidak memiliki cabang di tempat lain. Sementara kasus 2, SD tersebut merupakan kantor cabang karena sebelumnya sudah ada SD yang sama sebagai unit yang beroperasi lebih dulu. Sehingga secara umum, untuk perijinannya (NIK) tetap menggunakan perusahaan induk (yang sebelumnya berdiri lebih awal).\n3. Pupuk cair ramah lingkungan ini, apakah digunakan untuk menunjang kegiatan utama dibidang keuangan tersebut? Walau tidak diperjualbelikan, namun digunakan dalam menunjang kegiatan utama dibidang keuangan maka produksi pupuk tersebut termasuk memproduksi barang ramah lingkungan. betul, dalam hal ini termasuk memproduksi barang sebagian. Namun jika pupuk tersebut tidak digunakan untuk menunjang kegiatan bidang keuangan, maka produksi pupuk tersebut tidak termasuk dalam kegiatan yang memproduksi barang ramah lingkungan bagi usaha utama di bidang keuangan tersebut.",
+    "tags": [
+      "#KBLI & Klasifikasi",
+      "#Metodologi"
+    ]
+  },
+  {
+    "q_full": "Izin pak berarti Pegadaian bagaimana pak?\ncabang dan outlet (melayani nasabah langsung) - masuk cabang? KBLI 64 Pegadaian Pusat (kantor Pusat N 70)\nKantor Perwakilan (mengawasi dan koordinir urusan kantor area) dan Kantor Area (mengawasi dan koordinir urusan kantor cabang dan outlet) --> perwakilan dan area apakah termasuk perwakilan atau unit penunjang sebab mereka tidak ada pendapatan? Kategori KBLI termasuk kantor pusat N 70?\nMohon konfirmasi terkait jaringan usaha dan KBLI nya pak mengingat akan\nngibar besok pak. Terima kasih pak",
+    "a_full": "Kantor perwakilan sebagai kepanjangan kantor pusat, yang hanya untuk kebutuhan koordinasi dan administrasi aktivitasnya sebagai kantor pusat (N 70). Untuk jaringan kantor lainnya, yang melakukan aktivitas utama pegadaian, yaitu melayani nasabah gadai, adalah  kegiatan lembaga keuangan pegadaian\nDi pedoman dan bahan ajar ada penjelasan kantor Cabang dan Kantor Perwakilan terkait Fungsi, kegiatan bisnis, dan tanggungjawab.",
+    "tags": [
+      "#KBLI & Klasifikasi",
+      "#Metodologi"
+    ]
+  },
+  {
+    "q_full": "Izin pak berarti Pegadaian bagaimana pak?\nPegadaian Pusat (kantor Pusat N 70)\nKantor Perwakilan (mengawasi dan koordinir urusan kantor area) dan Kantor Area (mengawasi dan koordinir urusan kantor cabang dan outlet) --> perwakilan dan area apakah termasuk perwakilan atau unit penunjang sebab mereka tidak ada pendapatan? Kategori KBLI termasuk kantor pusat N 70?\ncabang dan outlet (melayani nasabah langsung) - masuk cabang? KBLI 64\nMohon konfirmasi terkait jaringan usaha dan KBLI nya pak mengingat akan ngibar besok pak.",
+    "a_full": "Kantor Perwakilan dan kantor Area jaringan usahanya perwakilan. Di pedoman dan bahan ajar ada penjelasan perbedaan Kantor Cabang dan Kantor Perwakilan terkait Fungsi, kegiatan Bisnis, dan Tanggungjawab.\nFungsi Kantor Perwakilan hanya untuk fungsi representasi: promosi, riset pasar, koordinasi. Tidak beroperasi secara komersial langsung.\nPegadaian di kategori L.\nKantor Wilayah = Jaringan usaha adalah kantor Cabang\nKantor Perwakilan = Representasi dari kantor pusat. (KBLI sama dengan kantor pusat)\nOutlet =",
+    "tags": [
+      "#KBLI & Klasifikasi",
+      "#Metodologi"
+    ]
+  },
+  {
+    "q_full": "dari penjelasan bu Puji menyebutkan bahwa anak sementara sekolah namun tidak tinggal bersama dengan keluarga dipilih kode 3 tidak tinggal bersama, misal anak ituk tinggal bersama dengan neneknya untuk bersekolah di dekat rumah nenek, masih berumur 10 tahun, anak masih masuk di kk orang tuannya, berarti saat pendataan di rumah neneknya sang anak tetep dianggap keluarga sendiri ( ada 2 keluarga keluarga nenek dan keluarga anak (hanya berisi anak)? meskipun belum cukup umur untuk menjadi responden? atau malah digabung\nsebagai anggota keluarga Nenek meski sebenernya berbeda KK dengan neneknya, apakah ada batasan usia agar bisa/eligible untuk memberikan jawaban/menjadi\nresponden",
+    "a_full": "1. Dirumah nenek, anak ditambahkan menjadi assignment sendiri (keluarga tersendiri, berbeda dengan nenek). Anak sebagai kepala keluarga yang anggota keluarganya hanya ia sendiri. Keterangan perumahan mengikuti rumah nenek.\n2. info mengenai anak ketika tinggal dirumah nenek, dapat ditanyakan ke nenek sebagai responden",
+    "tags": [
+      "#KBLI & Klasifikasi",
+      "#Metodologi"
+    ]
+  },
+  {
+    "q_full": "Pertanyaan Untuk rincian Kepemilikan Fasilitas BAB  jika seorang keluarga anak menumpang BAB di rumah orang taunya (keluarga anak dan keluarga orang tua tinggal berbeda rumah), jadi yang memiliki FAsilitas BAB/WC keluarga orang tuanya kan untuk keluarga orang tuanya status kepemilikan fasilitas BAB terisi kode 2, ada digunakan bersama oleh anggota keluarga dari beberapa rumah; nah untuk keluarga anaknya, status kepemilikan fasilitas BAB nya dipilih kode berapa? apakah kode 2 juga atau kode 4?\njika ternyata dipilih kode 2, kan sebenernya sang anak itu kondisinya tidak memiliki fasilitas BAB ya?, jadi kapan Pilihan kode 4 tidak ada fasilitas BAB nya\nterpilih",
+    "a_full": "Keluarga anak dan orang tua sama-sama terisi kode 2. Ada, digunakan bersama oleh anggota keluarga dari beberapa rumah",
+    "tags": [
+      "#KBLI & Klasifikasi",
+      "#Metodologi"
+    ]
+  },
+  {
+    "q_full": "Untuk usaha industri kue basah, industri tempe, industri makanan dalam kemasan, buat di rumah dan seluruhnya dijual di pasar.\nartinya ada 2 usaha? di rumah sebagai industri, di pasar usaha perdagangan?.\n- usaha d rumah 13b 1 'Ya', kategori industri, jaringan usaha pabrik.\n- untuk usaha di pasar rincian 13b1 (apakah memproduksi barang di lokasi ini) akan tercatat 'Tidak'. kategori perdagangan, R14 jaringan usahanya adalah unit penunjang.\nbenarkah demikian?\ntapi yang di pasar itu kan tidak ada mengambil selisih harga dari yang di rumah.",
+    "a_full": "jaringan pabrik hanya untuk unit kegiatan usaha yang hanya memproses produksi, tidak ada aktivitas lainnya, seperti aktivitas  administrasi dan pemasaran. sementara rumah yang digunakan sebagai tempat produksi juga ada aktivitas adminstrasi dan pemasaran dianggap sebagai usaha tunggal.\nJadi usaha produksi kue basah, tempe yang dibuat di rumah, jaringan usahanya adalah usaha tunggal industri pengolahan, sementara unit penjualan di pasar sebagai usaha tunggal perdagangan (bukan unit penunjang)",
+    "tags": [
+      "#KBLI & Klasifikasi",
+      "#Metodologi"
+    ]
+  },
+  {
+    "q_full": "Adakah minimum jumlah tanaman pangan atau luas tanam minimumnya yang dianggap sebagai usaha pertanian tanaman pangan ? Karena ada cukup banyak masyarakat di DKI Jakarta yang memanfaatkan tanah yang kosong untuk menanam tanaman pangan seperti ubi kayu dan jumlah pohonnya sangat sedikit (dapat dihitung dengan jari). karena secara konsep tanaman pangan yang dikonsumsi sendiri termasuk usaha. apakah hanya menanam 1 pohon ubi kayu itu\nsudah dianggap ada usaha pertanian tanaman pangan?",
+    "a_full": "berapa jarak tanam normal tanaman pangan atau per komoditasnya? adakah info tersebut di slide?",
+    "tags": [
+      "#KBLI & Klasifikasi",
+      "#Metodologi"
+    ]
+  },
+  {
+    "q_full": "Mengacu ke pertanyaan no 238, untuk kantor perwakilan karena kegiatan mengawasi dan mengkoordinir urusan kantor area, apakah KBLI nya bisa kategori N 70 pak? walaupun bukan kantor pusat ataukah mengikuti KBLI pegadaian (kategori L)?\nIzin melanjutkan Pak, Kanwil berfungsi sebagai pengawas dan pengelola operasional untuk wilayah geografis tertentu - tidak ada kegiatan gadai dengan nasabah, apakah kanwil tetap KBLI Pegadaian, atau KBLI Kantor Pusat mengingat kegiatannya?",
+    "a_full": "Untuk Kantor Perwakilan atau Kanwil yang kegiatannya mengawasi dan mengkoordinir dan tidak ada kegiatan layanan gadai dengan nasabah, mengikuti KBLI Kantor Pusat (N 70100).",
+    "tags": [
+      "#KBLI & Klasifikasi",
+      "#Metodologi"
+    ]
+  },
+  {
+    "q_full": "Kenapa hanya ada beberapa KBLI khusus yang kegiatan utamanya dilihat dari naturenya?\nUsaha karaoke secara nature adalah karaoke, tp kalo lihat pendapatannya, margin perdagangan makan minum / usaha PMMnya bisa jadi lebih besar. Apakah pada kasus seperti ini, keg utamanya bukan karaoke, tapi jadi perdagangan/usaha PMM?",
+    "a_full": "untuk saat ini, yang sudah disepakati, usaha berdasarkan nature adalah\n1. Usaha Bengkel yang juga menjual sparepart\n2. Usaha Salon yang juga menjual alat kosmetik\n3. Usaha Fotocopy yang juga menjual ATK\n4. Usaha minimarket yang juga menjual minuman (kopi)\n5. usaha Karaoke\n6. klinik kecantikan",
+    "tags": [
+      "#KBLI & Klasifikasi",
+      "#Metodologi"
+    ]
+  },
+  {
+    "q_full": "Untuk keluarga yang tinggal di kepulauan, biasanya mereka punya rumah lain di darat/ibukota kabupaten. Alamat KK adalah di kepulauan, dan keluarga tidak menentu kapan menempati rumahnya di kepulauan (tergantung cuaca, tapi dalam setahun pasti ada pulang 2-3 kali).\n1. Keberadaan anggota keluarga berpatokan pada rumah yang mana?\n2. Kondisi perumahan dan aset apakah mengikuti rumah sesuai KK (pulau) atau domisili setempat?",
+    "a_full": "Misalkan saat pendataan: keluarga sedang tinggal di darat sedangkan prelist ada di Kepulauan, maka:\n1. Keluarga di prelist Kepulauan, petugas mencari tahu keberadaan keluarga tersebut dari tetangga-tetangganya, berstatus Tidak ditemukan (kode 0) jika tidak bisa diperoleh apa pun mengenai keluarga tsb atau tidak dapat ditemui hingga akhir pendataan (kode 5) jika diketahui keluarga tsb masih tinggal di rumah itu. Selanjutnya akan ada assignment baru untuk keluarga di alamat darat.\n2. Kondisi perumahan dan aset mengikuti kondisi rumah keluarga di darat (yang\nditinggali). Untuk rumah di kepulauan, akan dicatat di Aset Lainnya",
+    "tags": [
+      "#KBLI & Klasifikasi",
+      "#Metodologi"
+    ]
+  },
+  {
+    "q_full": "mohon diperjelas kembali terkait identifikasi Usaha khusunya usaha hasil produksi yang dilakukan pemasaran sendiri\nmisal contoh kasus: seorang nelayan yang menjual ikan hasil tangkapannya sendiri di Pasar (dia memiliki lapak dipasar),kan sebenernya secara kerangka usaha ini hanya satu usaha ya yaitu usaha pertanian(perikanan) yang mana pemasarannya dipasar, apakah dalam pendataan tetap akan dibuat menjadi dua usaha, yaitu usaha pertanian/perikanan dan usaha perdagangan di pasar seperti penjelasan master intama tadi?\nkarena itu kan terlihat seakan akan di keluarga tersebut memilki beberapa usaha ( usaha di rumah dan usaha dipasar)\nkarena nantinya akan banyak ditemui kasus kasus dilapangan yang mana keluarga mengusahakan usaha pertanian yang dilakukan pemasaran/penjulana sendiri di tempat lain hasil pertaniannya, mohon bisa ditegaskan kembali\nkemudian apakah kita perlu menekankan kepada pegugas pendataan untuk usaha di BKU untuk menanyakan/menggali terkait asal barang barang yang dijual misalnya, apakah hasil produksi sendiri atau dari mana?",
+    "a_full": "Dalam kasus ini ada 2 usaha yaitu perikanan dan perdagangan.\n1. Usaha di rumah: perikanan - jaringan usaha: tunggal\n2. Usaha di los pasar: Perdagangan ikan - jaringan usaha: tunggal",
+    "tags": [
+      "#Pencatatan Pendapatan",
+      "#Teknis"
+    ]
+  },
+  {
+    "q_full": "mohon diperjelas kembali terkait identifikasi Usaha khusunya usaha  hasil produksi yang dilakukan pemasaran sendiri\nmisal contoh kasus: seorang nelayan yang menjual ikan hasil tangkapannya sendiri di Pasar (dia memiliki lapak dipasar),kan sebenernya secara kerangka usaha ini hanya satu usaha ya yaitu usaha pertanian(perikanan) yang mana pemasarannya dipasar,  apakah dalam pendataan tetap akan dibuat menjadi dua usaha, yaitu usaha pertanian/perikanan dan usaha perdagangan di pasar seperti penjelasan master intama tadi?\nkarena itu kan terlihat seakan akan di keluarga tersebut memilki beberapa usaha ( usaha di rumah dan usaha dipasar)\nkarena nantinya akan banyak ditemui kasus kasus dilapangan yang mana keluarga mengusahakan usaha pertanian yang dilakukan pemasaran/penjulana sendiri di tempat lain hasil pertaniannya, mohon bisa ditegaskan kembali\nkemudian apakah kita perlu menekankan kepada pegugas pendataan untuk usaha di BKU untuk menanyakan/menggali terkait asal barang barang yang dijual misalnya, apakah hasil produksi sendiri atau dari mana?",
+    "a_full": "- jika ada BKU tersendiri dibuat 2 usaha/establishment",
+    "tags": [
+      "#Pencatatan Pendapatan",
+      "#Teknis"
+    ]
+  },
+  {
+    "q_full": "Bisa lebih dipertegas lagi sebuah usaha masuk kategori pertanian atau kategori lainnya misal industri\nkhusunya untuk kasus yang usaha yang inputnya berasal dari hasil produksinya sendiri yang diolah menjadi produk lain\ncontoh kasus misal petani kelapa yang mengolah hasil kelapanya menjadi produk akhirnya kopra, apakah akan di catat usaha yang dimiliki usaha industri kopra saja atau akan di catat tetap memiliki 2 usaha  usaha pertanian kelapa dan usaha industri kopra,\nkasusnya sama juga seperti nelayan yang mengolah hasil ikan tangkapannya menjadi ikan asap itu pencatatan usahanya hanya sebagai usaha industri ikan asap atau akan dicatat 2 usaha perikanan dan industri?\nhal ini berkaitan juga dengan jumlah usaha yang ditemukan nantinya khususnya usaha pertanian yang dijadikan input sendiri untuk usaha lainnya",
+    "a_full": "Ya, jika inputnya berasal dari hasil pertanian maka tetap disebut sebagai usaha pertanian. Dalam hal usaha kopra dari hasil kebun sendiri maka ada 2 usaha yaitu usaha pertanian dalam hal ini adalah subsektor perkebunan dan usaha industri kopra.\nUsaha pertanian subsektor perkebunan:\npengeluaran: pupuk, bibit kelapa, dll\npendapatan: nilai produksi kelapa (didekati harga jual kelapa)\nUsaha Industri Kopra:\npengeluaran: biaya bahan baku kelapa (didekati harga jual kelapa), dan biaya penolong lainnya\npendapatan: nilai produksi kopra",
+    "tags": [
+      "#Pencatatan Pendapatan",
+      "#Teknis"
+    ]
+  },
+  {
+    "q_full": "Sweet Bakery yang berlokasi di Jalan Cendana memproduksi roti sebanyak 1.000 pcs dengan harga jual Rp20.000,00 per pcs.\nDalam proses produksinya, Sweet Bakery mengeluarkan biaya sebagai berikut: Biaya produksi: Rp10.000.000, Biaya operasional (listrik, internet, transportasi, dll.): Rp1.000.000, Upah pegawai: Rp3.000.000.\nDari total 1.000 pcs roti yang diproduksi: Sebanyak 600 pcs dijual di outlet Sweet Bakery Jalan Cendana, Sebanyak 400 pcs disalurkan ke outlet Sweet Bakery Jalan Rinjani.\nAdapun biaya operasional di outlet Jalan Rinjani adalah: Sewa ruko: Rp1.000.000, Upah pegawai: Rp1.500.000.\nSelain menjual produk sendiri, Sweet Bakery juga menerima titipan penjualan kerupuk dari usaha lain sebanyak 100 pcs dengan harga Rp10.000 per pcs, dengan rincian: 50 pcs dijual di outlet Jalan Cendana dan 50 pcs dijual di outlet Jalan Rinjani.\nBagaimana cara pengisian jaringan usaha, pendapatan, dan pengeluaran untuk Sweet Bakery di Jl Cendana dan Jl. Rinjani?",
+    "a_full": "Sweet Bakery Cendana: Kantor Pusat Pengeluaran\na. Upah: Rp3.000.000\nb. Biaya Produksi: Rp10.000.000\nc. pembelian barang yg terjual: 0\nd. Biaya operasional: Rp1.000.000\ne. Biaya non operasional: 0\nPendapatan\na. pendapatan: (1.000 x Rp20.000) + komisi penjualan 50 kerupuk\nb. pendapatan lainnya: 0\nSweet Bakery Rinjani: Kantor Cabang\na. Upah: Rp1.500.000\nb. Biaya Produksi: 0\nc. pembelian barang yg terjual: 400 x Rp20.000 = Rp8.000.000\nd. Biaya operasional: Rp1.000.000\ne. Biaya non operasional: 0\nPendapatan\na. pendapatan: (400 x Rp20.000) + komisi penjualan 50 kerupuk\nb. pendapatan lainnya: 0",
+    "tags": [
+      "#Pencatatan Pendapatan",
+      "#Teknis"
+    ]
+  },
+  {
+    "q_full": "Pada flowchart penentuan jumlah usaha pada slide 10, penentuan jumlah usaha ketika misalnya punya lebih dari satu usaha dengan laporan keuangan tidak terpisah maka usaha yang tercatat ditentukan berdasarkan nilai omzet yang paling besar sedangkan pada slide 14 dan 15 jenis aktivitas usaha ditentukan berdasarkan nature usaha/izin usaha/pengakuan responden atau nilai penjualan/produksi/pendapatan. Jadi sebenarnya layer penentuan jumlah usaha berdasarkan omzet terbesar atau nature/izin/pengakuan responden? mohon\npenjelasannya",
+    "a_full": "- identifikasi esstablishment: pemilik, lokasi, laporan keuangan\n- jika tidak bisa dibedakan laporan keuangannya, maka dianggap 1 usaha dengan melihat usaha dengan omset terbesar\n- terdapat 4 jenis usaha yang harus dilihat naturenya : bengkel, fotokopi, salon, minimarket/swalayan",
+    "tags": [
+      "#Pencatatan Pendapatan",
+      "#Teknis"
+    ]
+  },
+  {
+    "q_full": "tolong berikan penjelasan lebih detail terkait identifikasi establishment pada usaha mikro. seperti apa yang dicatat 1 dan seperti apa yang dicatat lebih dari 1. karna garis batasnya dari contoh yang disebutkan pada slide kurang begitu jelas. apakah dari pemilik, tempat usaha, atau pengelolaannya?\n1. di contoh usaha online dan pemilik kontakan dicatat 2 usaha karena berbeda naturenya. jika demikian contoh yang nasi uduk dan warung kopi kan bisa juga naturenya dianggap berbeda.\n2. bagaimana dengan usaha warung sembako, yang juga menjual pulsa, gas,\nbensin eceran?",
+    "a_full": "- Identifikasi establishment menggunakan 3 pendekatan :pemilik, lokasi usaha, dan pendekatan laporan keuangan (tidak ada pengecualian usaha mikro)\n1. untuk usaha kopi dan warung nasi uduk bisa dipastikan dulu laporan keuangannya terpisah atau tidak. usaha online dan kontrakan juga bisa dipastikan terlebih dahulu laporan keuangannya terpisah atau tidak.\n2.  dilihat dulu lokasi bangunan usaha nya. jika 2 lokasi maka bisa dipisahkan, jika 1 lokasi maka dilihat laporan keuangan terpisah atau tidak. jika tidak terpisah maka dianggap 1 usaha dengan omset terbesar",
+    "tags": [
+      "#Pencatatan Pendapatan",
+      "#Teknis"
+    ]
+  },
+  {
+    "q_full": "Terkait pekerja konstruksi  jika dia menawarkan jasa sendiri  kemudian kerjanya dibayar harian, bekerja dan diberi upah oleh orang lain apakah tetap dianggap bukan usaha? bisakah diperjelas apa yang menjadi kata kunci/yang membedakan ketika usaha kosntruksi/bangunan harian, bekerja dan diberi upah oleh orang lain dianggap bukan usaha, namun untuk ART Yang tidak menginap dan memiliki majikan lebih dari satu dianggap usaha dan kuli pekerja lepas (dia dibayar harian\noleh banyak orang) pun dianggap usaha.",
+    "a_full": "Konsep menanggung risiko, menanggung input, memperjualkan barang/jasa dan memasarkan barang/jasa",
+    "tags": [
+      "#Pencatatan Pendapatan",
+      "#Teknis"
+    ]
+  },
+  {
+    "q_full": "Bagaimana usaha pertanian dengan sistem bagi hasil?\n1. jika 1 orang sebagai pemilik lahan, 1 orang penggarap. modal beli bibit , pupuk dll dari penggarap. pemilik lahan hanya memperoleh bagi hasil dari hasil penjualan. apakah kedua orang itu usaha? pemilik lahan usaha penyewaan lahan dan penggarap usaha pertanian?\n2. jika 1 orang pemilik lahan, 1 orang penggarap. modal dari pemilik lahan. tp hasil bagi 3 misal (pemilik 2 bagian, penggarap 1 bagian). bagaimana\npencatatannya.",
+    "a_full": "1. Penggarap sebagai usaha pertanian, pemilik lahan bukan usaha pertanian.\n2. Jika seluruh modal usaha berasal dari pemilk lahan, maka pemilik lahan dianggap sebagai pengelola usaha pertanian karena bila terjadi gagal panen, maka menjadi tanggungan pemilik lahan (modal), sedangkan penggarap dalam hal ini dianggap sebagai buruh yang dibayar dengan 1 bagian bagi hasil.",
+    "tags": [
+      "#Pencatatan Pendapatan",
+      "#Teknis"
+    ]
+  },
+  {
+    "q_full": "Untuk penggunaan air gunung/ air sumber/ mata air yang bebas pakai apakah di inputasi? Karena tadi sempat disinggung penggunaan lahan bebas sewa tidak diinputasi\nBegitu juga dengan penjual pisang goreng yang pisangnya ambil dari budidaya sendiri dan ambil dari hutan (tidak dibudidayakan) apakah harus diimputasi semua nilainya berdasar harga pasar atau ada perbedaan?\nSama halnya dengan nelayan yang mengambil ikan di laut, apakah juga harus diimputasi biaya ikannya sesuai harga pasar atau dari cara mendapatkan ikannya?",
+    "a_full": "Diimputasi sesuai harga pasar. Bila harga pasar air gunung/mata air di wilayah tersebut o, maka nilai imputas untuk air = 0",
+    "tags": [
+      "#Pencatatan Pendapatan",
+      "#Teknis"
+    ]
+  },
+  {
+    "q_full": "Pada pelatihan kelas C kemarin, dicontohkan:\nusaha klinik dan apotek, punya dua izin (izin klinik dan izin apotik), 1 pemilik, di tempat yang sama, pemilik sama, laporan keuangan 1.\nmaka dicatat sebagai 1 usaha. meskipun izinnya 2. apakah masih sesuai?\n- Jika tercatat 1 usaha, kenapa pada slide metodologi (identifikasi establisment), contoh toko kelontong dan BRI Link dicatat sebagai 2 usaha karena nature kegiatan usahanya berbeda?",
+    "a_full": "umumnya kedua jenis kegiatan ini walaupun dimiliki oleh 1 pemilik, laporan keuangannya terpisah, sesuai perizinannya sehingga dihitung 2 establishmen. bila ternyata laporan keuangannya jadi 1 (misal berbentuk CV dengan satu nama usaha, maka dianggap 1 usaha",
+    "tags": [
+      "#Pencatatan Pendapatan",
+      "#Teknis"
+    ]
+  },
+  {
+    "q_full": "Hasil percobaan roll out tahap 2:\n1. Setelah Rincian 13 c seharusnya langsung 13 f, tapi ini masih diminta mengisi 13e\n2. Setelah Rincian 13 b4 terisi Ya seharusnya langsung 13 f, tapi ini masih diminta mengisi 13d dan 13 e\n3. Keterangan contoh untuk rincian 13 d dan 13 e masih dijelaskan bibit dan pakan (kategori pertanian), padahal berdasarkan penjelasan tadi pagi, jika dia termasuk kategori A maka setelah 13 b4 langsung ke 13 f (produk utama), jadi contoh untuk rincian 13 d dan 13 e tidak termasuk usaha pertanian\n4. Rincian 24 pekerja ketika dicoba jumlah pekerja =0 bisa (tidak ada warning), tetapi ketika jumlah pekerja = 1 kenapa ada warning: \"Jika total pekerja=1, maka seharusnya pekerja dibayar=0, pekerja tidak dibayar=1\"? Apakah pemilik tidak\nboleh dihitung sebagai pekerja dibayar?",
+    "a_full": "1,2,3. Sudah disesuaikan termasuk revisi untuk penambahan kategori pertanian\n4. - Tetap ada warning sebagai pengingat dan memastikan pekerja pemilik membayar dirinya sendiri.\n- Jumlah pekerja tidak boleh sama dengan nol (0).",
+    "tags": [
+      "#Identifikasi Usaha",
+      "#KasusBatas"
+    ]
+  },
+  {
+    "q_full": "Untuk Pendataan Usaha pembuatan Kopra keputusan Finalnya didata dilokasi mana? apakah di rumah keluarga yang mengusahakan atau di tempat/bangunan pembuatan Kopra (dia hanya berupa gubug yang ada panggungnya untuk menaruh daging kelapa untuk diasap)?\njika dia didata dibangunan pembuatan kopra itu akan cukup menyulitkan petugas dilapangan dikarenakan rata rata lokasi Tempat pembuatan kopra terletak di daerah perkebunan kepalanya (jauh dari pemukiman) dan lokasinya bisa berbeda SLS bahkan kelurahan dengan Pemiliknya sehingga menyulitkan dalam mencari pemilik , karena usahanya juga hanya beroperasi saat musim panen saja, sehingga\ntidak selalu ada pemilik dilokasi pembuatan kopranya",
+    "a_full": "dicatat di rumah tangga",
+    "tags": [
+      "#Identifikasi Usaha",
+      "#KasusBatas"
+    ]
+  },
+  {
+    "q_full": "Untuk Pendataan Usaha pembuatan Kopra keputusan Finalnya didata dilokasi mana? apakah di rumah keluarga yang mengusahakan atau di tempat/bangunan pembuatan Kopra (dia hanya berupa gubug yang ada panggungnya untuk menaruh daging kelapa untuk diasap)?\njika dia didata dibangunan pembuatan kopra itu akan cukup menyulitkan petugas dilapangan dikarenakan rata rata lokasi Tempat pembuatan kopra terletak di daerah perkebunan kepalanya (jauh dari pemukiman) dan lokasinya bisa berbeda SLS bahkan kelurahan dengan Pemiliknya sehingga menyulitkan dalam mencari pemilik , karena usahanya juga hanya beroperasi saat musim panen saja, sehingga\ntidak selalu ada pemilik dilokasi pembuatan kopranya",
+    "a_full": "- usaha kopra dicatat di rumah tangga",
+    "tags": [
+      "#Identifikasi Usaha",
+      "#KasusBatas"
+    ]
+  },
+  {
+    "q_full": "Melanjutkan pertanyaan no 5 diatas, berarti untuk usaha industri tempe di rumah dan menjual di pasar dimana unit di pasar adalah unit penunjang. Berarti untuk industri dirumah jaringan usahanya akan berstatus Kantor Pusat? Karena untuk unit penunjang di pasar membutuhkan isian kantor pusat di rincian 15. Kalau\nseperti ini bukankah jadi akan banyak yang berstatus Kantor Pusat?",
+    "a_full": "- Sudah diputuskan usaha perdagangan di mall/pasar pada tempat khusus usaha (BKU), diperlakukan sebagai usaha/establisment sendiri\n- terdapat penegasan terbaru merujuk pada pertanyaan 4",
+    "tags": [
+      "#Identifikasi Usaha",
+      "#KasusBatas"
+    ]
+  },
+  {
+    "q_full": "Bagaimana perlakuan bagi usaha yang pindah-pindah dari pasar/pekan ke pekan. Jika senin di pekan A, rabu di pekan B dan Sabtu di pekan C, bagaimana perlakukan usaha yang seperti ini, jika dia tidak punya tempat usaha tetap hanya beratapkan tenda, tapi tempat tetap hanya kar kaki per hari pekannya?\nBagaimana jika di setiap pekan, si pengusaha berpindah-pindah secara harian di kios masing-masing pasar di kios bangunan tetap. Usaha si pengusaha didata dimana?? apakah di setiap pasar didata?",
+    "a_full": "- Untuk kasus disini, yang usahanya perpindah/pindah dari satu pasar ke pasar lain dengan menggunakan tenda (ka kaki) dan tempatnya tidak tetap, maka akan didata di rumah tangganya\n- Usaha  di bangunan tetap (kios/BKU), hanya berbeda lokasi, maka akan di cacah di masing-masing kios (karena secara konsep usaha akan dicacah di BKU)",
+    "tags": [
+      "#Identifikasi Usaha",
+      "#KasusBatas"
+    ]
+  },
+  {
+    "q_full": "Bagaimana pencatatan tenaga kerja musiman di usaha pertanian dan di industri? Apakah tenaga kerja yang bantuin selama musim panen dicatat sebagai tenaga kerja atau dicatat sebagai jasa pertanian (biaya produksi)?\nBegitu juga dengan tenaga kerja yang dihire oleh industri kue selama menjelang lebaran bagaimana pencatatan tenaga kerjanya? Atau dicatat sebagai biaya\nproduksi karena tidak tetap?",
+    "a_full": "pekerja musiman dicatat sebagai pekerja, yang dicatat sebagai biaya jasa apabila pembayarannya melalui usaha/perusahaan perantara penyalur tenaga kerja",
+    "tags": [
+      "#Identifikasi Usaha",
+      "#KasusBatas"
+    ]
+  },
+  {
+    "q_full": "Hasil uji coba Internal Rollout Tahap II, ketika dalam 1 bangunan tempat tinggal terdapat 2 Keluarga, bagaimana pengisian keterangan untuk keluarga ke-2 tersebut, karena tidak muncul pilihan untuk pengisian keluarga ke-2 tersebut, apakah Keluarga ke-2 tersebut harus ditambahkan/merupakan assignment tersendiri untuk pengisian keterangan anggota keluarga, dan lain-lainnya?",
+    "a_full": "Ya ditambahkan assignment tersendiri",
+    "tags": [
+      "#Identifikasi Usaha",
+      "#KasusBatas"
+    ]
+  },
+  {
+    "q_full": "utk anak di bawah 17 tahun yang tinggal bersama neneknya di kab A krn sekolah, sdgkan orangtua nya tinggal di kab B. utk anak tsb ketika petugas dtg di rumah orangtua di kab B maka anaknya berkode 3 tidak tinggal dgn keluarga. Kemudian ketika rumah neneknya didatangi petugas apakah anak tsb apakah hrs ditambahkan assigment baru?",
+    "a_full": "Betul. Anak dianggap sebagai keluarga sendiri di rumah nenek (karena berbeda KK). Anak menjadi kepala keluarga.",
+    "tags": [
+      "#Identifikasi Usaha",
+      "#KasusBatas"
+    ]
+  },
+  {
+    "q_full": "PPL UB hanya mendata UB yang ada di prelist. Lalu PPL Door To Door mendata UB yang tidak ada di prelist (Sesuai alokasinya). Bagaimana cara Door To Door mengetahui jika UB tersebut sudah di data oleh PPL UB melalui FASIH ?\nSaat Pelatihan terdapat di PPT bahwa PPL Door To Door jika menemukan UB hanya geotagging dan submit, berarti tidak dilanjutkan pendataan ya ? Apakah ini\nmasih sama ?",
+    "a_full": "Jika PPL door to door menemukan usaha besar baik yang ada di daftar assigment maupun di menu lookup di wilayah SLS nya ada, maka PPL door to door cukup melakukan geotagging dan menempelkan sticker kemudian submit. Untuk pendataan lengkap usaha/perusahaan tersebut akan dilakukan oleh PPL-UB.",
+    "tags": [
+      "#Prosedur Prelisting",
+      "#Metodologi"
+    ]
+  },
+  {
+    "q_full": "Pak Barkah mengusahakan padi dan jagung selama 2025 secara berselang-seling, di P akan menjawab Ya pada tanaman pangan. Akan terbentuk rooster\nBarkah-Tanaman Pangan. Saat di rincian 13a penentuan KBLI dari nilai produksi terbesar antara padi dan jagung; misal yg terbesar adalah Padi. Pertanyaannya, pengeluaran dan pendapatan usaha pertanian pak barkah hanya berisi pengeluaran dan pendapatan untuk padi saja sesuai KBLI usaha atau termasuk\npengeluaran dan pendapatan padi dan jagung?",
+    "a_full": "Seluruh pendapatan dan pengeluaran padi dan jagung\nNilai Produksi dari seluruh hasil panen padi dan  jagung dicatat pada Rincaian 27 a Nilai produksi/penjualan/pendapatan barang dan jasa\nPengeluaran yang dicatat adalah seluruh pengeluaran pada kegiatan penanaman padi dan jagung pada rincian 26 b  Biaya produksi",
+    "tags": [
+      "#Prosedur Prelisting",
+      "#Metodologi"
+    ]
+  },
+  {
+    "q_full": "Rekomendasi untuk semua survei/sensus yang memanfaatkan FASIH dashboard. Bisa tidak ya dimulai dari SE ini, ada fitur di dashboard untuk melihat rekap per petugas? mengingat, kadang terjadi di survei lain, contohnya GC PBI, rekap petugas itu baru ada setelah ada banyak request dari daerah untuk dimunculkan di dashboard. Sebaiknya, itu jadi standar untuk kegiatan survei/sensus bahwa dashboard itu memfasilitasi untuk bisa melihat rekap per petugas.",
+    "a_full": "Noted. Rekap per petugas akan dijadikan standar.",
+    "tags": [
+      "#Prosedur Prelisting",
+      "#Metodologi"
+    ]
+  },
+  {
+    "q_full": "Untuk jumlah hewan ternak terutama ayam ini apa tidak ada batasannya?karena kalau di desa ini setiap rumah pasti melihara ayam tapi hanya dipelihara untuk jaga-jaga kalau butuh telur atau daging untuk dikonsumsi sendiri tidak sampai dijual\nIni serius kalau ayam misalnya cuma satu dan dia mau mengusahakan dimasukan\n?",
+    "a_full": "untuk yang memelihara hewan ternak dengan tujuan konsumsi sendiri maka\ntidak disebut sebagai usaha peternakan.\nIdentifikasi awal usaha peternakan yaitu ternak yang masih ada dipelihara pada saat pencacahan, kecuali pada unggas pedaging (ayam kampung pedaging, ayam ras pedaging, itik pedaging, puyuh pedaging) tetap tercakup walaupun pada saat pencacahan sedang tidak ada unggasnya (pengosongan kandang) asalkan masih berencana akan melanjutkan usaha unggas pedagingnya.",
+    "tags": [
+      "#Prosedur Prelisting",
+      "#Metodologi"
+    ]
+  },
+  {
+    "q_full": "saat ini di salah satu kabupaten/Kota yaitu di Kota Bitung masih belum ada pengesahan Ketua SLS, jadi belum ada ketua SLS yang disahkan untuk satu wilayah Kota Bitungsampe sekarang, pada tahap pengenalan dan Penelusuran Wilayahnya, serta identifikasi SLS seperti apa?, apakah tidak perlu melapor ke ketua SLS nya (kareta tidak ada ketua sls definite) atau dikonfirmasi ke ketua SLS periode sebelumnya atau ke aparat kelurahan saja?, informasinya saat ini belum ada pengurus Untuk semua Tingkatan SLS dibawah Kelurahan, baik itu Lingkungan (RW) maupun sls terkecil (RT)",
+    "a_full": "Melapor ke ketua SLS penting dilakukan untuk mengenalkan petugas, sekaligus meminta ijin untuk melakukan pendataan di wilayah (SLS) tersebut, hal ini untuk menghindari terjadinya persepsi negatif dari masyarakat. Jika suatu SLS belum ada Ketua SLSnya (belum ditetapkan), pendekatan yang dilakukan adalah melapor ke SLS di atasnya misal ke Ketua RW/Kampung, dan menanyakan pengurus/pengelola SLS/tokoh masyarakat lainnya yang diberi kewenangan (berpengaruh) untuk ditemui dan meminta ijin melakukan pendataan SE2026.",
+    "tags": [
+      "#Prosedur Prelisting",
+      "#Metodologi"
+    ]
+  },
+  {
+    "q_full": "Sewaktu NGIBAR, bagaimana menentukan Usaha Menengah (UM)?\ntersebut hanya ada di Bangunan Khusus Usaha (BKU), contoh PTSP kebanyakan datanya adalah UMKM dan nama pada list data yang diberikan adalah nama pemiliknya meski sudah ada badan hukum. Tapi jika di probing atau pengecekan baru ketahuan jika dia ada yang tinggal di bangunan tersebut. Mohon konfirmasinya",
+    "a_full": "- skala usaha berdasarkan prelist.",
+    "tags": [
+      "#Prosedur Prelisting",
+      "#Metodologi"
+    ]
+  },
+  {
+    "q_full": "dari penjelasan bu Puji menyebutkan bahwa anak sementara sekolah namun tidak tinggal bersama dengan keluarga dipilih kode 3 tidak tinggal bersama, misal anak ituk tinggal bersama dengan neneknya untuk bersekolah di dekat rumah nenek, masih berumur 10 tahun, anak masih masuk di kk orang tuannya, berarti saat pendataan di rumah neneknya sang anak tetep dianggap keluarga sendiri ( ada 2 keluarga keluarga nenek dan keluarga anak (hanya berisi anak)? meskipun belum cukup umur untuk menjadi responden? atau malah digabung\nsebagai anggota keluarga Nenek meski sebenernya berbeda KK dengan neneknya, apakah ada batasan usia agar bisa/eligible untuk memberikan jawaban/menjadi\nresponden",
+    "a_full": "1. Dirumah nenek, anak ditambahkan menjadi assignment sendiri (keluarga tersendiri, berbeda dengan nenek). Anak sebagai kepala keluarga yang anggota keluarganya hanya ia sendiri. Keterangan perumahan mengikuti rumah nenek.\n2. info mengenai anak ketika tinggal dirumah nenek, dapat ditanyakan ke nenek sebagai responden",
+    "tags": [
+      "#Aplikasi FASIH",
+      "#Sistem"
+    ]
+  },
+  {
+    "q_full": "Pertanyaan Untuk rincian Kepemilikan Fasilitas BAB  jika seorang keluarga anak menumpang BAB di rumah orang taunya (keluarga anak dan keluarga orang tua tinggal berbeda rumah), jadi yang memiliki FAsilitas BAB/WC keluarga orang tuanya kan untuk keluarga orang tuanya status kepemilikan fasilitas BAB terisi kode 2, ada digunakan bersama oleh anggota keluarga dari beberapa rumah; nah untuk keluarga anaknya, status kepemilikan fasilitas BAB nya dipilih kode berapa? apakah kode 2 juga atau kode 4?\njika ternyata dipilih kode 2, kan sebenernya sang anak itu kondisinya tidak memiliki fasilitas BAB ya?, jadi kapan Pilihan kode 4 tidak ada fasilitas BAB nya\nterpilih",
+    "a_full": "Keluarga anak dan orang tua sama-sama terisi kode 2. Ada, digunakan bersama oleh anggota keluarga dari beberapa rumah",
+    "tags": [
+      "#Aplikasi FASIH",
+      "#Sistem"
+    ]
+  },
+  {
+    "q_full": "Untuk usaha industri kue basah, industri tempe, industri makanan dalam kemasan, buat di rumah dan seluruhnya dijual di pasar.\nartinya ada 2 usaha? di rumah sebagai industri, di pasar usaha perdagangan?.\n- usaha d rumah 13b 1 'Ya', kategori industri, jaringan usaha pabrik.\n- untuk usaha di pasar rincian 13b1 (apakah memproduksi barang di lokasi ini) akan tercatat 'Tidak'. kategori perdagangan, R14 jaringan usahanya adalah unit penunjang.\nbenarkah demikian?\ntapi yang di pasar itu kan tidak ada mengambil selisih harga dari yang di rumah.",
+    "a_full": "jaringan pabrik hanya untuk unit kegiatan usaha yang hanya memproses produksi, tidak ada aktivitas lainnya, seperti aktivitas  administrasi dan pemasaran. sementara rumah yang digunakan sebagai tempat produksi juga ada aktivitas adminstrasi dan pemasaran dianggap sebagai usaha tunggal.\nJadi usaha produksi kue basah, tempe yang dibuat di rumah, jaringan usahanya adalah usaha tunggal industri pengolahan, sementara unit penjualan di pasar sebagai usaha tunggal perdagangan (bukan unit penunjang)",
+    "tags": [
+      "#Aplikasi FASIH",
+      "#Sistem"
+    ]
+  },
+  {
+    "q_full": "Adakah minimum jumlah tanaman pangan atau luas tanam minimumnya yang dianggap sebagai usaha pertanian tanaman pangan ? Karena ada cukup banyak masyarakat di DKI Jakarta yang memanfaatkan tanah yang kosong untuk menanam tanaman pangan seperti ubi kayu dan jumlah pohonnya sangat sedikit (dapat dihitung dengan jari). karena secara konsep tanaman pangan yang dikonsumsi sendiri termasuk usaha. apakah hanya menanam 1 pohon ubi kayu itu\nsudah dianggap ada usaha pertanian tanaman pangan?",
+    "a_full": "berapa jarak tanam normal tanaman pangan atau per komoditasnya? adakah info tersebut di slide?",
+    "tags": [
+      "#Aplikasi FASIH",
+      "#Sistem"
+    ]
+  },
+  {
+    "q_full": "Mengacu ke pertanyaan no 238, untuk kantor perwakilan karena kegiatan mengawasi dan mengkoordinir urusan kantor area, apakah KBLI nya bisa kategori N 70 pak? walaupun bukan kantor pusat ataukah mengikuti KBLI pegadaian (kategori L)?\nIzin melanjutkan Pak, Kanwil berfungsi sebagai pengawas dan pengelola operasional untuk wilayah geografis tertentu - tidak ada kegiatan gadai dengan nasabah, apakah kanwil tetap KBLI Pegadaian, atau KBLI Kantor Pusat mengingat kegiatannya?",
+    "a_full": "Untuk Kantor Perwakilan atau Kanwil yang kegiatannya mengawasi dan mengkoordinir dan tidak ada kegiatan layanan gadai dengan nasabah, mengikuti KBLI Kantor Pusat (N 70100).",
+    "tags": [
+      "#Aplikasi FASIH",
+      "#Sistem"
+    ]
+  },
+  {
+    "q_full": "Kenapa hanya ada beberapa KBLI khusus yang kegiatan utamanya dilihat dari naturenya?\nUsaha karaoke secara nature adalah karaoke, tp kalo lihat pendapatannya, margin perdagangan makan minum / usaha PMMnya bisa jadi lebih besar. Apakah pada kasus seperti ini, keg utamanya bukan karaoke, tapi jadi perdagangan/usaha PMM?",
+    "a_full": "untuk saat ini, yang sudah disepakati, usaha berdasarkan nature adalah\n1. Usaha Bengkel yang juga menjual sparepart\n2. Usaha Salon yang juga menjual alat kosmetik\n3. Usaha Fotocopy yang juga menjual ATK\n4. Usaha minimarket yang juga menjual minuman (kopi)\n5. usaha Karaoke\n6. klinik kecantikan",
+    "tags": [
+      "#Aplikasi FASIH",
+      "#Sistem"
+    ]
+  },
+  {
+    "q_full": "Untuk keluarga yang tinggal di kepulauan, biasanya mereka punya rumah lain di darat/ibukota kabupaten. Alamat KK adalah di kepulauan, dan keluarga tidak menentu kapan menempati rumahnya di kepulauan (tergantung cuaca, tapi dalam setahun pasti ada pulang 2-3 kali).\n1. Keberadaan anggota keluarga berpatokan pada rumah yang mana?\n2. Kondisi perumahan dan aset apakah mengikuti rumah sesuai KK (pulau) atau domisili setempat?",
+    "a_full": "Misalkan saat pendataan: keluarga sedang tinggal di darat sedangkan prelist ada di Kepulauan, maka:\n1. Keluarga di prelist Kepulauan, petugas mencari tahu keberadaan keluarga tersebut dari tetangga-tetangganya, berstatus Tidak ditemukan (kode 0) jika tidak bisa diperoleh apa pun mengenai keluarga tsb atau tidak dapat ditemui hingga akhir pendataan (kode 5) jika diketahui keluarga tsb masih tinggal di rumah itu. Selanjutnya akan ada assignment baru untuk keluarga di alamat darat.\n2. Kondisi perumahan dan aset mengikuti kondisi rumah keluarga di darat (yang\nditinggali). Untuk rumah di kepulauan, akan dicatat di Aset Lainnya",
+    "tags": [
+      "#Aplikasi FASIH",
+      "#Sistem"
+    ]
+  },
+  {
+    "q_full": "Sweet Bakery yang berlokasi di Jalan Cendana memproduksi roti sebanyak 1.000 pcs dengan harga jual Rp20.000,00 per pcs.\nDalam proses produksinya, Sweet Bakery mengeluarkan biaya sebagai berikut: Biaya produksi: Rp10.000.000, Biaya operasional (listrik, internet, transportasi, dll.): Rp1.000.000, Upah pegawai: Rp3.000.000.\nDari total 1.000 pcs roti yang diproduksi: Sebanyak 600 pcs dijual di outlet Sweet Bakery Jalan Cendana, Sebanyak 400 pcs disalurkan ke outlet Sweet Bakery Jalan Rinjani.\nAdapun biaya operasional di outlet Jalan Rinjani adalah: Sewa ruko: Rp1.000.000, Upah pegawai: Rp1.500.000.\nSelain menjual produk sendiri, Sweet Bakery juga menerima titipan penjualan kerupuk dari usaha lain sebanyak 100 pcs dengan harga Rp10.000 per pcs, dengan rincian: 50 pcs dijual di outlet Jalan Cendana dan 50 pcs dijual di outlet Jalan Rinjani.\nBagaimana cara pengisian jaringan usaha, pendapatan, dan pengeluaran untuk Sweet Bakery di Jl Cendana dan Jl. Rinjani?",
+    "a_full": "Sweet Bakery Cendana: Kantor Pusat Pengeluaran\na. Upah: Rp3.000.000\nb. Biaya Produksi: Rp10.000.000\nc. pembelian barang yg terjual: 0\nd. Biaya operasional: Rp1.000.000\ne. Biaya non operasional: 0\nPendapatan\na. pendapatan: (1.000 x Rp20.000) + komisi penjualan 50 kerupuk\nb. pendapatan lainnya: 0\nSweet Bakery Rinjani: Kantor Cabang\na. Upah: Rp1.500.000\nb. Biaya Produksi: 0\nc. pembelian barang yg terjual: 400 x Rp20.000 = Rp8.000.000\nd. Biaya operasional: Rp1.000.000\ne. Biaya non operasional: 0\nPendapatan\na. pendapatan: (400 x Rp20.000) + komisi penjualan 50 kerupuk\nb. pendapatan lainnya: 0",
+    "tags": [
+      "#KBLI & Klasifikasi",
+      "#Metodologi"
+    ]
+  },
+  {
+    "q_full": "Pada flowchart penentuan jumlah usaha pada slide 10, penentuan jumlah usaha ketika misalnya punya lebih dari satu usaha dengan laporan keuangan tidak terpisah maka usaha yang tercatat ditentukan berdasarkan nilai omzet yang paling besar sedangkan pada slide 14 dan 15 jenis aktivitas usaha ditentukan berdasarkan nature usaha/izin usaha/pengakuan responden atau nilai penjualan/produksi/pendapatan. Jadi sebenarnya layer penentuan jumlah usaha berdasarkan omzet terbesar atau nature/izin/pengakuan responden? mohon\npenjelasannya",
+    "a_full": "- identifikasi esstablishment: pemilik, lokasi, laporan keuangan\n- jika tidak bisa dibedakan laporan keuangannya, maka dianggap 1 usaha dengan melihat usaha dengan omset terbesar\n- terdapat 4 jenis usaha yang harus dilihat naturenya : bengkel, fotokopi, salon, minimarket/swalayan",
+    "tags": [
+      "#KBLI & Klasifikasi",
+      "#Metodologi"
+    ]
+  },
+  {
+    "q_full": "tolong berikan penjelasan lebih detail terkait identifikasi establishment pada usaha mikro. seperti apa yang dicatat 1 dan seperti apa yang dicatat lebih dari 1. karna garis batasnya dari contoh yang disebutkan pada slide kurang begitu jelas. apakah dari pemilik, tempat usaha, atau pengelolaannya?\n1. di contoh usaha online dan pemilik kontakan dicatat 2 usaha karena berbeda naturenya. jika demikian contoh yang nasi uduk dan warung kopi kan bisa juga naturenya dianggap berbeda.\n2. bagaimana dengan usaha warung sembako, yang juga menjual pulsa, gas,\nbensin eceran?",
+    "a_full": "- Identifikasi establishment menggunakan 3 pendekatan :pemilik, lokasi usaha, dan pendekatan laporan keuangan (tidak ada pengecualian usaha mikro)\n1. untuk usaha kopi dan warung nasi uduk bisa dipastikan dulu laporan keuangannya terpisah atau tidak. usaha online dan kontrakan juga bisa dipastikan terlebih dahulu laporan keuangannya terpisah atau tidak.\n2.  dilihat dulu lokasi bangunan usaha nya. jika 2 lokasi maka bisa dipisahkan, jika 1 lokasi maka dilihat laporan keuangan terpisah atau tidak. jika tidak terpisah maka dianggap 1 usaha dengan omset terbesar",
+    "tags": [
+      "#KBLI & Klasifikasi",
+      "#Metodologi"
+    ]
+  },
+  {
+    "q_full": "Terkait pekerja konstruksi  jika dia menawarkan jasa sendiri  kemudian kerjanya dibayar harian, bekerja dan diberi upah oleh orang lain apakah tetap dianggap bukan usaha? bisakah diperjelas apa yang menjadi kata kunci/yang membedakan ketika usaha kosntruksi/bangunan harian, bekerja dan diberi upah oleh orang lain dianggap bukan usaha, namun untuk ART Yang tidak menginap dan memiliki majikan lebih dari satu dianggap usaha dan kuli pekerja lepas (dia dibayar harian\noleh banyak orang) pun dianggap usaha.",
+    "a_full": "Konsep menanggung risiko, menanggung input, memperjualkan barang/jasa dan memasarkan barang/jasa",
+    "tags": [
+      "#KBLI & Klasifikasi",
+      "#Metodologi"
+    ]
+  },
+  {
+    "q_full": "Bagaimana usaha pertanian dengan sistem bagi hasil?\n1. jika 1 orang sebagai pemilik lahan, 1 orang penggarap. modal beli bibit , pupuk dll dari penggarap. pemilik lahan hanya memperoleh bagi hasil dari hasil penjualan. apakah kedua orang itu usaha? pemilik lahan usaha penyewaan lahan dan penggarap usaha pertanian?\n2. jika 1 orang pemilik lahan, 1 orang penggarap. modal dari pemilik lahan. tp hasil bagi 3 misal (pemilik 2 bagian, penggarap 1 bagian). bagaimana\npencatatannya.",
+    "a_full": "1. Penggarap sebagai usaha pertanian, pemilik lahan bukan usaha pertanian.\n2. Jika seluruh modal usaha berasal dari pemilk lahan, maka pemilik lahan dianggap sebagai pengelola usaha pertanian karena bila terjadi gagal panen, maka menjadi tanggungan pemilik lahan (modal), sedangkan penggarap dalam hal ini dianggap sebagai buruh yang dibayar dengan 1 bagian bagi hasil.",
+    "tags": [
+      "#KBLI & Klasifikasi",
+      "#Metodologi"
+    ]
+  },
+  {
+    "q_full": "Untuk penggunaan air gunung/ air sumber/ mata air yang bebas pakai apakah di inputasi? Karena tadi sempat disinggung penggunaan lahan bebas sewa tidak diinputasi\nBegitu juga dengan penjual pisang goreng yang pisangnya ambil dari budidaya sendiri dan ambil dari hutan (tidak dibudidayakan) apakah harus diimputasi semua nilainya berdasar harga pasar atau ada perbedaan?\nSama halnya dengan nelayan yang mengambil ikan di laut, apakah juga harus diimputasi biaya ikannya sesuai harga pasar atau dari cara mendapatkan ikannya?",
+    "a_full": "Diimputasi sesuai harga pasar. Bila harga pasar air gunung/mata air di wilayah tersebut o, maka nilai imputas untuk air = 0",
+    "tags": [
+      "#KBLI & Klasifikasi",
+      "#Metodologi"
+    ]
+  },
+  {
+    "q_full": "Pada pelatihan kelas C kemarin, dicontohkan:\nusaha klinik dan apotek, punya dua izin (izin klinik dan izin apotik), 1 pemilik, di tempat yang sama, pemilik sama, laporan keuangan 1.\nmaka dicatat sebagai 1 usaha. meskipun izinnya 2. apakah masih sesuai?\n- Jika tercatat 1 usaha, kenapa pada slide metodologi (identifikasi establisment), contoh toko kelontong dan BRI Link dicatat sebagai 2 usaha karena nature kegiatan usahanya berbeda?",
+    "a_full": "umumnya kedua jenis kegiatan ini walaupun dimiliki oleh 1 pemilik, laporan keuangannya terpisah, sesuai perizinannya sehingga dihitung 2 establishmen. bila ternyata laporan keuangannya jadi 1 (misal berbentuk CV dengan satu nama usaha, maka dianggap 1 usaha",
+    "tags": [
+      "#KBLI & Klasifikasi",
+      "#Metodologi"
+    ]
+  },
+  {
+    "q_full": "Melanjutkan pertanyaan no 5 diatas, berarti untuk usaha industri tempe di rumah dan menjual di pasar dimana unit di pasar adalah unit penunjang. Berarti untuk industri dirumah jaringan usahanya akan berstatus Kantor Pusat? Karena untuk unit penunjang di pasar membutuhkan isian kantor pusat di rincian 15. Kalau\nseperti ini bukankah jadi akan banyak yang berstatus Kantor Pusat?",
+    "a_full": "- Sudah diputuskan usaha perdagangan di mall/pasar pada tempat khusus usaha (BKU), diperlakukan sebagai usaha/establisment sendiri\n- terdapat penegasan terbaru merujuk pada pertanyaan 4",
+    "tags": [
+      "#Pencatatan Pendapatan",
+      "#Teknis"
+    ]
+  },
+  {
+    "q_full": "Bagaimana perlakuan bagi usaha yang pindah-pindah dari pasar/pekan ke pekan. Jika senin di pekan A, rabu di pekan B dan Sabtu di pekan C, bagaimana perlakukan usaha yang seperti ini, jika dia tidak punya tempat usaha tetap hanya beratapkan tenda, tapi tempat tetap hanya kar kaki per hari pekannya?\nBagaimana jika di setiap pekan, si pengusaha berpindah-pindah secara harian di kios masing-masing pasar di kios bangunan tetap. Usaha si pengusaha didata dimana?? apakah di setiap pasar didata?",
+    "a_full": "- Untuk kasus disini, yang usahanya perpindah/pindah dari satu pasar ke pasar lain dengan menggunakan tenda (ka kaki) dan tempatnya tidak tetap, maka akan didata di rumah tangganya\n- Usaha  di bangunan tetap (kios/BKU), hanya berbeda lokasi, maka akan di cacah di masing-masing kios (karena secara konsep usaha akan dicacah di BKU)",
+    "tags": [
+      "#Pencatatan Pendapatan",
+      "#Teknis"
+    ]
+  },
+  {
+    "q_full": "Bagaimana pencatatan tenaga kerja musiman di usaha pertanian dan di industri? Apakah tenaga kerja yang bantuin selama musim panen dicatat sebagai tenaga kerja atau dicatat sebagai jasa pertanian (biaya produksi)?\nBegitu juga dengan tenaga kerja yang dihire oleh industri kue selama menjelang lebaran bagaimana pencatatan tenaga kerjanya? Atau dicatat sebagai biaya\nproduksi karena tidak tetap?",
+    "a_full": "pekerja musiman dicatat sebagai pekerja, yang dicatat sebagai biaya jasa apabila pembayarannya melalui usaha/perusahaan perantara penyalur tenaga kerja",
+    "tags": [
+      "#Pencatatan Pendapatan",
+      "#Teknis"
+    ]
+  },
+  {
+    "q_full": "Hasil uji coba Internal Rollout Tahap II, ketika dalam 1 bangunan tempat tinggal terdapat 2 Keluarga, bagaimana pengisian keterangan untuk keluarga ke-2 tersebut, karena tidak muncul pilihan untuk pengisian keluarga ke-2 tersebut, apakah Keluarga ke-2 tersebut harus ditambahkan/merupakan assignment tersendiri untuk pengisian keterangan anggota keluarga, dan lain-lainnya?",
+    "a_full": "Ya ditambahkan assignment tersendiri",
+    "tags": [
+      "#Pencatatan Pendapatan",
+      "#Teknis"
+    ]
+  },
+  {
+    "q_full": "utk anak di bawah 17 tahun yang tinggal bersama neneknya di kab A krn sekolah, sdgkan orangtua nya tinggal di kab B. utk anak tsb ketika petugas dtg di rumah orangtua di kab B maka anaknya berkode 3 tidak tinggal dgn keluarga. Kemudian ketika rumah neneknya didatangi petugas apakah anak tsb apakah hrs ditambahkan assigment baru?",
+    "a_full": "Betul. Anak dianggap sebagai keluarga sendiri di rumah nenek (karena berbeda KK). Anak menjadi kepala keluarga.",
+    "tags": [
+      "#Pencatatan Pendapatan",
+      "#Teknis"
+    ]
+  }
+]
