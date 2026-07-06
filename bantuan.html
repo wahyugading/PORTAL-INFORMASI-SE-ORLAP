@@ -608,11 +608,12 @@
       },
       'mental': {
         title: 'Kelelahan Mental & Stres',
-        desc: 'Jangan ragu untuk mencari bantuan. Kami menyediakan dua layanan yang bisa Anda pilih.',
+        desc: 'Jangan ragu untuk mencari bantuan. Pilih opsi di bawah ini untuk melihat detail layanannya.',
         alert: 'Semua sesi konseling bersifat rahasia.',
+        layout: 'tabs',
         buttons: [
-          { label: 'Konsultasi dengan UPK', icon: 'medical_services', url: 'https://s.stis.ac.id/PendaftaranKonseling', primary: true },
-          { label: 'Layanan Konselor Sebaya BEM', icon: 'group', url: 'https://s.stis.ac.id/LayananKonselingSebayaSTIS' }
+          { label: 'Konsultasi UPK', icon: 'medical_services', url: 'https://s.stis.ac.id/PendaftaranKonseling', primary: true, image: 'assets/layanan terpusat kampus.jpeg' },
+          { label: 'Konselor Sebaya', icon: 'group', url: 'https://s.stis.ac.id/LayananKonselingSebayaSTIS', primary: true, image: 'assets/konseling sebaya.jpeg' }
         ]
       },
       'urgent': {
@@ -653,44 +654,150 @@
 
       const actionsDiv = document.getElementById('triage-actions');
       actionsDiv.innerHTML = '';
-      data.buttons.forEach(btn => {
-        const button = document.createElement('button');
-        button.style.width = '100%';
-        button.style.padding = '12px 16px';
-        button.style.borderRadius = '8px';
-        button.style.border = 'none';
-        button.style.fontSize = '13px';
-        button.style.fontWeight = '700';
-        button.style.display = 'flex';
-        button.style.alignItems = 'center';
-        button.style.justifyContent = 'center';
-        button.style.gap = '8px';
-        button.style.cursor = 'pointer';
-        button.style.transition = '0.2s';
+      if (data.layout === 'tabs') {
+        const tabContainer = document.createElement('div');
+        tabContainer.style.display = 'grid';
+        tabContainer.style.gridTemplateColumns = '1fr 1fr';
+        tabContainer.style.gap = '8px';
+        tabContainer.style.marginBottom = '16px';
+        
+        const contentContainer = document.createElement('div');
+        contentContainer.style.width = '100%';
 
-        if (btn.primary) {
-          if (btn.isWa) {
-            button.style.background = '#25D366';
-            button.style.color = 'white';
-          } else {
-            button.style.background = 'var(--clr-blue)';
-            button.style.color = 'white';
+        data.buttons.forEach((btn) => {
+          const tabBtn = document.createElement('button');
+          tabBtn.style.padding = '10px';
+          tabBtn.style.borderRadius = '8px';
+          tabBtn.style.border = '1px solid var(--clr-border)';
+          tabBtn.style.background = 'var(--clr-surface)';
+          tabBtn.style.color = 'var(--clr-black)';
+          tabBtn.style.fontSize = '12px';
+          tabBtn.style.fontWeight = '700';
+          tabBtn.style.cursor = 'pointer';
+          tabBtn.style.display = 'flex';
+          tabBtn.style.flexDirection = 'column';
+          tabBtn.style.alignItems = 'center';
+          tabBtn.style.gap = '4px';
+          tabBtn.style.transition = '0.2s';
+          tabBtn.innerHTML = `<span class="material-symbols-outlined" style="font-size: 20px;">${btn.icon}</span> ${btn.label}`;
+
+          tabBtn.onclick = () => {
+            Array.from(tabContainer.children).forEach(child => {
+              child.style.background = 'var(--clr-surface)';
+              child.style.color = 'var(--clr-black)';
+              child.style.border = '1px solid var(--clr-border)';
+            });
+            tabBtn.style.background = 'rgba(242, 114, 33, 0.08)';
+            tabBtn.style.color = 'var(--clr-orange-dk)';
+            tabBtn.style.border = '1px solid var(--clr-orange)';
+            
+            contentContainer.innerHTML = '';
+            
+            if (btn.image) {
+              const img = document.createElement('img');
+              img.src = btn.image;
+              img.alt = btn.label;
+              img.style.width = '100%';
+              img.style.borderRadius = '8px';
+              img.style.objectFit = 'contain';
+              img.style.border = '1px solid var(--clr-border)';
+              img.style.marginBottom = '12px';
+              contentContainer.appendChild(img);
+            }
+
+            const actionBtn = document.createElement('button');
+            actionBtn.style.width = '100%';
+            actionBtn.style.padding = '12px 16px';
+            actionBtn.style.borderRadius = '8px';
+            actionBtn.style.border = 'none';
+            actionBtn.style.fontSize = '13px';
+            actionBtn.style.fontWeight = '700';
+            actionBtn.style.display = 'flex';
+            actionBtn.style.alignItems = 'center';
+            actionBtn.style.justifyContent = 'center';
+            actionBtn.style.gap = '8px';
+            actionBtn.style.cursor = 'pointer';
+            actionBtn.style.transition = '0.2s';
+            
+            if (btn.primary) {
+              actionBtn.style.background = 'var(--clr-blue)';
+              actionBtn.style.color = 'white';
+            } else {
+              actionBtn.style.background = 'var(--clr-surface)';
+              actionBtn.style.color = 'var(--clr-black)';
+              actionBtn.style.border = '1px solid var(--clr-border)';
+            }
+            
+            actionBtn.innerHTML = `Buka Link ${btn.label} <span class="material-symbols-outlined" style="font-size: 16px;">open_in_new</span>`;
+            actionBtn.onclick = () => window.open(btn.url, '_blank', 'noopener,noreferrer');
+            
+            contentContainer.appendChild(actionBtn);
+          };
+          
+          tabContainer.appendChild(tabBtn);
+        });
+
+        actionsDiv.appendChild(tabContainer);
+        actionsDiv.appendChild(contentContainer);
+
+      } else {
+        data.buttons.forEach(btn => {
+          const wrapper = document.createElement('div');
+          wrapper.style.display = 'flex';
+          wrapper.style.flexDirection = 'column';
+          wrapper.style.gap = '8px';
+          wrapper.style.width = '100%';
+
+          if (btn.image) {
+            const img = document.createElement('img');
+            img.src = btn.image;
+            img.alt = btn.label;
+            img.style.width = '100%';
+            img.style.borderRadius = '8px';
+            img.style.objectFit = 'contain';
+            img.style.border = '1px solid var(--clr-border)';
+            wrapper.appendChild(img);
           }
-        } else {
-          button.style.background = 'var(--clr-surface)';
-          button.style.color = 'var(--clr-black)';
-          button.style.border = '1px solid var(--clr-border)';
-        }
 
-        button.innerHTML = `<span class="material-symbols-outlined" style="font-size: 18px;">${btn.icon}</span> ${btn.label}`;
+          const button = document.createElement('button');
+          button.style.width = '100%';
+          button.style.padding = '12px 16px';
+          button.style.borderRadius = '8px';
+          button.style.border = 'none';
+          button.style.fontSize = '13px';
+          button.style.fontWeight = '700';
+          button.style.display = 'flex';
+          button.style.alignItems = 'center';
+          button.style.justifyContent = 'center';
+          button.style.gap = '8px';
+          button.style.cursor = 'pointer';
+          button.style.transition = '0.2s';
 
-        button.onclick = () => {
-          if (btn.url) window.open(btn.url, '_blank', 'noopener,noreferrer');
-          else if (btn.action === 'showSearch') showSearch();
-        };
+          if (btn.primary) {
+            if (btn.isWa) {
+              button.style.background = '#25D366';
+              button.style.color = 'white';
+            } else {
+              button.style.background = 'var(--clr-blue)';
+              button.style.color = 'white';
+            }
+          } else {
+            button.style.background = 'var(--clr-surface)';
+            button.style.color = 'var(--clr-black)';
+            button.style.border = '1px solid var(--clr-border)';
+          }
 
-        actionsDiv.appendChild(button);
-      });
+          button.innerHTML = `<span class="material-symbols-outlined" style="font-size: 18px;">${btn.icon}</span> ${btn.label}`;
+
+          button.onclick = () => {
+            if (btn.url) window.open(btn.url, '_blank', 'noopener,noreferrer');
+            else if (btn.action === 'showSearch') showSearch();
+          };
+
+          wrapper.appendChild(button);
+          actionsDiv.appendChild(wrapper);
+        });
+      }
 
       document.getElementById('triage-result').style.display = 'block';
     }
